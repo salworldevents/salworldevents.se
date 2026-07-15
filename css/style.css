@@ -1,0 +1,381 @@
+/* =====================================
+   RESET
+===================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f7f3ef;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+.container{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+}
+
+/* =====================================
+   HEADER
+===================================== */
+
+.header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    transition:.45s;
+
+}
+
+.header.scrolled{
+
+    background:rgba(75,31,46,.92);
+
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(212,175,99,.25);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.18);
+
+}
+
+.header .container{
+
+    height:95px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.logo img{
+
+    height:70px;
+
+}
+
+.navbar{
+
+    display:flex;
+
+    gap:45px;
+
+}
+
+.navbar a{
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    transition:.35s;
+
+}
+
+.navbar a:hover{
+
+    color:#d7b06b;
+
+}
+
+.header-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.language-btn{
+
+    background:transparent;
+
+    border:1px solid rgba(255,255,255,.5);
+
+    color:#fff;
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.language-btn:hover{
+
+    background:#d7b06b;
+
+    border-color:#d7b06b;
+
+    color:#4b1f2e;
+
+}
+
+.book-btn{
+
+    background:#d7b06b;
+
+    color:#4b1f2e;
+
+    padding:15px 34px;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.book-btn:hover{
+
+    transform:translateY(-2px);
+
+    background:#e6c584;
+
+}
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero{
+
+    position:relative;
+
+    width:100%;
+
+    height:100vh;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.hero-video{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:1;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(75,31,46,.40);
+    z-index:2;
+}
+
+.hero-content{
+    position:relative;
+    z-index:3;
+}
+
+.hero-logo{
+    width:230px;
+    margin:0 auto 25px;
+    display:block;
+}
+.hero h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:85px;
+
+    font-weight:600;
+
+    letter-spacing:10px;
+
+    color:#E5C67A;
+
+    margin-bottom:25px;
+
+    text-transform:uppercase;
+
+    text-shadow:0 5px 30px rgba(0,0,0,.35);
+
+}
+
+.hero p{
+
+    width:80%;
+
+    margin:auto;
+
+    color:#F6E8D8;
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    margin-bottom:45px;
+
+    font-weight:300;
+
+}
+
+.hero-btn{
+
+    display:inline-block;
+
+    background:#D4AF63;
+
+    color:#4B1F2E;
+
+    padding:18px 50px;
+
+    border-radius:50px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.25);
+
+}
+
+.hero-btn:hover{
+
+    transform:translateY(-5px);
+
+    background:#E5C67A;
+
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+.hero-logo{
+
+    animation:fadeDown 1.2s ease;
+
+}
+
+.hero h1{
+
+    animation:fadeUp 1.4s ease;
+
+}
+
+.hero p{
+
+    animation:fadeUp 1.8s ease;
+
+}
+
+.hero-btn{
+
+    animation:fadeUp 2.2s ease;
+
+}
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* ===== Hero Animation ===== */
+
+.hero{
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-video{
+    transition: transform .8s ease;
+    will-change: transform;
+}
+
+.hero-content{
+    transition:
+        opacity .5s ease,
+        transform .5s ease;
+}
+
+.hero-overlay{
+    transition: background .6s ease;
+}
