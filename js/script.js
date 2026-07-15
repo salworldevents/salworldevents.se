@@ -1,108 +1,36 @@
-const header = document.querySelector(".header");
-const heroContent = document.querySelector(".hero-content");
-const heroVideo = document.querySelector(".hero-video");
-const heroOverlay = document.querySelector(".hero-overlay");
+const header = document.getElementById('header');
+let lastY = window.scrollY;
 
-window.addEventListener("scroll", () => {
-
-    const scroll = window.scrollY;
-
-    if (scroll > 50) {
-        header.classList.add("scrolled");
-    } else {
-        header.classList.remove("scrolled");
-    }
-
-    if (heroContent) {
-        heroContent.style.opacity = 1 - scroll / 300;
-        heroContent.style.transform =
-            translateY(${scroll * 0.35}px) scale(${1 - scroll * 0.0007});
-    }
-
-    if (heroVideo) {
-        heroVideo.style.transform =
-            translate(-50%, -50%) scale(${1 + scroll * 0.00055});
-    }
-
-    if (heroOverlay) {
-        heroOverlay.style.background =
-            rgba(75,31,46,${0.30 + scroll * 0.0012});
-    }
-
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  header.classList.toggle('scrolled', y > 20);
+  if (y > lastY && y > 120) header.style.transform = 'translateY(-110%)';
+  else header.style.transform = 'translateY(0)';
+  lastY = y;
 });
 
-const about = document.querySelector(".about");
+// Mobile menu
+const hamburger = document.getElementById('hamburger');
+const nav = document.getElementById('nav');
+hamburger?.addEventListener('click', () => nav.classList.toggle('show'));
+nav?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('show')));
 
-if (about) {
+// Safe GSAP (only if loaded)
+if (window.gsap && window.ScrollTrigger) {
+  gsap.registerPlugin(ScrollTrigger);
 
-    const observer = new IntersectionObserver((entries) => {
+  const title = document.querySelector('.split-chars');
+  if (title) {
+    title.innerHTML = title.textContent.split('').map(c => `<span>${c === ' ' ? '&nbsp;' : c}</span>`).join('');
+    gsap.from('.split-chars span', { y: 60, opacity: 0, stagger: 0.03, duration: 1, ease: 'power3.out' });
+  }
 
-        entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-                entry.target.classList.add("show");
-            }
-
-        });
-
-    }, {
-        threshold: 0.3
+  gsap.utils.toArray('.reveal').forEach(el => {
+    gsap.from(el, {
+      opacity: 0,
+      y: 30,
+      duration: 0.8,
+      scrollTrigger: { trigger: el, start: 'top 88%' }
     });
-
-    observer.observe(about);
-
-}
-
-const counters = document.querySelectorAll(".counter");
-
-function startCounters() {
-
-    counters.forEach(counter => {
-
-        const target = Number(counter.dataset.target);
-
-        let count = 0;
-
-        const update = () => {
-
-            const increment = Math.ceil(target / 80);
-
-            count += increment;
-
-            if (count >= target) {
-                counter.innerText = target;
-            } else {
-                counter.innerText = count;
-                requestAnimationFrame(update);
-            }
-
-        };
-
-        update();
-
-    });
-
-}
-
-const stats = document.querySelector(".about-stats");
-
-let started = false;
-
-if (stats) {
-
-    const observer2 = new IntersectionObserver((entries) => {
-
-        if (entries[0].isIntersecting && !started) {
-
-            started = true;
-            startCounters();
-
-        }
-
-    }, {
-        threshold: 0.5
-    });
-
-    observer2.observe(stats);
-
+  });
 }
