@@ -26,42 +26,38 @@ body.salcups-page {
 
 .sc-hero {
     position: relative;
-    min-height: 100vh;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 130px 24px 80px;
-    background:
-        radial-gradient(ellipse at 50% 30%, rgba(212,175,55,.18) 0%, transparent 55%),
-        radial-gradient(ellipse at 20% 80%, rgba(90,29,45,.10) 0%, transparent 40%),
-        radial-gradient(ellipse at 80% 80%, rgba(90,29,45,.08) 0%, transparent 40%),
-        linear-gradient(180deg, #fdf6ed 0%, #f3e6d4 60%, #ede0cc 100%);
+    background: url('../images/fc85ce6f-353b-4c96-a8e5-a27c0c956ac5.jpeg') center center / cover no-repeat;
     overflow: hidden;
 }
 
-.sc-hero::before {
-    content: "";
+.sc-hero-overlay {
     position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #d4af37, transparent);
+    inset: 0;
+    background: linear-gradient(180deg, rgba(20, 5, 12, 0.45), rgba(30, 8, 18, 0.82));
 }
 
 .sc-hero-content {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     max-width: 880px;
     margin: 0 auto;
+    padding: 0 24px;
     animation: scFadeUp 1.2s ease both;
 }
 
 .sc-hero-logo {
-    width: min(340px, 62vw);
-    margin: 0 auto 52px;
+    width: min(300px, 56vw);
+    margin: 0 auto 44px;
     display: block;
-    filter: drop-shadow(0 14px 36px rgba(90,29,45,.18));
+    filter: drop-shadow(0 14px 40px rgba(212,175,55,.30)) brightness(1.08);
     animation: scFadeDown 1.2s ease both;
 }
 
@@ -70,66 +66,57 @@ body.salcups-page {
     font-family: 'Poppins', sans-serif;
     font-size: 11px;
     font-weight: 600;
-    letter-spacing: 6px;
+    letter-spacing: 7px;
     color: #d4af37;
     text-transform: uppercase;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
     animation: scFadeUp 1.4s ease both;
 }
 
 .sc-hero-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(48px, 7vw, 82px);
+    font-size: clamp(42px, 6.5vw, 80px);
     font-weight: 600;
-    color: #5a1d2d;
-    letter-spacing: 4px;
-    line-height: 1.05;
+    color: #D4AF37;
+    letter-spacing: 3px;
+    line-height: 1.1;
     margin-bottom: 28px;
-    text-transform: uppercase;
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
     animation: scFadeUp 1.6s ease both;
 }
 
 .sc-hero-desc {
     font-family: 'Poppins', sans-serif;
-    font-size: clamp(16px, 2vw, 19px);
+    font-size: clamp(15px, 1.9vw, 20px);
     font-weight: 300;
     line-height: 1.95;
-    color: #6a4d3d;
-    max-width: 680px;
-    margin: 0 auto 52px;
+    color: #F6EDD8;
+    max-width: 640px;
+    margin: 0 auto 48px;
     animation: scFadeUp 1.8s ease both;
 }
 
-/* Scroll indicator */
-.sc-scroll-indicator {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    animation: scFadeUp 2.2s ease both;
-    cursor: pointer;
-}
-
-.sc-scroll-label {
+/* "Beställ Nu" hero button */
+.sc-hero-btn {
+    display: inline-block;
+    background: #D4AF37;
+    color: #2E1620;
+    padding: 18px 58px;
+    border-radius: 50px;
     font-family: 'Poppins', sans-serif;
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 4px;
-    color: #b8902a;
-    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 12px 38px rgba(212, 175, 55, 0.30);
+    animation: scFadeUp 2.0s ease both;
 }
 
-.sc-scroll-arrow {
-    width: 22px;
-    height: 22px;
-    border-right: 1.5px solid #d4af37;
-    border-bottom: 1.5px solid #d4af37;
-    transform: rotate(45deg);
-    animation: scBounce 1.8s ease-in-out infinite;
+.sc-hero-btn:hover {
+    background: #e8c84e;
+    transform: translateY(-4px);
+    box-shadow: 0 22px 52px rgba(212, 175, 55, 0.42);
 }
 
 /* =====================================
@@ -750,8 +737,8 @@ body.salcups-page {
 }
 
 @keyframes scBounce {
-    0%, 100% { transform: rotate(45deg) translateY(0); }
-    50%       { transform: rotate(45deg) translateY(7px); }
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(7px); }
 }
 
 /* =====================================
@@ -773,8 +760,9 @@ body.salcups-page {
         grid-template-columns: 1fr;
     }
 
-    .sc-hero {
-        padding: 110px 20px 90px;
+    .sc-hero-btn {
+        padding: 16px 44px;
+        font-size: 15px;
     }
 
     .sc-cart-panel {
