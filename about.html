@@ -4,490 +4,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>About Us | SALWORLDEVENTS</title>
-
+    <title>About Us | SALWORLD EVENTS</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/about.css">
 </head>
 
 <body>
 
-<header>
+    <!-- HEADER -->
+    <header id="header" class="header">
+        <div class="container">
 
-    <div class="logo">
-        <a href="index.html">
-            <img src="images/logo.png" alt="SALWORLDEVENTS">
-        </a>
-    </div>
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="SALWORLD EVENTS">
+            </a>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Hem</a></li>
-            <li><a href="about.html" class="active">Om Oss</a></li>
-            <li><a href="services.html">Tjänster</a></li>
-            <li><a href="salcups.html">SALCUPS</a></li>
-            <li><a href="gallery.html">Galleri</a></li>
-            <li><a href="reviews.html">Recensioner</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
-        </ul>
-    </nav>
+            <nav class="navbar" id="nav">
+                <a href="index.html">Hem</a>
+                <a href="about.html" class="active">Om Oss</a>
+                <a href="services.html">Tjänster</a>
+                <a href="salcups.html">SALCUPS</a>
+                <a href="gallery.html">Galleri</a>
+                <a href="reviews.html">Recensioner</a>
+                <a href="contact.html">Kontakt</a>
+            </nav>
 
-    <div class="right-side">
+            <div class="header-right">
+                <button class="language-btn">EN</button>
+                <a href="contact.html" class="book-btn">Boka Nu</a>
+            </div>
 
-        <div class="language">
-            <a href="#">SV</a>
-            <span>|</span>
-            <a href="#">EN</a>
         </div>
+    </header>
 
-        <a href="contact.html" class="book-btn">Boka Nu</a>
-
-    </div>
-
-</header>
-
-<section class="about-hero">
-
-    <div class="about-container">
-
-        <div class="about-image">
-            <img src="images/general-manager.jpg" alt="Founders">
+    <!-- 1. HERO -->
+    <section class="ab-hero">
+        <div class="ab-hero-overlay"></div>
+        <div class="ab-hero-content reveal">
+            <span class="ab-hero-eyebrow">LUXURY EVENT COMPANY</span>
+            <h1>About SALWORLD EVENTS</h1>
+            <p>Creating unforgettable weddings and luxury celebrations across Sweden.</p>
         </div>
+    </section>
 
-        <div class="about-content">
+    <!-- 2. OUR STORY -->
+    <section class="ab-story">
+        <div class="ab-story-inner">
 
-            <span>OUR STORY</span>
+            <div class="ab-story-img reveal">
+                <img src="images/general-manager.jpg" alt="Founders">
+            </div>
 
-            <h1>Behind <br> SALWORLDEVENTS</h1>
+            <div class="ab-story-text reveal">
+                <span class="ab-eyebrow">OUR STORY</span>
+                <h2>Our Story</h2>
+                <div class="ab-gold-line"></div>
+                <p>
+                    SALWORLD EVENTS was created to bring luxury, elegance and unforgettable
+                    experiences to every celebration. We believe every event should be unique,
+                    timeless and perfectly organized.
+                </p>
+            </div>
 
-            <p class="lead">
-                Creating timeless weddings and unforgettable luxury events with passion,
-                elegance and attention to every detail.
-            </p>
+        </div>
+    </section>
 
+    <!-- 3. OUR MISSION -->
+    <section class="ab-mission">
+        <div class="ab-mission-card reveal">
+            <span class="ab-eyebrow">OUR PURPOSE</span>
+            <h2>Our Mission</h2>
+            <div class="ab-gold-line"></div>
             <p>
-                SALWORLDEVENTS was founded with one vision — to transform every celebration
-                into an unforgettable experience. Every event is designed with creativity,
-                precision and luxury from beginning to end.
+                To deliver world-class weddings, engagements, birthdays and luxury events
+                with creativity, precision and exceptional service.
             </p>
+        </div>
+    </section>
+
+    <!-- 4. WHY CHOOSE US -->
+    <section class="ab-why">
+
+        <div class="ab-section-header reveal">
+            <span class="ab-eyebrow">OUR STRENGTHS</span>
+            <h2>Why Choose Us</h2>
+        </div>
+
+        <div class="ab-why-grid">
+
+            <div class="ab-why-card reveal">
+                <div class="ab-why-icon">&#9670;</div>
+                <h3>Luxury Planning</h3>
+                <p>
+                    Every detail is meticulously planned to create a flawless,
+                    unforgettable celebration tailored to you.
+                </p>
+            </div>
+
+            <div class="ab-why-card reveal">
+                <div class="ab-why-icon">&#9670;</div>
+                <h3>Premium Catering</h3>
+                <p>
+                    Exquisite menus, SALCUPS and bespoke dessert tables crafted
+                    to delight every guest.
+                </p>
+            </div>
+
+            <div class="ab-why-card reveal">
+                <div class="ab-why-icon">&#9670;</div>
+                <h3>Elegant Decoration</h3>
+                <p>
+                    Timeless floral arrangements and luxury décor that transform
+                    every venue into something extraordinary.
+                </p>
+            </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
+    <!-- 5. NUMBERS -->
+    <section class="ab-numbers">
 
-<section class="services-preview">
+        <div class="ab-numbers-inner">
 
-    <div class="section-title">
-        <span>WHAT WE DO</span>
-        <h2>Luxury Event Experiences</h2>
-    </div>
+            <div class="ab-stat reveal">
+                <div class="ab-stat-number">
+                    <span class="counter" data-target="100">0</span><span class="ab-plus">+</span>
+                </div>
+                <p>Luxury Events</p>
+            </div>
 
-    <div class="services-grid">
+            <div class="ab-stat-divider"></div>
 
-        <div class="service-card">
-            <div class="number">01</div>
-            <h3>Exclusive Weddings</h3>
-            <p>
-                Elegant wedding planning tailored to every couple with timeless luxury.
-            </p>
+            <div class="ab-stat reveal">
+                <div class="ab-stat-number">
+                    <span class="counter" data-target="500">0</span><span class="ab-plus">+</span>
+                </div>
+                <p>Happy Guests</p>
+            </div>
+
+            <div class="ab-stat-divider"></div>
+
+            <div class="ab-stat reveal">
+                <div class="ab-stat-number">
+                    <span>5</span><span class="ab-star">&#9733;</span>
+                </div>
+                <p>Customer Satisfaction</p>
+            </div>
+
         </div>
 
-        <div class="service-card">
-            <div class="number">02</div>
-            <h3>Luxury Events</h3>
-            <p>
-                Private celebrations, engagements, birthdays and premium occasions.
-            </p>
+    </section>
+
+    <!-- 6. MEET OUR TEAM -->
+    <section class="ab-team">
+
+        <div class="ab-section-header reveal">
+            <span class="ab-eyebrow">THE PEOPLE BEHIND THE MAGIC</span>
+            <h2>Meet Our Team</h2>
         </div>
 
-        <div class="service-card">
-            <div class="number">03</div>
-            <h3>Premium Catering</h3>
-            <p>
-                Luxury dessert tables, SALCUPS and premium catering experiences.
-            </p>
+        <div class="ab-team-card reveal">
+            <div class="ab-team-img">
+                <img src="images/general-manager.jpg" alt="Founders">
+            </div>
+            <div class="ab-team-desc">
+                <h3>SALWORLD EVENTS Team</h3>
+                <p>
+                    Passionate, dedicated and driven by a love for creating extraordinary
+                    moments — our team brings your dream event to life with elegance and precision.
+                </p>
+            </div>
         </div>
 
-    </div>
+    </section>
 
-</section>
+    <!-- 7. CTA -->
+    <section class="ab-cta">
+        <div class="ab-cta-inner reveal">
+            <span class="ab-eyebrow">GET IN TOUCH</span>
+            <h2>Let's Create Something Unforgettable Together</h2>
+            <div class="ab-gold-line"></div>
+            <a href="contact.html" class="ab-cta-btn">Contact Us</a>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+
+    <script>
+        // Counter animation
+        function animateCounters() {
+            document.querySelectorAll('.counter').forEach(function(el) {
+                var target = parseInt(el.getAttribute('data-target'), 10);
+                var duration = 1800;
+                var start = null;
+                function step(ts) {
+                    if (!start) start = ts;
+                    var progress = Math.min((ts - start) / duration, 1);
+                    el.textContent = Math.floor(progress * target);
+                    if (progress < 1) requestAnimationFrame(step);
+                    else el.textContent = target;
+                }
+                requestAnimationFrame(step);
+            });
+        }
+
+        // Intersection Observer for .reveal fade-in
+        var revealObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.reveal').forEach(function(el) {
+            revealObserver.observe(el);
+        });
+
+        // Trigger counter when numbers section enters viewport
+        var numbered = false;
+        var numbersObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting && !numbered) {
+                    numbered = true;
+                    animateCounters();
+                }
+            });
+        }, { threshold: 0.3 });
+
+        var numbersSection = document.querySelector('.ab-numbers');
+        if (numbersSection) numbersObserver.observe(numbersSection);
+
+        // Header scroll
+        var hdr = document.getElementById('header');
+        var lastScroll = 0;
+        window.addEventListener('scroll', function() {
+            var y = window.scrollY;
+            if (hdr) {
+                hdr.classList.toggle('scrolled', y > 20);
+                hdr.style.transform = (y > lastScroll && y > 120) ? 'translateY(-110%)' : 'translateY(0)';
+            }
+            lastScroll = y;
+        });
+    </script>
 
 </body>
-</html><!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>About Us | SALWORLDEVENTS</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/about.css">
-</head>
-
-<body>
-
-<header>
-
-    <div class="logo">
-        <a href="index.html">
-            <img src="images/logo.png" alt="SALWORLDEVENTS">
-        </a>
-    </div>
-
-    <nav>
-        <ul>
-            <li><a href="index.html">Hem</a></li>
-            <li><a href="about.html" class="active">Om Oss</a></li>
-            <li><a href="services.html">Tjänster</a></li>
-            <li><a href="salcups.html">SALCUPS</a></li>
-            <li><a href="gallery.html">Galleri</a></li>
-            <li><a href="reviews.html">Recensioner</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
-        </ul>
-    </nav>
-
-    <div class="right-side">
-
-        <div class="language">
-            <a href="#">SV</a>
-            <span>|</span>
-            <a href="#">EN</a>
-        </div>
-
-        <a href="contact.html" class="book-btn">Boka Nu</a>
-
-    </div>
-
-</header>
-
-<section class="about-hero">
-
-    <div class="about-container">
-
-        <div class="about-image">
-            <img src="images/general-manager.jpg" alt="Founders">
-        </div>
-
-        <div class="about-content">
-
-            <span>OUR STORY</span>
-
-            <h1>Behind <br> SALWORLDEVENTS</h1>
-
-            <p class="lead">
-                Creating timeless weddings and unforgettable luxury events with passion,
-                elegance and attention to every detail.
-            </p>
-
-            <p>
-                SALWORLDEVENTS was founded with one vision — to transform every celebration
-                into an unforgettable experience. Every event is designed with creativity,
-                precision and luxury from beginning to end.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section class="services-preview">
-
-    <div class="section-title">
-        <span>WHAT WE DO</span>
-        <h2>Luxury Event Experiences</h2>
-    </div>
-
-    <div class="services-grid">
-
-        <div class="service-card">
-            <div class="number">01</div>
-            <h3>Exclusive Weddings</h3>
-            <p>
-                Elegant wedding planning tailored to every couple with timeless luxury.
-            </p>
-        </div>
-
-        <div class="service-card">
-            <div class="number">02</div>
-            <h3>Luxury Events</h3>
-            <p>
-                Private celebrations, engagements, birthdays and premium occasions.
-            </p>
-        </div>
-
-        <div class="service-card">
-            <div class="number">03</div>
-            <h3>Premium Catering</h3>
-            <p>
-                Luxury dessert tables, SALCUPS and premium catering experiences.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>About Us | SALWORLDEVENTS</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/about.css">
-</head>
-
-<body>
-
-<header>
-
-    <div class="logo">
-        <a href="index.html">
-            <img src="images/logo.png" alt="SALWORLDEVENTS">
-        </a>
-    </div>
-
-    <nav>
-        <ul>
-            <li><a href="index.html">Hem</a></li>
-            <li><a href="about.html" class="active">Om Oss</a></li>
-            <li><a href="services.html">Tjänster</a></li>
-            <li><a href="salcups.html">SALCUPS</a></li>
-            <li><a href="gallery.html">Galleri</a></li>
-            <li><a href="reviews.html">Recensioner</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
-        </ul>
-    </nav>
-
-    <div class="right-side">
-
-        <div class="language">
-            <a href="#">SV</a>
-            <span>|</span>
-            <a href="#">EN</a>
-        </div>
-
-        <a href="contact.html" class="book-btn">Boka Nu</a>
-
-    </div>
-
-</header>
-
-<section class="about-hero">
-
-    <div class="about-container">
-
-        <div class="about-image">
-            <img src="images/general-manager.jpg" alt="Founders">
-        </div>
-
-        <div class="about-content">
-
-            <span>OUR STORY</span>
-
-            <h1>Behind <br> SALWORLDEVENTS</h1>
-
-            <p class="lead">
-                Creating timeless weddings and unforgettable luxury events with passion,
-                elegance and attention to every detail.
-            </p>
-
-            <p>
-                SALWORLDEVENTS was founded with one vision — to transform every celebration
-                into an unforgettable experience. Every event is designed with creativity,
-                precision and luxury from beginning to end.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section class="services-preview">
-
-    <div class="section-title">
-        <span>WHAT WE DO</span>
-        <h2>Luxury Event Experiences</h2>
-    </div>
-
-    <div class="services-grid">
-
-        <div class="service-card">
-            <div class="number">01</div>
-            <h3>Exclusive Weddings</h3>
-            <p>
-                Elegant wedding planning tailored to every couple with timeless luxury.
-            </p>
-        </div>
-
-        <div class="service-card">
-            <div class="number">02</div>
-            <h3>Luxury Events</h3>
-            <p>
-                Private celebrations, engagements, birthdays and premium occasions.
-            </p>
-        </div>
-
-        <div class="service-card">
-            <div class="number">03</div>
-            <h3>Premium Catering</h3>
-            <p>
-                Luxury dessert tables, SALCUPS and premium catering experiences.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>About Us | SALWORLDEVENTS</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/about.css">
-</head>
-
-<body>
-
-<header>
-
-    <div class="logo">
-        <a href="index.html">
-            <img src="images/logo.png" alt="SALWORLDEVENTS">
-        </a>
-    </div>
-
-    <nav>
-        <ul>
-            <li><a href="index.html">Hem</a></li>
-            <li><a href="about.html" class="active">Om Oss</a></li>
-            <li><a href="services.html">Tjänster</a></li>
-            <li><a href="salcups.html">SALCUPS</a></li>
-            <li><a href="gallery.html">Galleri</a></li>
-            <li><a href="reviews.html">Recensioner</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
-        </ul>
-    </nav>
-
-    <div class="right-side">
-
-        <div class="language">
-            <a href="#">SV</a>
-            <span>|</span>
-            <a href="#">EN</a>
-        </div>
-
-        <a href="contact.html" class="book-btn">Boka Nu</a>
-
-    </div>
-
-</header>
-
-<section class="about-hero">
-
-    <div class="about-container">
-
-        <div class="about-image">
-            <img src="images/general-manager.jpg" alt="Founders">
-        </div>
-
-        <div class="about-content">
-
-            <span>OUR STORY</span>
-
-            <h1>Behind <br> SALWORLDEVENTS</h1>
-
-            <p class="lead">
-                Creating timeless weddings and unforgettable luxury events with passion,
-                elegance and attention to every detail.
-            </p>
-
-            <p>
-                SALWORLDEVENTS was founded with one vision — to transform every celebration
-                into an unforgettable experience. Every event is designed with creativity,
-                precision and luxury from beginning to end.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section class="services-preview">
-
-    <div class="section-title">
-        <span>WHAT WE DO</span>
-        <h2>Luxury Event Experiences</h2>
-    </div>
-
-    <div class="services-grid">
-
-        <div class="service-card">
-            <div class="number">01</div>
-            <h3>Exclusive Weddings</h3>
-            <p>
-                Elegant wedding planning tailored to every couple with timeless luxury.
-            </p>
-        </div>
-
-        <div class="service-card">
-            <div class="number">02</div>
-            <h3>Luxury Events</h3>
-            <p>
-                Private celebrations, engagements, birthdays and premium occasions.
-            </p>
-        </div>
-
-        <div class="service-card">
-            <div class="number">03</div>
-            <h3>Premium Catering</h3>
-            <p>
-                Luxury dessert tables, SALCUPS and premium catering experiences.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-</body>
-</html>v
+</html>
