@@ -1,19 +1,167 @@
 <!doctype html>
-<html lang="en">
+<html lang="sv">
 <head>
-  <link rel="stylesheet" href="style.css" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sal World Events</title>
+  <meta name="description" content="SALWORLD EVENTS skapar exklusiva event: bröllop, företagsevent, fester och premiumupplevelser." />
+  <title>SALWORLD EVENTS | Exklusiv Eventplanering</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Sal World Events</h1>
-  <p>Website is live.</p>
-</body>
-<body>
-  <main class="wrapper">
-    <h1>Sal World Events</h1>
-    <p>Website is live.</p>
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a href="#" class="logo">SALWORLD EVENTS</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Öppna meny">☰</button>
+      <nav id="mainNav" class="main-nav" aria-label="Huvudnavigering">
+        <a href="#tjanster">Tjänster</a>
+        <a href="#paket">Paket</a>
+        <a href="#galleri">Galleri</a>
+        <a href="#omdomen">Omdömen</a>
+        <a href="#faq">FAQ</a>
+        <a href="#kontakt" class="btn-nav">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container reveal">
+      <p class="kicker">Exklusiv Eventdesign i Sverige</p>
+      <h1>Vi förvandlar visioner till oförglömliga upplevelser</h1>
+      <p class="lead">Bröllop, födelsedagar, företagsevent och premiumkoncept med en tidlös, elegant touch.</p>
+      <div class="hero-actions">
+        <a href="#kontakt" class="btn btn-gold">Boka konsultation</a>
+        <a href="#galleri" class="btn btn-outline">Utforska vårt galleri</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section id="tjanster" class="section container">
+      <div class="section-head reveal">
+        <p class="kicker">Våra tjänster</p>
+        <h2>Skräddarsydda event för livets viktigaste stunder</h2>
+      </div>
+      <div class="services-grid">
+        <article class="lux-card reveal"><h3>Bröllopsplanering</h3><p>Helhetslösningar från koncept till perfektion.</p></article>
+        <article class="lux-card reveal"><h3>Födelsedagsfester</h3><p>Unika teman och minnesvärda detaljer för alla åldrar.</p></article>
+        <article class="lux-card reveal"><h3>Företagsevent</h3><p>Professionella arrangemang som stärker ert varumärke.</p></article>
+        <article class="lux-card reveal"><h3>Förlovningar</h3><p>Romantiska och eleganta upplägg för ett magiskt ögonblick.</p></article>
+        <article class="lux-card reveal"><h3>Catering</h3><p>Smakupplevelser med premiumservice och exklusiv presentation.</p></article>
+        <article class="lux-card reveal"><h3>Ansiktsmålning</h3><p>Kreativa och professionella koncept för barn och vuxna.</p></article>
+        <article class="lux-card reveal"><h3>Glitter Bar</h3><p>Trendiga glitterupplevelser som lyfter festens energi.</p></article>
+        <article class="lux-card reveal"><h3>Ballongdekoration</h3><p>Stilrena installationer i lyxig och modern design.</p></article>
+        <article class="lux-card reveal"><h3>Dessertbord</h3><p>Visuellt spektakulära dessertkoncept med premiumkänsla.</p></article>
+      </div>
+    </section>
+
+    <section id="paket" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">Premium paket</p>
+          <h2>Tre nivåer av exklusiv service</h2>
+        </div>
+        <div class="package-grid">
+          <article class="package-card reveal">
+            <h3>Signature</h3>
+            <p class="price">Från 19 900 kr</p>
+            <ul><li>Koncept & planering</li><li>Tidslinje och koordinering</li><li>Leverantörsrådgivning</li></ul>
+          </article>
+          <article class="package-card featured reveal">
+            <h3>Prestige</h3>
+            <p class="price">Från 39 900 kr</p>
+            <ul><li>Allt i Signature</li><li>Designstyling på plats</li><li>Heldagskoordinering</li></ul>
+          </article>
+          <article class="package-card reveal">
+            <h3>Royal</h3>
+            <p class="price">Från 69 900 kr</p>
+            <ul><li>Fullservice premium</li><li>Exklusivt team</li><li>VIP-gästupplevelse</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="galleri" class="section container">
+      <div class="section-head reveal">
+        <p class="kicker">Galleri</p>
+        <h2>En inblick i våra senaste event</h2>
+      </div>
+      <div class="gallery-grid">
+        <button class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop" alt="Elegant bröllopsdekoration"></button>
+        <button class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=1200&auto=format&fit=crop" alt="Lyxig dukning för event"></button>
+        <button class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=1200&auto=format&fit=crop" alt="Företagsevent i modern miljö"></button>
+        <button class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?q=80&w=1200&auto=format&fit=crop" alt="Dessertbord med exklusiv styling"></button>
+      </div>
+    </section>
+
+    <section id="omdomen" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">Omdömen</p>
+          <h2>Vad våra kunder säger</h2>
+        </div>
+        <div class="testimonial reveal">
+          <p id="testimonialText">“SALWORLD EVENTS skapade ett bröllop över all förväntan. Elegant, professionellt och helt magiskt.”</p>
+          <span id="testimonialAuthor">— Lina & Markus</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section container">
+      <div class="section-head reveal">
+        <p class="kicker">FAQ</p>
+        <h2>Vanliga frågor</h2>
+      </div>
+      <div class="faq-list">
+        <details class="reveal"><summary>Hur långt i förväg bör vi boka?</summary><p>Vi rekommenderar 3–12 månader beroende på eventets storlek.</p></details>
+        <details class="reveal"><summary>Arbetar ni i hela Sverige?</summary><p>Ja, vi tar uppdrag nationellt och internationellt på förfrågan.</p></details>
+        <details class="reveal"><summary>Kan ni skräddarsy paket?</summary><p>Absolut. Alla våra lösningar kan anpassas efter era behov.</p></details>
+      </div>
+    </section>
+
+    <section id="instagram" class="section section-alt">
+      <div class="container reveal">
+        <p class="kicker">Instagram</p>
+        <h2>Följ vår resa</h2>
+        <p>@salworldevents — daglig inspiration, bakom kulisserna och nya projekt.</p>
+      </div>
+    </section>
+
+    <section id="kontakt" class="section container">
+      <div class="section-head reveal">
+        <p class="kicker">Kontakt</p>
+        <h2>Låt oss planera ert nästa event</h2>
+      </div>
+      <form class="contact-form reveal">
+        <label for="name">Namn</label>
+        <input id="name" name="name" type="text" required />
+        <label for="email">E-post</label>
+        <input id="email" name="email" type="email" required />
+        <label for="message">Berätta om ert event</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <button type="submit" class="btn btn-gold">Skicka förfrågan</button>
+      </form>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 SALWORLD EVENTS. Alla rättigheter förbehållna.</p>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/46700000000" target="_blank" rel="noopener" aria-label="Kontakta oss på WhatsApp">WhatsApp</a>
+
+  <dialog id="lightbox">
+    <button id="closeLightbox" aria-label="Stäng">✕</button>
+    <img id="lightboxImg" alt="Förstorad bild" />
+  </dialog>
+
+  <script src="script.js"></script>
 </body>
 </html>
