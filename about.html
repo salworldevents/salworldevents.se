@@ -1,493 +1,396 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>About Us | SALWORLDEVENTS</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/about.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Om Oss | SÀLWORLD EVENTS</title>
+  <meta name="description" content="Lär känna SÀLWORLD EVENTS – premium eventplanering i Sverige med exklusiv design och oförglömliga upplevelser." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
+  <header class="header scrolled" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">SW</a>
 
-<header>
+      <button class="hamburger" id="hamburger" aria-label="Öppna meny">
+        <span></span><span></span><span></span>
+      </button>
 
-    <div class="logo">
-        <a href="index.html">
-            <img src="images/logo.png" alt="SALWORLDEVENTS">
-        </a>
+      <nav class="nav" id="nav">
+        <a href="index.html">Hem</a>
+        <a href="about.html" aria-current="page">Om Oss</a>
+        <a href="index.html#services">Tjänster</a>
+        <a href="index.html#salcups">SÀLCUPS</a>
+        <a href="index.html#gallery">Galleri</a>
+        <a href="index.html#contact">Kontakt</a>
+      </nav>
+
+      <div class="header-right">
+        <span class="location">📍 Sverige</span>
+        <button class="lang-switch">EN | SV</button>
+        <a class="btn btn-gold" href="index.html#booking">Boka Nu</a>
+      </div>
     </div>
+  </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Hem</a></li>
-            <li><a href="about.html" class="active">Om Oss</a></li>
-            <li><a href="services.html">Tjänster</a></li>
-            <li><a href="salcups.html">SALCUPS</a></li>
-            <li><a href="gallery.html">Galleri</a></li>
-            <li><a href="reviews.html">Recensioner</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
-        </ul>
-    </nav>
-
-    <div class="right-side">
-
-        <div class="language">
-            <a href="#">SV</a>
-            <span>|</span>
-            <a href="#">EN</a>
+  <main style="padding-top:120px;">
+    <section class="section about" id="about-page">
+      <div class="container about-grid">
+        <div class="about-image reveal">
+          <img src="assets/about-luxury.jpg" alt="SÀLWORLD EVENTS team creating a luxury setup" loading="lazy" />
         </div>
-
-        <a href="contact.html" class="book-btn">Boka Nu</a>
-
-    </div>
-
-</header>
-
-<section class="about-hero">
-
-    <div class="about-container">
-
-        <div class="about-image">
-            <img src="images/general-manager.jpg" alt="Founders">
-        </div>
-
         <div class="about-content">
+          <h1 class="section-title reveal">Om Oss</h1>
+          <div class="lux-divider"></div>
+          <p class="reveal">
+            SÀLWORLD EVENTS är ett exklusivt eventbolag i Sverige som skapar upplevelser där elegans möter perfektion.
+            Vi designar allt från bröllop och privata firanden till företagsevent – alltid skräddarsytt efter kundens vision.
+          </p>
+          <p class="reveal" style="margin-top:14px;">
+            Vår filosofi är enkel: varje event ska kännas unikt, sofistikerat och oförglömligt.
+            Från första konsultation till sista detalj levererar vi premiumkvalitet i varje moment.
+          </p>
 
-            <span>OUR STORY</span>
-
-            <h1>Behind <br> SALWORLDEVENTS</h1>
-
-            <p class="lead">
-                Creating timeless weddings and unforgettable luxury events with passion,
-                elegance and attention to every detail.
-            </p>
-
-            <p>
-                SALWORLDEVENTS was founded with one vision — to transform every celebration
-                into an unforgettable experience. Every event is designed with creativity,
-                precision and luxury from beginning to end.
-            </p>
-
+          <div class="stats">
+            <div class="stat reveal"><h3>250+</h3><p>Events</p></div>
+            <div class="stat reveal"><h3>100%</h3><p>Satisfied Clients</p></div>
+            <div class="stat reveal"><h3>10+</h3><p>Years Experience</p></div>
+          </div>
         </div>
+      </div>
+    </section>
+  </main>
 
+  <footer class="footer">
+    <div class="container">
+      <div class="lux-divider"></div>
+      <p>© 2026 SÀLWORLD EVENTS. All rights reserved.</p>
     </div>
+  </footer>
 
-</section>
-
-<section class="services-preview">
-
-    <div class="section-title">
-        <span>WHAT WE DO</span>
-        <h2>Luxury Event Experiences</h2>
-    </div>
-
-    <div class="services-grid">
-
-        <div class="service-card">
-            <div class="number">01</div>
-            <h3>Exclusive Weddings</h3>
-            <p>
-                Elegant wedding planning tailored to every couple with timeless luxury.
-            </p>
-        </div>
-
-        <div class="service-card">
-            <div class="number">02</div>
-            <h3>Luxury Events</h3>
-            <p>
-                Private celebrations, engagements, birthdays and premium occasions.
-            </p>
-        </div>
-
-        <div class="service-card">
-            <div class="number">03</div>
-            <h3>Premium Catering</h3>
-            <p>
-                Luxury dessert tables, SALCUPS and premium catering experiences.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+    hamburger?.addEventListener('click',()=>nav.classList.toggle('show'));
+  </script>
 </body>
 </html><!DOCTYPE html>
-<html lang="en">
-
+<html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>About Us | SALWORLDEVENTS</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/about.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Om Oss | SÀLWORLD EVENTS</title>
+  <meta name="description" content="Lär känna SÀLWORLD EVENTS – premium eventplanering i Sverige med exklusiv design och oförglömliga upplevelser." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
+  <header class="header scrolled" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">SW</a>
 
-<header>
+      <button class="hamburger" id="hamburger" aria-label="Öppna meny">
+        <span></span><span></span><span></span>
+      </button>
 
-    <div class="logo">
-        <a href="index.html">
-            <img src="images/logo.png" alt="SALWORLDEVENTS">
-        </a>
+      <nav class="nav" id="nav">
+        <a href="index.html">Hem</a>
+        <a href="about.html" aria-current="page">Om Oss</a>
+        <a href="index.html#services">Tjänster</a>
+        <a href="index.html#salcups">SÀLCUPS</a>
+        <a href="index.html#gallery">Galleri</a>
+        <a href="index.html#contact">Kontakt</a>
+      </nav>
+
+      <div class="header-right">
+        <span class="location">📍 Sverige</span>
+        <button class="lang-switch">EN | SV</button>
+        <a class="btn btn-gold" href="index.html#booking">Boka Nu</a>
+      </div>
     </div>
+  </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Hem</a></li>
-            <li><a href="about.html" class="active">Om Oss</a></li>
-            <li><a href="services.html">Tjänster</a></li>
-            <li><a href="salcups.html">SALCUPS</a></li>
-            <li><a href="gallery.html">Galleri</a></li>
-            <li><a href="reviews.html">Recensioner</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
-        </ul>
-    </nav>
-
-    <div class="right-side">
-
-        <div class="language">
-            <a href="#">SV</a>
-            <span>|</span>
-            <a href="#">EN</a>
+  <main style="padding-top:120px;">
+    <section class="section about" id="about-page">
+      <div class="container about-grid">
+        <div class="about-image reveal">
+          <img src="assets/about-luxury.jpg" alt="SÀLWORLD EVENTS team creating a luxury setup" loading="lazy" />
         </div>
-
-        <a href="contact.html" class="book-btn">Boka Nu</a>
-
-    </div>
-
-</header>
-
-<section class="about-hero">
-
-    <div class="about-container">
-
-        <div class="about-image">
-            <img src="images/general-manager.jpg" alt="Founders">
-        </div>
-
         <div class="about-content">
+          <h1 class="section-title reveal">Om Oss</h1>
+          <div class="lux-divider"></div>
+          <p class="reveal">
+            SÀLWORLD EVENTS är ett exklusivt eventbolag i Sverige som skapar upplevelser där elegans möter perfektion.
+            Vi designar allt från bröllop och privata firanden till företagsevent – alltid skräddarsytt efter kundens vision.
+          </p>
+          <p class="reveal" style="margin-top:14px;">
+            Vår filosofi är enkel: varje event ska kännas unikt, sofistikerat och oförglömligt.
+            Från första konsultation till sista detalj levererar vi premiumkvalitet i varje moment.
+          </p>
 
-            <span>OUR STORY</span>
-
-            <h1>Behind <br> SALWORLDEVENTS</h1>
-
-            <p class="lead">
-                Creating timeless weddings and unforgettable luxury events with passion,
-                elegance and attention to every detail.
-            </p>
-
-            <p>
-                SALWORLDEVENTS was founded with one vision — to transform every celebration
-                into an unforgettable experience. Every event is designed with creativity,
-                precision and luxury from beginning to end.
-            </p>
-
+          <div class="stats">
+            <div class="stat reveal"><h3>250+</h3><p>Events</p></div>
+            <div class="stat reveal"><h3>100%</h3><p>Satisfied Clients</p></div>
+            <div class="stat reveal"><h3>10+</h3><p>Years Experience</p></div>
+          </div>
         </div>
+      </div>
+    </section>
+  </main>
 
+  <footer class="footer">
+    <div class="container">
+      <div class="lux-divider"></div>
+      <p>© 2026 SÀLWORLD EVENTS. All rights reserved.</p>
     </div>
+  </footer>
 
-</section>
-
-<section class="services-preview">
-
-    <div class="section-title">
-        <span>WHAT WE DO</span>
-        <h2>Luxury Event Experiences</h2>
-    </div>
-
-    <div class="services-grid">
-
-        <div class="service-card">
-            <div class="number">01</div>
-            <h3>Exclusive Weddings</h3>
-            <p>
-                Elegant wedding planning tailored to every couple with timeless luxury.
-            </p>
-        </div>
-
-        <div class="service-card">
-            <div class="number">02</div>
-            <h3>Luxury Events</h3>
-            <p>
-                Private celebrations, engagements, birthdays and premium occasions.
-            </p>
-        </div>
-
-        <div class="service-card">
-            <div class="number">03</div>
-            <h3>Premium Catering</h3>
-            <p>
-                Luxury dessert tables, SALCUPS and premium catering experiences.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+    hamburger?.addEventListener('click',()=>nav.classList.toggle('show'));
+  </script>
 </body>
 </html><!DOCTYPE html>
-<html lang="en">
-
+<html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>About Us | SALWORLDEVENTS</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/about.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Om Oss | SÀLWORLD EVENTS</title>
+  <meta name="description" content="Lär känna SÀLWORLD EVENTS – premium eventplanering i Sverige med exklusiv design och oförglömliga upplevelser." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
+  <header class="header scrolled" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">SW</a>
 
-<header>
+      <button class="hamburger" id="hamburger" aria-label="Öppna meny">
+        <span></span><span></span><span></span>
+      </button>
 
-    <div class="logo">
-        <a href="index.html">
-            <img src="images/logo.png" alt="SALWORLDEVENTS">
-        </a>
+      <nav class="nav" id="nav">
+        <a href="index.html">Hem</a>
+        <a href="about.html" aria-current="page">Om Oss</a>
+        <a href="index.html#services">Tjänster</a>
+        <a href="index.html#salcups">SÀLCUPS</a>
+        <a href="index.html#gallery">Galleri</a>
+        <a href="index.html#contact">Kontakt</a>
+      </nav>
+
+      <div class="header-right">
+        <span class="location">📍 Sverige</span>
+        <button class="lang-switch">EN | SV</button>
+        <a class="btn btn-gold" href="index.html#booking">Boka Nu</a>
+      </div>
     </div>
+  </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Hem</a></li>
-            <li><a href="about.html" class="active">Om Oss</a></li>
-            <li><a href="services.html">Tjänster</a></li>
-            <li><a href="salcups.html">SALCUPS</a></li>
-            <li><a href="gallery.html">Galleri</a></li>
-            <li><a href="reviews.html">Recensioner</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
-        </ul>
-    </nav>
-
-    <div class="right-side">
-
-        <div class="language">
-            <a href="#">SV</a>
-            <span>|</span>
-            <a href="#">EN</a>
+  <main style="padding-top:120px;">
+    <section class="section about" id="about-page">
+      <div class="container about-grid">
+        <div class="about-image reveal">
+          <img src="assets/about-luxury.jpg" alt="SÀLWORLD EVENTS team creating a luxury setup" loading="lazy" />
         </div>
-
-        <a href="contact.html" class="book-btn">Boka Nu</a>
-
-    </div>
-
-</header>
-
-<section class="about-hero">
-
-    <div class="about-container">
-
-        <div class="about-image">
-            <img src="images/general-manager.jpg" alt="Founders">
-        </div>
-
         <div class="about-content">
+          <h1 class="section-title reveal">Om Oss</h1>
+          <div class="lux-divider"></div>
+          <p class="reveal">
+            SÀLWORLD EVENTS är ett exklusivt eventbolag i Sverige som skapar upplevelser där elegans möter perfektion.
+            Vi designar allt från bröllop och privata firanden till företagsevent – alltid skräddarsytt efter kundens vision.
+          </p>
+          <p class="reveal" style="margin-top:14px;">
+            Vår filosofi är enkel: varje event ska kännas unikt, sofistikerat och oförglömligt.
+            Från första konsultation till sista detalj levererar vi premiumkvalitet i varje moment.
+          </p>
 
-            <span>OUR STORY</span>
-
-            <h1>Behind <br> SALWORLDEVENTS</h1>
-
-            <p class="lead">
-                Creating timeless weddings and unforgettable luxury events with passion,
-                elegance and attention to every detail.
-            </p>
-
-            <p>
-                SALWORLDEVENTS was founded with one vision — to transform every celebration
-                into an unforgettable experience. Every event is designed with creativity,
-                precision and luxury from beginning to end.
-            </p>
-
+          <div class="stats">
+            <div class="stat reveal"><h3>250+</h3><p>Events</p></div>
+            <div class="stat reveal"><h3>100%</h3><p>Satisfied Clients</p></div>
+            <div class="stat reveal"><h3>10+</h3><p>Years Experience</p></div>
+          </div>
         </div>
+      </div>
+    </section>
+  </main>
 
+  <footer class="footer">
+    <div class="container">
+      <div class="lux-divider"></div>
+      <p>© 2026 SÀLWORLD EVENTS. All rights reserved.</p>
     </div>
+  </footer>
 
-</section>
-
-<section class="services-preview">
-
-    <div class="section-title">
-        <span>WHAT WE DO</span>
-        <h2>Luxury Event Experiences</h2>
-    </div>
-
-    <div class="services-grid">
-
-        <div class="service-card">
-            <div class="number">01</div>
-            <h3>Exclusive Weddings</h3>
-            <p>
-                Elegant wedding planning tailored to every couple with timeless luxury.
-            </p>
-        </div>
-
-        <div class="service-card">
-            <div class="number">02</div>
-            <h3>Luxury Events</h3>
-            <p>
-                Private celebrations, engagements, birthdays and premium occasions.
-            </p>
-        </div>
-
-        <div class="service-card">
-            <div class="number">03</div>
-            <h3>Premium Catering</h3>
-            <p>
-                Luxury dessert tables, SALCUPS and premium catering experiences.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+    hamburger?.addEventListener('click',()=>nav.classList.toggle('show'));
+  </script>
 </body>
 </html><!DOCTYPE html>
-<html lang="en">
-
+<html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>About Us | SALWORLDEVENTS</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/about.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Om Oss | SÀLWORLD EVENTS</title>
+  <meta name="description" content="Lär känna SÀLWORLD EVENTS – premium eventplanering i Sverige med exklusiv design och oförglömliga upplevelser." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
+  <header class="header scrolled" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">SW</a>
 
-<header>
+      <button class="hamburger" id="hamburger" aria-label="Öppna meny">
+        <span></span><span></span><span></span>
+      </button>
 
-    <div class="logo">
-        <a href="index.html">
-            <img src="images/logo.png" alt="SALWORLDEVENTS">
-        </a>
+      <nav class="nav" id="nav">
+        <a href="index.html">Hem</a>
+        <a href="about.html" aria-current="page">Om Oss</a>
+        <a href="index.html#services">Tjänster</a>
+        <a href="index.html#salcups">SÀLCUPS</a>
+        <a href="index.html#gallery">Galleri</a>
+        <a href="index.html#contact">Kontakt</a>
+      </nav>
+
+      <div class="header-right">
+        <span class="location">📍 Sverige</span>
+        <button class="lang-switch">EN | SV</button>
+        <a class="btn btn-gold" href="index.html#booking">Boka Nu</a>
+      </div>
     </div>
+  </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Hem</a></li>
-            <li><a href="about.html" class="active">Om Oss</a></li>
-            <li><a href="services.html">Tjänster</a></li>
-            <li><a href="salcups.html">SALCUPS</a></li>
-            <li><a href="gallery.html">Galleri</a></li>
-            <li><a href="reviews.html">Recensioner</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
-        </ul>
-    </nav>
-
-    <div class="right-side">
-
-        <div class="language">
-            <a href="#">SV</a>
-            <span>|</span>
-            <a href="#">EN</a>
+  <main style="padding-top:120px;">
+    <section class="section about" id="about-page">
+      <div class="container about-grid">
+        <div class="about-image reveal">
+          <img src="assets/about-luxury.jpg" alt="SÀLWORLD EVENTS team creating a luxury setup" loading="lazy" />
         </div>
-
-        <a href="contact.html" class="book-btn">Boka Nu</a>
-
-    </div>
-
-</header>
-
-<section class="about-hero">
-
-    <div class="about-container">
-
-        <div class="about-image">
-            <img src="images/general-manager.jpg" alt="Founders">
-        </div>
-
         <div class="about-content">
+          <h1 class="section-title reveal">Om Oss</h1>
+          <div class="lux-divider"></div>
+          <p class="reveal">
+            SÀLWORLD EVENTS är ett exklusivt eventbolag i Sverige som skapar upplevelser där elegans möter perfektion.
+            Vi designar allt från bröllop och privata firanden till företagsevent – alltid skräddarsytt efter kundens vision.
+          </p>
+          <p class="reveal" style="margin-top:14px;">
+            Vår filosofi är enkel: varje event ska kännas unikt, sofistikerat och oförglömligt.
+            Från första konsultation till sista detalj levererar vi premiumkvalitet i varje moment.
+          </p>
 
-            <span>OUR STORY</span>
-
-            <h1>Behind <br> SALWORLDEVENTS</h1>
-
-            <p class="lead">
-                Creating timeless weddings and unforgettable luxury events with passion,
-                elegance and attention to every detail.
-            </p>
-
-            <p>
-                SALWORLDEVENTS was founded with one vision — to transform every celebration
-                into an unforgettable experience. Every event is designed with creativity,
-                precision and luxury from beginning to end.
-            </p>
-
+          <div class="stats">
+            <div class="stat reveal"><h3>250+</h3><p>Events</p></div>
+            <div class="stat reveal"><h3>100%</h3><p>Satisfied Clients</p></div>
+            <div class="stat reveal"><h3>10+</h3><p>Years Experience</p></div>
+          </div>
         </div>
+      </div>
+    </section>
+  </main>
 
+  <footer class="footer">
+    <div class="container">
+      <div class="lux-divider"></div>
+      <p>© 2026 SÀLWORLD EVENTS. All rights reserved.</p>
     </div>
+  </footer>
 
-</section>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+    hamburger?.addEventListener('click',()=>nav.classList.toggle('show'));
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Om Oss | SÀLWORLD EVENTS</title>
+  <meta name="description" content="Lär känna SÀLWORLD EVENTS – premium eventplanering i Sverige med exklusiv design och oförglömliga upplevelser." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header scrolled" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">SW</a>
 
-<section class="services-preview">
+      <button class="hamburger" id="hamburger" aria-label="Öppna meny">
+        <span></span><span></span><span></span>
+      </button>
 
-    <div class="section-title">
-        <span>WHAT WE DO</span>
-        <h2>Luxury Event Experiences</h2>
+      <nav class="nav" id="nav">
+        <a href="index.html">Hem</a>
+        <a href="about.html" aria-current="page">Om Oss</a>
+        <a href="index.html#services">Tjänster</a>
+        <a href="index.html#salcups">SÀLCUPS</a>
+        <a href="index.html#gallery">Galleri</a>
+        <a href="index.html#contact">Kontakt</a>
+      </nav>
+
+      <div class="header-right">
+        <span class="location">📍 Sverige</span>
+        <button class="lang-switch">EN | SV</button>
+        <a class="btn btn-gold" href="index.html#booking">Boka Nu</a>
+      </div>
     </div>
+  </header>
 
-    <div class="services-grid">
-
-        <div class="service-card">
-            <div class="number">01</div>
-            <h3>Exclusive Weddings</h3>
-            <p>
-                Elegant wedding planning tailored to every couple with timeless luxury.
-            </p>
+  <main style="padding-top:120px;">
+    <section class="section about" id="about-page">
+      <div class="container about-grid">
+        <div class="about-image reveal">
+          <img src="assets/about-luxury.jpg" alt="SÀLWORLD EVENTS team creating a luxury setup" loading="lazy" />
         </div>
+        <div class="about-content">
+          <h1 class="section-title reveal">Om Oss</h1>
+          <div class="lux-divider"></div>
+          <p class="reveal">
+            SÀLWORLD EVENTS är ett exklusivt eventbolag i Sverige som skapar upplevelser där elegans möter perfektion.
+            Vi designar allt från bröllop och privata firanden till företagsevent – alltid skräddarsytt efter kundens vision.
+          </p>
+          <p class="reveal" style="margin-top:14px;">
+            Vår filosofi är enkel: varje event ska kännas unikt, sofistikerat och oförglömligt.
+            Från första konsultation till sista detalj levererar vi premiumkvalitet i varje moment.
+          </p>
 
-        <div class="service-card">
-            <div class="number">02</div>
-            <h3>Luxury Events</h3>
-            <p>
-                Private celebrations, engagements, birthdays and premium occasions.
-            </p>
+          <div class="stats">
+            <div class="stat reveal"><h3>250+</h3><p>Events</p></div>
+            <div class="stat reveal"><h3>100%</h3><p>Satisfied Clients</p></div>
+            <div class="stat reveal"><h3>10+</h3><p>Years Experience</p></div>
+          </div>
         </div>
+      </div>
+    </section>
+  </main>
 
-        <div class="service-card">
-            <div class="number">03</div>
-            <h3>Premium Catering</h3>
-            <p>
-                Luxury dessert tables, SALCUPS and premium catering experiences.
-            </p>
-        </div>
-
+  <footer class="footer">
+    <div class="container">
+      <div class="lux-divider"></div>
+      <p>© 2026 SÀLWORLD EVENTS. All rights reserved.</p>
     </div>
+  </footer>
 
-</section>
-
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+    hamburger?.addEventListener('click',()=>nav.classList.toggle('show'));
+  </script>
 </body>
 </html>
