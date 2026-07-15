@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SÀL CUPS | SALWORLD EVENTS</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/salcups.css">
+</head>
+
+<body class="salcups-page" data-lang="sv">
+
+    <!-- =========================
+            HEADER
+    ========================== -->
+
+    <header class="header" id="header">
+        <div class="container">
+
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="SALWORLD EVENTS">
+            </a>
+
+            <nav class="navbar" id="nav">
+                <a href="index.html" data-sv="Hem" data-en="Home">Hem</a>
+                <a href="about.html" data-sv="Om Oss" data-en="About Us">Om Oss</a>
+                <a href="index.html#services" data-sv="Tjänster" data-en="Services">Tjänster</a>
+                <a href="salcups.html" class="active" data-sv="SÀL CUPS" data-en="SÀL CUPS">SÀL CUPS</a>
+                <a href="index.html#gallery" data-sv="Galleri" data-en="Gallery">Galleri</a>
+                <a href="index.html#contact" data-sv="Kontakt" data-en="Contact">Kontakt</a>
+            </nav>
+
+            <div class="header-right">
+                <button class="language-btn" id="language-toggle" type="button" aria-label="Switch language">EN</button>
+                <a href="index.html#contact" class="book-btn" data-sv="Boka Nu" data-en="Book Now">Boka Nu</a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- =========================
+            HERO
+    ========================== -->
+
+    <section class="sc-hero" id="sc-home">
+
+        <div class="sc-hero-content">
+
+            <img src="images/Salcuplogo.png.PNG" alt="SÀL CUPS" class="sc-hero-logo">
+
+            <span class="sc-hero-tagline" data-sv="PREMIUM MINI DESSERT CUPS" data-en="PREMIUM MINI DESSERT CUPS">PREMIUM MINI DESSERT CUPS</span>
+
+            <h1 class="sc-hero-title" data-sv="SÀL CUPS" data-en="SÀL CUPS">SÀL CUPS</h1>
+
+            <p class="sc-hero-desc" data-sv="Handgjorda lyxiga dessertbägare av premiumingredienser för oförglömliga firanden och speciella ögonblick." data-en="Handcrafted luxury dessert cups made with premium ingredients for unforgettable celebrations and special moments.">
+                Handgjorda lyxiga dessertbägare av premiumingredienser för oförglömliga firanden och speciella ögonblick.
+            </p>
+
+        </div>
+
+        <div class="sc-scroll-indicator" onclick="document.getElementById('sc-products').scrollIntoView({behavior:'smooth'})">
+            <span class="sc-scroll-label" data-sv="Scrolla ner" data-en="Scroll Down">Scrolla ner</span>
+            <div class="sc-scroll-arrow"></div>
+        </div>
+
+    </section>
+
+    <!-- =========================
+            PRICING STRIP
+    ========================== -->
+
+    <div class="sc-pricing-strip">
+        <div class="sc-pricing-inner">
+            <div class="sc-pricing-badge">
+                <span class="sc-pricing-badge-label" data-sv="BULK-PRIS" data-en="BULK PRICE">BULK-PRIS</span>
+                <span class="sc-pricing-badge-price">35 SEK</span>
+                <span class="sc-pricing-badge-min" data-sv="vid minst 100 koppar" data-en="minimum order 100 cups">vid minst 100 koppar</span>
+            </div>
+            <div class="sc-pricing-divider"></div>
+            <div class="sc-pricing-badge">
+                <span class="sc-pricing-badge-label" data-sv="STANDARDPRIS" data-en="STANDARD PRICE">STANDARDPRIS</span>
+                <span class="sc-pricing-badge-price">45 SEK</span>
+                <span class="sc-pricing-badge-min" data-sv="minimibeställning 20 koppar" data-en="minimum order 20 cups">minimibeställning 20 koppar</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================
+            PRODUCTS
+    ========================== -->
+
+    <section class="sc-products" id="sc-products">
+        <div class="container">
+
+            <div class="sc-products-header sc-reveal">
+                <span class="sc-eyebrow" data-sv="VÅRA SMAKER" data-en="OUR FLAVOURS">VÅRA SMAKER</span>
+                <h2 class="sc-products-title" data-sv="Välj din favorit" data-en="Choose Your Favourite">Välj din favorit</h2>
+                <div class="sc-gold-divider"></div>
+            </div>
+
+            <!-- Product grid — populated by JS -->
+            <div class="sc-grid" id="sc-product-grid"></div>
+
+        </div>
+    </section>
+
+    <!-- =========================
+            FLOATING CART ICON
+    ========================== -->
+
+    <button class="sc-cart-trigger" id="cartTrigger" aria-label="Öppna kundvagn">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="sc-cart-count" id="cartCount">0</span>
+    </button>
+
+    <!-- =========================
+            CART OVERLAY
+    ========================== -->
+
+    <div class="sc-cart-overlay" id="cartOverlay"></div>
+
+    <!-- =========================
+            CART PANEL
+    ========================== -->
+
+    <aside class="sc-cart-panel" id="cartPanel" role="dialog" aria-label="Kundvagn">
+
+        <div class="sc-cart-header">
+            <h3 data-sv="Kundvagn" data-en="Cart">Kundvagn</h3>
+            <button class="sc-cart-close" id="cartClose" aria-label="Stäng kundvagn">&#x2715;</button>
+        </div>
+
+        <div class="sc-cart-items" id="cartItems">
+            <!-- Populated by JS -->
+        </div>
+
+        <div class="sc-cart-footer" id="cartFooter">
+            <div class="sc-cart-total">
+                <span data-sv="TOTALT" data-en="TOTAL">TOTALT</span>
+                <span class="sc-cart-total-amount" id="cartTotal">0 SEK</span>
+            </div>
+            <button class="sc-continue-btn" id="continueBtn" data-sv="Fortsätt handla" data-en="Continue Shopping">Fortsätt handla</button>
+            <button class="sc-checkout-btn" data-sv="Gå till kassan" data-en="Checkout">Gå till kassan</button>
+        </div>
+
+    </aside>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script>
+    // ── Products data ──────────────────────────────────────────────────────────
+    const PRODUCTS = [
+        {
+            id: 1,
+            name: 'Frukt Cheesecake',
+            nameEn: 'Fruit Cheesecake',
+            desc: 'Krämig cheesecake toppad med färska frukter för en fräsch, färgstark och lyxig dessertupplevelse.',
+            descEn: 'Creamy cheesecake topped with fresh fruits for a refreshing, vibrant and luxurious dessert experience.',
+            img: 'images/eea3fc73-ebbe-4144-a8a3-4a1a1be6a899.jpeg',
+            price: 45
+        },
+        {
+            id: 2,
+            name: 'Mango Cheesecake',
+            nameEn: 'Mango Cheesecake',
+            desc: 'Len cheesecake med söt mango som ger en tropisk, elegant och somrig känsla i varje sked.',
+            descEn: 'Silky cheesecake with sweet mango giving a tropical, elegant and summery feeling with every spoonful.',
+            img: 'images/0c8de439-c25a-4e2f-b432-dafaaca00a4f.jpeg',
+            price: 45
+        },
+        {
+            id: 3,
+            name: 'Oreo Cheesecake',
+            nameEn: 'Oreo Cheesecake',
+            desc: 'En fyllig favorit med krämig cheesecake och Oreo för en rik, mjuk och oemotståndlig smak.',
+            descEn: 'A rich favourite with creamy cheesecake and Oreo for an indulgent, soft and irresistible taste.',
+            img: 'images/f4dc64f3-13cc-418f-afec-2cf535e41ff6.jpeg',
+            price: 45
+        },
+        {
+            id: 4,
+            name: 'Ferrero Rocher',
+            nameEn: 'Ferrero Rocher',
+            desc: 'Lyxig choklad och hasselnöt i perfekt harmoni för en sofistikerad dessert med exklusiv känsla.',
+            descEn: 'Luxurious chocolate and hazelnut in perfect harmony for a sophisticated dessert with an exclusive feel.',
+            img: 'images/d93d1c81-e482-4489-b4a2-222ff564fa9a.jpeg',
+            price: 45
+        },
+        {
+            id: 5,
+            name: 'Lotus Cheesecake',
+            nameEn: 'Lotus Cheesecake',
+            desc: 'Krämig cheesecake med karamelliserad Lotus-smak som känns varm, mjuk och elegant från första biten.',
+            descEn: 'Creamy cheesecake with caramelised Lotus flavour that feels warm, soft and elegant from the first bite.',
+            img: 'images/af43a02e-05a6-4fd9-8028-e8dd7846d4ba.jpeg',
+            price: 45
+        },
+        {
+            id: 6,
+            name: 'Jordgubb Cheesecake',
+            nameEn: 'Strawberry Cheesecake',
+            desc: 'En klassisk favorit med krämig fyllning och friska jordgubbar som ger en romantisk och lyxig touch.',
+            descEn: 'A classic favourite with creamy filling and fresh strawberries giving a romantic and luxurious touch.',
+            img: 'images/strawberry.png',
+            price: 45
+        }
+    ];
+
+    // ── Cart state ─────────────────────────────────────────────────────────────
+    let cart = []; // [{ product, qty }]
+
+    // ── Language helper ────────────────────────────────────────────────────────
+    function currentLang() {
+        return document.body.dataset.lang || 'sv';
+    }
+
+    // ── Render product grid ────────────────────────────────────────────────────
+    function renderGrid() {
+        const grid = document.getElementById('sc-product-grid');
+        if (!grid) return;
+        const lang = currentLang();
+        grid.innerHTML = PRODUCTS.map(p => `
+            <article class="sc-card sc-reveal" data-id="${p.id}">
+                <div class="sc-card-img-wrap">
+                    <img src="${p.img}" alt="${lang === 'en' ? p.nameEn : p.name}" class="sc-card-img" loading="lazy">
+                </div>
+                <div class="sc-card-body">
+                    <h3 class="sc-card-name">${lang === 'en' ? p.nameEn : p.name}</h3>
+                    <p class="sc-card-desc">${lang === 'en' ? p.descEn : p.desc}</p>
+                    <p class="sc-card-price">${p.price} SEK / kopp</p>
+                    <p class="sc-card-price-note">${lang === 'en' ? '35 SEK / cup on orders of 100+' : '35 SEK / kopp vid order på 100+'}</p>
+                    <div class="sc-qty-row">
+                        <button class="sc-qty-btn" data-action="dec" data-id="${p.id}" aria-label="Minska">&#x2212;</button>
+                        <span class="sc-qty-value" id="qty-${p.id}">1</span>
+                        <button class="sc-qty-btn" data-action="inc" data-id="${p.id}" aria-label="Öka">&#x2B;</button>
+                    </div>
+                    <button class="sc-add-btn" data-id="${p.id}">
+                        ${lang === 'en' ? 'Add to Cart' : 'Lägg i kundvagn'}
+                    </button>
+                </div>
+            </article>
+        `).join('');
+
+        // Bind quantity buttons
+        grid.querySelectorAll('.sc-qty-btn').forEach(btn => {
+            btn.addEventListener('click', e => {
+                const id = parseInt(btn.dataset.id);
+                const qtyEl = document.getElementById('qty-' + id);
+                let v = parseInt(qtyEl.textContent);
+                if (btn.dataset.action === 'inc') v++;
+                else if (btn.dataset.action === 'dec' && v > 1) v--;
+                qtyEl.textContent = v;
+            });
+        });
+
+        // Bind add-to-cart buttons
+        grid.querySelectorAll('.sc-add-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const id = parseInt(btn.dataset.id);
+                const product = PRODUCTS.find(p => p.id === id);
+                const qty = parseInt(document.getElementById('qty-' + id).textContent);
+                addToCart(product, qty);
+                // Reset qty
+                document.getElementById('qty-' + id).textContent = 1;
+                // Visual feedback
+                btn.textContent = currentLang() === 'en' ? '✓ Added' : '✓ Tillagd';
+                btn.style.background = 'linear-gradient(135deg,#5a1d2d,#3b1f28)';
+                btn.style.color = '#e8c97e';
+                setTimeout(() => {
+                    btn.textContent = currentLang() === 'en' ? 'Add to Cart' : 'Lägg i kundvagn';
+                    btn.style.background = '';
+                    btn.style.color = '';
+                }, 1400);
+            });
+        });
+
+        // Observe reveals
+        observeReveals();
+    }
+
+    // ── Cart logic ─────────────────────────────────────────────────────────────
+    function addToCart(product, qty) {
+        const existing = cart.find(i => i.product.id === product.id);
+        if (existing) existing.qty += qty;
+        else cart.push({ product, qty });
+        updateCartUI();
+    }
+
+    function removeFromCart(id) {
+        cart = cart.filter(i => i.product.id !== id);
+        updateCartUI();
+    }
+
+    function changeCartQty(id, delta) {
+        const item = cart.find(i => i.product.id === id);
+        if (!item) return;
+        item.qty += delta;
+        if (item.qty <= 0) removeFromCart(id);
+        else updateCartUI();
+    }
+
+    function cartTotal() {
+        return cart.reduce((sum, i) => sum + i.product.price * i.qty, 0);
+    }
+
+    function cartItemCount() {
+        return cart.reduce((sum, i) => sum + i.qty, 0);
+    }
+
+    function updateCartUI() {
+        const lang = currentLang();
+        const countEl = document.getElementById('cartCount');
+        const count = cartItemCount();
+        countEl.textContent = count;
+        countEl.classList.toggle('visible', count > 0);
+
+        const itemsEl = document.getElementById('cartItems');
+        const totalEl = document.getElementById('cartTotal');
+
+        if (cart.length === 0) {
+            itemsEl.innerHTML = `
+                <div class="sc-cart-empty">
+                    <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                    <p>${lang === 'en' ? 'Your cart is empty' : 'Din kundvagn är tom'}</p>
+                </div>`;
+        } else {
+            itemsEl.innerHTML = cart.map(i => `
+                <div class="sc-cart-item" data-id="${i.product.id}">
+                    <img src="${i.product.img}" alt="${lang === 'en' ? i.product.nameEn : i.product.name}" class="sc-cart-item-img">
+                    <div class="sc-cart-item-info">
+                        <span class="sc-cart-item-name">${lang === 'en' ? i.product.nameEn : i.product.name}</span>
+                        <span class="sc-cart-item-price">${i.product.price * i.qty} SEK</span>
+                        <div class="sc-cart-item-qty-row">
+                            <button class="sc-cart-item-qty-btn" data-id="${i.product.id}" data-delta="-1">&#x2212;</button>
+                            <span class="sc-cart-item-qty-val">${i.qty}</span>
+                            <button class="sc-cart-item-qty-btn" data-id="${i.product.id}" data-delta="1">&#x2B;</button>
+                        </div>
+                    </div>
+                    <button class="sc-cart-item-remove" data-id="${i.product.id}" aria-label="${lang === 'en' ? 'Remove' : 'Ta bort'}">&#x2715;</button>
+                </div>
+            `).join('');
+
+            // Bind cart item buttons
+            itemsEl.querySelectorAll('.sc-cart-item-qty-btn').forEach(btn => {
+                btn.addEventListener('click', () => changeCartQty(parseInt(btn.dataset.id), parseInt(btn.dataset.delta)));
+            });
+            itemsEl.querySelectorAll('.sc-cart-item-remove').forEach(btn => {
+                btn.addEventListener('click', () => removeFromCart(parseInt(btn.dataset.id)));
+            });
+        }
+
+        totalEl.textContent = cartTotal() + ' SEK';
+    }
+
+    // ── Cart panel open/close ──────────────────────────────────────────────────
+    function openCart() {
+        document.getElementById('cartPanel').classList.add('open');
+        document.getElementById('cartOverlay').classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeCart() {
+        document.getElementById('cartPanel').classList.remove('open');
+        document.getElementById('cartOverlay').classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    document.getElementById('cartTrigger').addEventListener('click', openCart);
+    document.getElementById('cartClose').addEventListener('click', closeCart);
+    document.getElementById('cartOverlay').addEventListener('click', closeCart);
+    document.getElementById('continueBtn').addEventListener('click', closeCart);
+
+    // ── Scroll reveal ──────────────────────────────────────────────────────────
+    function observeReveals() {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('.sc-reveal:not(.visible)').forEach(el => observer.observe(el));
+    }
+
+    // ── Language re-render ─────────────────────────────────────────────────────
+    // Extend the base language toggle to also re-render the dynamic grid
+    const _baseLangToggle = document.getElementById('language-toggle');
+    if (_baseLangToggle) {
+        _baseLangToggle.addEventListener('click', () => {
+            // Wait a tick for script.js to update body.dataset.lang
+            setTimeout(() => {
+                renderGrid();
+                updateCartUI();
+            }, 50);
+        });
+    }
+
+    // ── Init ───────────────────────────────────────────────────────────────────
+    renderGrid();
+    updateCartUI();
+    observeReveals();
+    </script>
+
+</body>
+</html>
