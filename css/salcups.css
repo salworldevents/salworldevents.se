@@ -765,8 +765,8 @@ body.salcups-page {
     }
 
     .sc-cart-trigger {
-        top: auto;
-        bottom: 28px;
+        top: 26px;
         right: 22px;
+        bottom: auto;
     }
 }
