@@ -1,1 +1,0 @@
-# salworldevents.se
