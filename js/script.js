@@ -1,19 +1,47 @@
 const header = document.getElementById('header');
 let lastY = window.scrollY;
 
-window.addEventListener('scroll', () => {
-  const y = window.scrollY;
-  header.classList.toggle('scrolled', y > 20);
-  if (y > lastY && y > 120) header.style.transform = 'translateY(-110%)';
-  else header.style.transform = 'translateY(0)';
-  lastY = y;
-});
+if (header) {
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    header.classList.toggle('scrolled', y > 20);
+    if (y > lastY && y > 120) header.style.transform = 'translateY(-110%)';
+    else header.style.transform = 'translateY(0)';
+    lastY = y;
+  });
+}
 
 // Mobile menu
 const hamburger = document.getElementById('hamburger');
 const nav = document.getElementById('nav');
 hamburger?.addEventListener('click', () => nav.classList.toggle('show'));
 nav?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('show')));
+
+// Language switcher
+const languageToggle = document.getElementById('language-toggle');
+const translatableElements = document.querySelectorAll('[data-sv][data-en]');
+const defaultLang = 'sv';
+
+function applyLanguage(lang) {
+  document.documentElement.lang = lang;
+  document.body.dataset.lang = lang;
+
+  translatableElements.forEach((element) => {
+    element.innerHTML = element.dataset[lang];
+  });
+
+  if (languageToggle) {
+    languageToggle.textContent = lang === 'sv' ? 'EN' : 'SV';
+    languageToggle.setAttribute('aria-label', lang === 'sv' ? 'Switch to English' : 'Byt till svenska');
+  }
+}
+
+applyLanguage(defaultLang);
+
+languageToggle?.addEventListener('click', () => {
+  const nextLang = document.body.dataset.lang === 'sv' ? 'en' : 'sv';
+  applyLanguage(nextLang);
+});
 
 // Safe GSAP (only if loaded)
 if (window.gsap && window.ScrollTrigger) {
