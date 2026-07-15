@@ -1,29 +1,166 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SALWORLD EVENTS</title>
-  <meta name="description" content="Exklusiv eventplanering i Sverige." />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SÀLWORLD EVENTS | Premium Luxury Event Planning</title>
+  <meta name="description" content="SÀLWORLD EVENTS skapar exklusiva event i Sverige med elegans, kvalitet och oförglömliga upplevelser." />
+  <meta name="theme-color" content="#5B1F2A" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>SALWORLD EVENTS</h1>
-    <p>Exklusiv eventplanering med lyx och elegans.</p>
+  <div class="noise"></div>
+
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <button class="hamburger" id="hamburger" aria-label="Öppna meny">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <a href="#hero">Hem</a>
+        <a href="#about">Om Oss</a>
+        <a href="#services">Tjänster</a>
+        <a href="#salcups">SÀLCUPS</a>
+        <a href="#gallery">Galleri</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+
+      <div class="header-right">
+        <span class="location">📍 Sverige</span>
+        <button class="lang-switch" aria-label="Byt språk">EN | SV</button>
+        <a class="btn btn-gold" href="#booking">Boka Nu</a>
+      </div>
+    </div>
   </header>
 
   <main>
-    <section>
-      <h2>Välkommen</h2>
-      <p>Vi skapar minnesvärda bröllop, födelsedagar och företagsevent.</p>
+    <section class="hero" id="hero">
+      <video class="hero-video" autoplay muted loop playsinline preload="metadata">
+        <source src="assets/luxury-wedding.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="particles" id="particles"></div>
+
+      <div class="container hero-content">
+        <h1 class="hero-title split-chars">SÀLWORLD EVENTS</h1>
+        <p class="hero-subtitle reveal-up">Exklusiva event med elegans, kvalitet och oförglömliga upplevelser.</p>
+        <div class="hero-cta reveal-up delay-1">
+          <a href="#about" class="btn btn-glass">Upptäck Mer</a>
+          <a href="#booking" class="btn btn-gold">Book Event</a>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="container about-grid">
+        <div class="about-image reveal">
+          <img loading="lazy" src="assets/about-luxury.jpg" alt="Elegant event setup" />
+        </div>
+        <div class="about-content">
+          <h2 class="section-title reveal">Om Oss</h2>
+          <div class="lux-divider"></div>
+          <p class="reveal">Vi skapar skräddarsydda premiumevent i Sverige – från intima firanden till storslagna galakvällar. Varje detalj är noggrant utvald för att leverera en upplevelse av absolut elegans.</p>
+
+          <div class="stats">
+            <div class="stat reveal"><h3 data-count="250">0</h3><p>Events</p></div>
+            <div class="stat reveal"><h3 data-count="100">0</h3><p>Satisfied Clients</p></div>
+            <div class="stat reveal"><h3 data-count="10">0</h3><p>Years Experience</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services section" id="services">
+      <div class="container">
+        <h2 class="section-title reveal">Tjänster</h2>
+        <div class="lux-divider"></div>
+        <div class="service-grid" id="serviceGrid"></div>
+      </div>
+    </section>
+
+    <section class="salcups section" id="salcups">
+      <div class="container">
+        <h2 class="section-title reveal">SÀLCUPS</h2>
+        <div class="lux-divider"></div>
+        <div class="cups-grid">
+          <article class="cup-card reveal"><img loading="lazy" src="assets/lotus.jpg" alt="Lotus Cake Cup"><h3>Lotus Cake Cup</h3><p>89 SEK</p><button class="btn btn-glass">Order</button></article>
+          <article class="cup-card reveal"><img loading="lazy" src="assets/oreo.jpg" alt="Oreo Cake Cup"><h3>Oreo Cake Cup</h3><p>89 SEK</p><button class="btn btn-glass">Order</button></article>
+          <article class="cup-card reveal"><img loading="lazy" src="assets/cheesecake.jpg" alt="Cheesecake Freeze Cup"><h3>Cheesecake Freeze Cup</h3><p>89 SEK</p><button class="btn btn-glass">Order</button></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery section" id="gallery">
+      <div class="container">
+        <h2 class="section-title reveal">Galleri</h2>
+        <div class="filter-buttons">
+          <button data-filter="all" class="active">All</button>
+          <button data-filter="wedding">Wedding</button>
+          <button data-filter="birthday">Birthday</button>
+          <button data-filter="henna">Henna</button>
+          <button data-filter="corporate">Corporate</button>
+          <button data-filter="dessert">Dessert</button>
+          <button data-filter="decorations">Decorations</button>
+          <button data-filter="videos">Videos</button>
+        </div>
+        <div class="masonry" id="masonry"></div>
+      </div>
+    </section>
+
+    <section class="booking section" id="booking">
+      <div class="container">
+        <h2 class="section-title reveal">Boka Event</h2>
+        <div class="lux-divider"></div>
+        <form class="booking-form reveal" id="bookingForm">
+          <input type="text" placeholder="Name" required />
+          <input type="email" placeholder="Email" required />
+          <input type="tel" placeholder="Phone" required />
+          <input type="text" placeholder="Event Type" required />
+          <input type="date" required />
+          <input type="number" placeholder="Guests" min="1" required />
+          <textarea placeholder="Message" rows="4"></textarea>
+          <button type="submit" class="btn btn-gold">Skicka Förfrågan</button>
+          <p class="form-success" id="formSuccess">Tack! Din förfrågan är skickad.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <h2 class="section-title">Kontakt</h2>
+          <p>📍 Sweden</p>
+          <p>📞 +46707117795</p>
+          <p>✉️ salworldevents@info.se </p>
+          <div class="socials">
+            <a href="#">Instagram</a><a href="#">TikTok</a><a href="#">Facebook</a><a href="#">WhatsApp</a>
+          </div>
+        </div>
+        <div class="map-wrap">
+          <iframe title="Google Map Sweden" src="https://www.google.com/maps?q=Sweden&output=embed" loading="lazy"></iframe>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>© <span id="year"></span> SALWORLD EVENTS</p>
+  <footer class="footer">
+    <div class="container">
+      <div class="lux-divider"></div>
+      <p>© 2026 SÀLWORLD EVENTS. All rights reserved.</p>
+    </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.16/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
