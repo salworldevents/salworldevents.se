@@ -1,64 +1,140 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SÀLWORLD EVENTS | Premium Luxury Event Planning</title>
-  <meta name="description" content="SÀLWORLD EVENTS skapar exklusiva event i Sverige med elegans, kvalitet och oförglömliga upplevelser." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SÀLWORLD EVENTS</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-  <header class="header" id="header">
-    <div class="container header-inner">
-      <a href="index.html" class="brand-logo">SW</a>
 
-      <button class="hamburger" id="hamburger" aria-label="Öppna meny">
-        <span></span><span></span><span></span>
-      </button>
+    <!-- =========================
+            HEADER
+    ========================== -->
 
-      <nav class="nav" id="nav">
-        <a href="#hero">Hem</a>
-        <a href="about.html">Om Oss</a>
-        <a href="#services">Tjänster</a>
-        <a href="#salcups">SÀLCUPS</a>
-        <a href="#gallery">Galleri</a>
-        <a href="#contact">Kontakt</a>
-      </nav>
+    <header class="header">
 
-      <div class="header-right">
-        <span class="location">📍 Sverige</span>
-        <button class="lang-switch">EN | SV</button>
-        <a class="btn btn-gold" href="#booking">Boka Nu</a>
-      </div>
-    </div>
-  </header>
+        <div class="container">
 
-  <main>
-    <section class="hero" id="hero">
-      <video class="hero-video" autoplay muted loop playsinline poster="assets/hero-poster.jpg">
-        <source src="assets/luxury-wedding.mp4" type="video/mp4" />
-      </video>
-      <div class="hero-overlay"></div>
-      <div class="container hero-content">
-        <h1 class="hero-title">SÀLWORLD EVENTS</h1>
-        <p class="hero-subtitle">Exklusiva event med elegans, kvalitet och oförglömliga upplevelser.</p>
-        <div class="hero-cta">
-          <a href="about.html" class="btn btn-glass">Upptäck Mer</a>
-          <a href="#booking" class="btn btn-gold">Book Event</a>
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="SÀLWORLD EVENTS">
+            </a>
+
+            <nav class="navbar">
+
+                <a href="#home">Hem</a>
+                <a href="#about">Om Oss</a>
+                <a href="#services">Tjänster</a>
+                <a href="#salcups">SALCUPS</a>
+                <a href="#gallery">Galleri</a>
+                <a href="#contact">Kontakt</a>
+
+            </nav>
+
+            <div class="header-right">
+
+                <button class="language-btn">
+                    EN
+                </button>
+
+                <a href="#contact" class="book-btn">
+                    Boka Nu
+                </a>
+
+            </div>
+
         </div>
-      </div>
+
+    </header>
+
+    <!-- =========================
+            HERO
+    ========================== -->
+
+    <section class="hero" id="home">
+
+        <video autoplay muted loop playsinline class="hero-video">
+
+            <source src="images/3c40675a-acc1-43c6-ac7c-c1c0d56162ec.mp4" type="video/mp4">
+        </video>
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+           <img src="https://salworldevents.github.io/images/logo.png" alt="SW Logo" class="hero-logo">
+
+            <h1>SÀLWORLD EVENTS</h1>
+
+            <p>
+                Exklusiva event med elegans, kvalitet och oförglömliga upplevelser.
+            </p>
+
+            <a href="#contact" class="hero-btn">
+                Boka Nu
+            </a>
+
+        </div>
+
     </section>
 
-    <section class="section" id="services"><div class="container"><h2 class="section-title">Tjänster</h2></div></section>
-    <section class="section" id="salcups"><div class="container"><h2 class="section-title">SÀLCUPS</h2></div></section>
-    <section class="section" id="gallery"><div class="container"><h2 class="section-title">Galleri</h2></div></section>
-    <section class="section" id="booking"><div class="container"><h2 class="section-title">Boka Event</h2></div></section>
-    <section class="section" id="contact"><div class="container"><h2 class="section-title">Kontakt</h2></div></section>
-  </main>
+    <!-- =========================
+            ABOUT
+    ========================== -->
 
-  <script src="script.js"></script>
+    <section id="about">
+
+    </section>
+
+    <!-- =========================
+            SERVICES
+    ========================== -->
+
+    <section id="services">
+
+    </section>
+
+    <!-- =========================
+            SALCUPS
+    ========================== -->
+
+    <section id="salcups">
+
+    </section>
+
+    <!-- =========================
+            GALLERY
+    ========================== -->
+
+    <section id="gallery">
+
+    </section>
+
+    <!-- =========================
+            CONTACT
+    ========================== -->
+
+    <section id="contact">
+
+    </section>
+
+    <!-- JavaScript -->
+
+    <script src="js/script.js"></script>
+
 </body>
-</html>
+
+</html>v
