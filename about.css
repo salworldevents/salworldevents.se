@@ -1,0 +1,200 @@
+/* =====================================
+   ABOUT
+===================================== */
+
+.about{
+
+    background:#F6EFE7;
+
+    padding:140px 0;
+
+}
+
+.about-container{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+.about-image{
+
+    position:relative;
+
+}
+
+.about-image img{
+
+    width:100%;
+
+    border-radius:25px;
+
+    display:block;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.15);
+
+}
+
+.about-image::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-20px;
+
+    left:-20px;
+
+    width:100%;
+
+    height:100%;
+
+    border:2px solid #C8A35C;
+
+    border-radius:25px;
+
+    z-index:-1;
+
+}
+
+.about-content{
+
+    color:#4B1F2E;
+
+}
+
+.section-subtitle{
+
+    display:inline-block;
+
+    color:#C8A35C;
+
+    letter-spacing:5px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+.about-content h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:54px;
+
+    line-height:1.2;
+
+    margin-bottom:30px;
+
+    color:#4B1F2E;
+
+}
+
+.about-content p{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    margin-bottom:22px;
+
+    color:#6D5A54;
+
+}
+
+.about-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+    margin-top:45px;
+
+}
+
+.stat-box{
+
+    background:#FFFFFF;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.stat-box:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.stat-box h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:42px;
+
+    color:#C8A35C;
+
+    margin-bottom:10px;
+
+}
+
+.stat-box span{
+
+    color:#6D5A54;
+
+    font-size:15px;
+
+}
+/* ===== Scroll Animation ===== */
+
+.about-image,
+.about-content{
+
+    opacity:0;
+    transition:1s ease;
+
+}
+
+.about-image{
+
+    transform:translateX(-80px);
+
+}
+
+.about-content{
+
+    transform:translateX(80px);
+
+}
+
+.about.show .about-image{
+
+    opacity:1;
+    transform:translateX(0);
+
+}
+
+.about.show .about-content{
+
+    opacity:1;
+    transform:translateX(0);
+
+}
