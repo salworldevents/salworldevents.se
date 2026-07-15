@@ -1,0 +1,17 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: Arial, sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+  line-height: 1.6;
+}
+.wrapper {
+  max-width: 900px;
+  margin: 60px auto;
+  background: white;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+h1 { font-size: clamp(2rem, 6vw, 3.5rem); margin-bottom: 10px; }
+p { font-size: 1.1rem; }
