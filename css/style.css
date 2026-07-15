@@ -1,5 +1,5 @@
 /* =====================================
-   RESET
+‏   RESET
 ===================================== */
 
 *{
@@ -55,13 +55,11 @@ img{
 
 .header.scrolled{
 
-    background:rgba(75,31,46,.92);
+    background:rgba(73,28,42,.92);
 
     backdrop-filter:blur(18px);
 
-    border-bottom:1px solid rgba(212,175,99,.25);
-
-    box-shadow:0 15px 40px rgba(0,0,0,.18);
+    box-shadow:0 10px 35px rgba(0,0,0,.18);
 
 }
 
@@ -209,7 +207,7 @@ img{
 .hero-overlay{
     position:absolute;
     inset:0;
-    background:rgba(75,31,46,.40);
+    background:rgba(75,31,46,.30);
     z-index:2;
 }
 
@@ -219,15 +217,15 @@ img{
 }
 
 .hero-logo{
-    width:230px;
-    margin:0 auto 25px;
+    width:180px;
+    margin:0 auto 35px;
     display:block;
 }
 .hero h1{
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:85px;
+    font-size:95px;
 
     font-weight:600;
 
@@ -357,25 +355,4 @@ img{
 
     }
 
-}
-/* ===== Hero Animation ===== */
-
-.hero{
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-video{
-    transition: transform .8s ease;
-    will-change: transform;
-}
-
-.hero-content{
-    transition:
-        opacity .5s ease,
-        transform .5s ease;
-}
-
-.hero-overlay{
-    transition: background .6s ease;
 }
