@@ -186,7 +186,7 @@ body {
    3. OUR MISSION
 ============================================= */
 .ab-mission {
-    background: #2E1620;
+    background: #F3E7D3;
     padding: 100px 8%;
 }
 
@@ -194,11 +194,11 @@ body {
     max-width: 860px;
     margin: 0 auto;
     text-align: center;
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.07), rgba(212, 175, 55, 0.02));
-    border: 1px solid rgba(212, 175, 55, 0.25);
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(212, 175, 55, 0.35);
     border-radius: 28px;
     padding: 70px 60px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
 }
 
 .ab-mission-card .ab-gold-line {
@@ -209,7 +209,7 @@ body {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(38px, 4.5vw, 58px);
     font-weight: 600;
-    color: #D4AF37;
+    color: #8A5A2B;
 }
 
 .ab-mission-card p {
@@ -217,7 +217,7 @@ body {
     font-size: 18px;
     font-weight: 300;
     line-height: 2;
-    color: #D6C4AC;
+    color: #5C4632;
     max-width: 680px;
     margin: 0 auto;
 }
