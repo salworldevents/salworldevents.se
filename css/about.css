@@ -421,10 +421,10 @@ body {
 .ab-profile-photo {
     width: 100%;
     max-width: 360px;
-    aspect-ratio: 1 / 1.08;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 20px;
-    border: 1.5px solid rgba(212, 175, 55, 0.9);
+    border: 2px solid rgba(212, 175, 55, 0.85);
     box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
     transition: transform 0.45s ease, box-shadow 0.45s ease;
 }
