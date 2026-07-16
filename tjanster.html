@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SÀL CUPS | Premium Dessert Shop | SALWORLD EVENTS</title>
+    <title>Tjänster | SALWORLD EVENTS</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/salcups.css">
+    <link rel="stylesheet" href="css/tjanster.css">
 </head>
-<body class="salcups-page" data-lang="sv">
-    <header class="header salcups-header" id="header">
+<body class="services-page" data-lang="sv">
+    <header class="header" id="header">
         <div class="container">
             <a href="index.html" class="logo">
                 <img src="images/logo.png" alt="SALWORLD EVENTS">
@@ -20,252 +20,123 @@
             <nav class="navbar" id="nav">
                 <a href="index.html">Hem</a>
                 <a href="about.html">Om Oss</a>
-                <a href="tjanster.html">Tjänster</a>
-                <a href="salcups.html" class="active">SÀL CUPS</a>
+                <a href="tjanster.html" class="active">Tjänster</a>
+                <a href="salcups.html">SÀL CUPS</a>
                 <a href="index.html#gallery">Galleri</a>
                 <a href="index.html#contact">Kontakt</a>
             </nav>
             <div class="header-right">
-                <button class="language-btn" id="language-toggle">EN</button>
-                <button class="cart-header-btn" id="cartTriggerHeader">
-                    <i class="fas fa-shopping-bag"></i>
-                    <span class="cart-badge" id="cartBadgeHeader">0</span>
-                </button>
+                <button class="language-btn" id="language-toggle" type="button" aria-label="Switch language">EN</button>
                 <a href="index.html#contact" class="book-btn">Boka Nu</a>
             </div>
         </div>
     </header>
 
-    <section class="sc-hero-premium">
-        <div class="sc-hero-bg" style="background-image: url('images/Salcuplogo.png.PNG')"></div>
-        <div class="sc-hero-overlay"></div>
-        <div class="sc-hero-content-premium">
-            <span class="sc-hero-eyebrow">PREMIUM DESSERT SHOP</span>
-            <h1 class="sc-hero-title-luxury">SÀL CUPS</h1>
-            <p class="sc-hero-desc-luxury">Handgjorda lyxdessertbägare av premiumingredienser för oförglömliga firanden.</p>
-            <a href="#sc-products" class="sc-hero-btn-luxury">Beställ Nu</a>
+    <!-- HERO SECTION -->
+    <section class="services-hero">
+        <img src="images/wedding.jpg" alt="Tjänster">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-eyebrow">EXKLUSIVA TJÄNSTER</span>
+            <h1>Tjänster</h1>
+            <p>Vi skapar oförglömliga upplevelser för varje tillfälle</p>
         </div>
     </section>
 
-    <div class="sc-pricing-strip-luxury">
-        <div class="sc-pricing-inner">
-            <div class="sc-pricing-badge">
-                <span class="sc-pricing-badge-label">STANDARDPRIS</span>
-                <span class="sc-pricing-badge-price">40 SEK</span>
-                <span class="sc-pricing-badge-min">mindre än 100 koppar</span>
-            </div>
-            <div class="sc-pricing-divider"></div>
-            <div class="sc-pricing-badge">
-                <span class="sc-pricing-badge-label">BULK-PRIS</span>
-                <span class="sc-pricing-badge-price">35 SEK</span>
-                <span class="sc-pricing-badge-min">från 100 koppar</span>
-            </div>
-        </div>
-    </div>
-
-    <section class="sc-products-luxury" id="sc-products">
+    <!-- SERVICES SECTION -->
+    <section class="services-section">
         <div class="container">
-            <div class="sc-products-header">
-                <span class="sc-eyebrow">VÅRA SMAKER</span>
-                <h2 class="sc-products-title">Välj din favorit</h2>
-                <div class="sc-gold-divider"></div>
+            <div class="services-grid">
+
+                <!-- SERVICE 1: WEDDINGS -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/wedding.jpg" alt="Bröllop & Förlovning">
+                    </div>
+                    <div class="service-content">
+                        <h3>Bröllop & Förlovning</h3>
+                        <p>Skapa din drömdag med vår expertplanering. Vi hanterar allt från dekoration till catering och ser till att varje detalj är perfekt.</p>
+                        <a href="index.html#contact" class="service-link">Läs Mer →</a>
+                    </div>
+                </div>
+
+                <!-- SERVICE 2: ANNIVERSARY -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/anniversary.jpg" alt="Årsdagar & Jubileum">
+                    </div>
+                    <div class="service-content">
+                        <h3>Årsdagar & Jubileum</h3>
+                        <p>Fira viktiga årtal med elegans och kärlek. Från silverbrölloop till guldbrölloop, vi skapar minnesvärd kväll.</p>
+                        <a href="index.html#contact" class="service-link">Läs Mer →</a>
+                    </div>
+                </div>
+
+                <!-- SERVICE 3: PROPOSAL -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/proposal.jpg" alt="Frierande Ögonblick">
+                    </div>
+                    <div class="service-content">
+                        <h3>Frierande Ögonblick</h3>
+                        <p>Gör din frieri till en magisk och oförglömlig upplevelse. Vi arrangerar varje detalj för att skapa det perfekta ögonblicket.</p>
+                        <a href="index.html#contact" class="service-link">Läs Mer →</a>
+                    </div>
+                </div>
+
+                <!-- SERVICE 4: BIRTHDAY -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/birthday.jpg" alt="Födselsdagsfestar">
+                    </div>
+                    <div class="service-content">
+                        <h3>Födselsdagsfestar</h3>
+                        <p>Fira milstolpar med stil och glädje. Från barnkalas till vuxnafester, vi skapar magiska stunder för alla åldrar.</p>
+                        <a href="index.html#contact" class="service-link">Läs Mer →</a>
+                    </div>
+                </div>
+
+                <!-- SERVICE 5: HENNA CELEBRATION -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/henna.jpg" alt="Hennafestar">
+                    </div>
+                    <div class="service-content">
+                        <h3>Hennafestar</h3>
+                        <p>En vacker och traditionell fest före bröllopet. Vi skapar en atmosfär av elegans, musik, dans och glädje.</p>
+                        <a href="index.html#contact" class="service-link">Läs Mer →</a>
+                    </div>
+                </div>
+
+                <!-- SERVICE 6: DESSERT TABLE & CATERING -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/dessert.jpg" alt="Dessertbord & Catering">
+                    </div>
+                    <div class="service-content">
+                        <h3>Dessertbord & Catering</h3>
+                        <p>Gourmetmat och vackra dessertbord som låter gästerna bli förtrollad. Vi kombinerar smak med skönhet.</p>
+                        <a href="index.html#contact" class="service-link">Läs Mer →</a>
+                    </div>
+                </div>
+
+                <!-- SERVICE 7: KIDS ACTIVITIES -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/kids-activities.jpg" alt="Barnaktiviteter">
+                    </div>
+                    <div class="service-content">
+                        <h3>Barnaktiviteter</h3>
+                        <p>Glitterbåren och ansigtsmålning - barnens favorit! Vi erbjuder underhålning som gör varje fest minnesvärd för ungarna.</p>
+                        <a href="index.html#contact" class="service-link">Läs Mer →</a>
+                    </div>
+                </div>
+
             </div>
-            <div class="sc-grid" id="sc-product-grid"></div>
         </div>
     </section>
 
-    <div class="sc-cart-overlay" id="cartOverlay"></div>
-
-    <aside class="sc-cart-panel" id="cartPanel">
-        <div class="sc-cart-header">
-            <h3>Kundvagn</h3>
-            <button class="sc-cart-close" id="cartClose">✕</button>
-        </div>
-
-        <div class="sc-cart-body">
-            <div class="sc-cart-items" id="cartItems"></div>
-
-            <div class="sc-cart-total-section">
-                <div class="sc-cart-total">
-                    <span>TOTALT</span>
-                    <span class="sc-cart-total-amount" id="cartTotal">0 SEK</span>
-                </div>
-                <div class="sc-cart-discount">
-                    <input type="text" placeholder="Rabattkod" id="discountCode" class="sc-discount-input">
-                    <button class="sc-apply-discount" id="applyDiscount">Tillämpa</button>
-                </div>
-                <div class="sc-discount-info" id="discountInfo" style="display: none;"></div>
-            </div>
-
-            <div class="sc-checkout-section">
-                <h4 class="sc-section-title">Leverans</h4>
-                <div class="sc-delivery-options">
-                    <label class="sc-delivery-option">
-                        <input type="radio" name="delivery" value="pickup" checked>
-                        <span class="sc-option-label">
-                            <i class="fas fa-store"></i>
-                            <div>
-                                <strong>Hämtning</strong>
-                                <small>Gratis</small>
-                            </div>
-                        </span>
-                    </label>
-                    <label class="sc-delivery-option">
-                        <input type="radio" name="delivery" value="home">
-                        <span class="sc-option-label disabled">
-                            <i class="fas fa-truck"></i>
-                            <div>
-                                <strong>Hemleverans</strong>
-                                <small>Kontakta support</small>
-                            </div>
-                        </span>
-                    </label>
-                </div>
-                <p class="sc-delivery-note">För hemleverans, vänligen kontakta vår support.</p>
-            </div>
-
-            <div class="sc-checkout-section">
-                <h4 class="sc-section-title">Dina Uppgifter</h4>
-                <form class="sc-customer-form" id="customerForm">
-                    <input type="text" placeholder="Namn *" id="customerName" required class="sc-input">
-                    <input type="email" placeholder="E-post *" id="customerEmail" required class="sc-input">
-                    <input type="tel" placeholder="Telefonnummer *" id="customerPhone" required class="sc-input">
-                    <div id="pickupFields" class="sc-address-fields">
-                        <input type="text" placeholder="Gatuadress *" id="customerAddress" required class="sc-input">
-                        <input type="text" placeholder="Postnummer *" id="customerZip" required class="sc-input">
-                        <input type="text" placeholder="Stad *" id="customerCity" required class="sc-input">
-                    </div>
-                </form>
-            </div>
-
-            <div class="sc-checkout-section">
-                <h4 class="sc-section-title">Betalning</h4>
-                <div class="sc-payment-options">
-                    <label class="sc-payment-option">
-                        <input type="radio" name="payment" value="swish" checked>
-                        <span class="sc-payment-label"><i class="fas fa-mobile-alt"></i> <strong>Swish</strong></span>
-                    </label>
-                    <label class="sc-payment-option">
-                        <input type="radio" name="payment" value="card">
-                        <span class="sc-payment-label"><i class="fas fa-credit-card"></i> <strong>Visa/Mastercard</strong></span>
-                    </label>
-                    <label class="sc-payment-option">
-                        <input type="radio" name="payment" value="applepay">
-                        <span class="sc-payment-label"><i class="fab fa-apple"></i> <strong>Apple Pay</strong></span>
-                    </label>
-                </div>
-            </div>
-        </div>
-
-        <div class="sc-cart-footer">
-            <button class="sc-continue-btn" id="continueBtn">Fortsätt handla</button>
-            <button class="sc-checkout-btn" id="checkoutBtn">Gå till betalning</button>
-        </div>
-    </aside>
-
+    <!-- JavaScript -->
     <script src="js/script.js"></script>
-    <script>
-    const PRODUCTS = [
-        { id: 1, name: 'Frukt Cheesecake', desc: 'Krämig cheesecake toppad med färska frukter', img: 'images/eea3fc73-ebbe-4144-a8a3-4a1a1be6a899.jpeg' },
-        { id: 2, name: 'Mango Cheesecake', desc: 'Len cheesecake med söt mango', img: 'images/0c8de439-c25a-4e2f-b432-dafaaca00a4f.jpeg' },
-        { id: 3, name: 'Oreo Cheesecake', desc: 'Fyllig favorit med Oreo', img: 'images/f4dc64f3-13cc-418f-afec-2cf535e41ff6.jpeg' },
-        { id: 4, name: 'Ferrero Rocher', desc: 'Lyxig choklad och hasselnöt', img: 'images/d93d1c81-e482-4489-b4a2-222ff564fa9a.jpeg' },
-        { id: 5, name: 'Lotus Cheesecake', desc: 'Karamelliserad Lotus-smak', img: 'images/af43a02e-05a6-4fd9-8028-e8dd7846d4ba.jpeg' },
-        { id: 6, name: 'Jordgubb Cheesecake', desc: 'Klassisk med färska jordgubbar', img: 'images/strawberry.png' }
-    ];
-
-    let cart = [];
-    let discountCode = '';
-
-    function getPrice(totalItems) {
-        return totalItems >= 100 ? 35 : 40;
-    }
-
-    function renderGrid() {
-        const grid = document.getElementById('sc-product-grid');
-        grid.innerHTML = PRODUCTS.map(p => `<article class="sc-card-luxury"><div class="sc-card-img-wrap"><img src="${p.img}" alt="${p.name}" class="sc-card-img"></div><div class="sc-card-body"><h3>${p.name}</h3><p>${p.desc}</p><p class="sc-card-price" id="price-${p.id}">40 SEK / kopp</p><div class="sc-qty-row"><button class="sc-qty-btn" data-action="dec" data-id="${p.id}">−</button><span class="sc-qty-value" id="qty-${p.id}">20</span><button class="sc-qty-btn" data-action="inc" data-id="${p.id}">+</button></div><button class="sc-add-btn" data-id="${p.id}">Lägg i kundvagn</button></div></article>`).join('');
-        grid.querySelectorAll('.sc-qty-btn').forEach(btn=>{btn.addEventListener('click',e=>{const id=parseInt(btn.dataset.id);const qtyEl=document.getElementById('qty-'+id);let v=parseInt(qtyEl.textContent);if(btn.dataset.action==='inc')v++;else if(btn.dataset.action==='dec'&&v>20)v--;qtyEl.textContent=v;updatePriceDisplay(id,v);});});
-        grid.querySelectorAll('.sc-add-btn').forEach(btn=>{btn.addEventListener('click',()=>{const id=parseInt(btn.dataset.id);const product=PRODUCTS.find(p=>p.id===id);const qty=parseInt(document.getElementById('qty-'+id).textContent);addToCart(product,qty);document.getElementById('qty-'+id).textContent=20;btn.textContent='✓ Tillagd';setTimeout(()=>{btn.textContent='Lägg i kundvagn';},1500);});});
-    }
-
-    function updatePriceDisplay(productId, qty) {
-        const totalItems = qty;
-        const price = getPrice(totalItems);
-        document.getElementById('price-'+productId).textContent = price + ' SEK / kopp';
-    }
-
-    function addToCart(product,qty){const existing=cart.find(i=>i.product.id===product.id);if(existing)existing.qty+=qty;else cart.push({product,qty});updateCartUI();}
-
-    function updateCartUI(){
-        const count=cart.reduce((sum,i)=>sum+i.qty,0);
-        document.getElementById('cartBadgeHeader').textContent=count;
-        document.getElementById('cartBadgeHeader').classList.toggle('visible',count>0);
-        const itemsEl=document.getElementById('cartItems');
-        if(cart.length===0){itemsEl.innerHTML='<div class="sc-cart-empty"><p>Din kundvagn är tom</p></div>';}else{
-            itemsEl.innerHTML=cart.map(i=>{const price=getPrice(cart.reduce((s,x)=>s+x.qty,0));return `<div class="sc-cart-item"><img src="${i.product.img}" alt="${i.product.name}"><div class="sc-cart-item-info"><span>${i.product.name}</span><span class="sc-cart-item-price">${price} SEK × ${i.qty} = ${price*i.qty} SEK</span><div class="sc-cart-item-qty"><button class="sc-cart-qty-btn" data-id="${i.product.id}" data-action="dec">−</button><span>${i.qty}</span><button class="sc-cart-qty-btn" data-id="${i.product.id}" data-action="inc">+</button></div></div><button class="sc-cart-item-remove" data-id="${i.product.id}">✕</button></div>`;}).join('');
-            itemsEl.querySelectorAll('.sc-cart-qty-btn').forEach(btn=>{btn.addEventListener('click',()=>{const id=parseInt(btn.dataset.id);const item=cart.find(i=>i.product.id===id);if(btn.dataset.action==='inc')item.qty++;else if(item.qty>20)item.qty--;updateCartUI();});});
-            itemsEl.querySelectorAll('.sc-cart-item-remove').forEach(btn=>{btn.addEventListener('click',()=>{cart=cart.filter(i=>i.product.id!==parseInt(btn.dataset.id));updateCartUI();});});
-        }
-        updateTotalPrice();
-    }
-
-    function updateTotalPrice(){
-        const totalItems = cart.reduce((sum,i)=>sum+i.qty,0);
-        const price = getPrice(totalItems);
-        const subtotal = cart.reduce((sum,i)=>sum+price*i.qty,0);
-        document.getElementById('cartTotal').textContent = subtotal.toFixed(0) + ' SEK';
-    }
-
-    document.getElementById('applyDiscount').addEventListener('click', ()=>{
-        const code = document.getElementById('discountCode').value.trim();
-        const discountInfo = document.getElementById('discountInfo');
-        if(code.length > 0) {
-            discountCode = code;
-            discountInfo.textContent = `✓ Rabattkod: ${code}`;
-            discountInfo.style.color = '#28a745';
-            discountInfo.style.display = 'block';
-        } else {
-            discountCode = '';
-            discountInfo.textContent = 'Vänligen ange en rabattkod';
-            discountInfo.style.color = '#dc3545';
-            discountInfo.style.display = 'block';
-        }
-    });
-
-    document.querySelectorAll('input[name="delivery"]').forEach(radio=>{radio.addEventListener('change',(e)=>{const pickupFields=document.getElementById('pickupFields');const addressInputs=pickupFields.querySelectorAll('input');if(e.target.value==='pickup'){pickupFields.style.display='none';addressInputs.forEach(input=>input.removeAttribute('required'));}else{pickupFields.style.display='flex';addressInputs.forEach(input=>input.setAttribute('required',''));}});});
-
-    document.getElementById('checkoutBtn').addEventListener('click',()=>{
-        const form=document.getElementById('customerForm');
-        const name=document.getElementById('customerName').value;
-        const email=document.getElementById('customerEmail').value;
-        const phone=document.getElementById('customerPhone').value;
-        const delivery=document.querySelector('input[name="delivery"]:checked').value;
-        const payment=document.querySelector('input[name="payment"]:checked').value;
-        if(!name||!email||!phone){alert('Vänligen fyll i alla obligatoriska fält');return;}
-        if(delivery==='pickup'&&(!document.getElementById('customerAddress').value||!document.getElementById('customerZip').value||!document.getElementById('customerCity').value)){alert('Vänligen fyll i leveransadress');return;}
-        const totalItems = cart.reduce((sum,i)=>sum+i.qty,0);
-        const price = getPrice(totalItems);
-        const subtotal = cart.reduce((sum,i)=>sum+price*i.qty,0);
-        const orderData={items:cart,customer:{name,email,phone,address:document.getElementById('customerAddress').value,zip:document.getElementById('customerZip').value,city:document.getElementById('customerCity').value},delivery,payment,discountCode,subtotal,total:subtotal.toFixed(0)};
-        const orderSummary = `Beställning klar!\n\nKunduppgifter:\nNamn: ${name}\nE-post: ${email}\nTelefon: ${phone}\n\nLeverans: ${delivery==='pickup'?'Hämtning':'Hemleverans'}\nBetalmetod: ${payment==='swish'?'Swish':payment==='card'?'Visa/Mastercard':'Apple Pay'}\n${discountCode ? `Rabattkod: ${discountCode}\n` : ''}Belopp: ${orderData.total} SEK\n\nDu kommer snart få en bekräftelse på din e-post.`;
-        alert(orderSummary);
-        cart=[];
-        discountCode = '';
-        updateCartUI();
-        document.getElementById('customerForm').reset();
-        document.getElementById('discountCode').value = '';
-        document.getElementById('discountInfo').style.display = 'none';
-        document.getElementById('cartPanel').classList.remove('open');
-        document.getElementById('cartOverlay').classList.remove('open');
-    });
-
-    document.getElementById('cartTriggerHeader').addEventListener('click',()=>{if(cart.length>0){document.getElementById('cartPanel').classList.add('open');document.getElementById('cartOverlay').classList.add('open');}});
-    document.getElementById('cartClose').addEventListener('click',()=>{document.getElementById('cartPanel').classList.remove('open');document.getElementById('cartOverlay').classList.remove('open');});
-    document.getElementById('cartOverlay').addEventListener('click',()=>{document.getElementById('cartPanel').classList.remove('open');document.getElementById('cartOverlay').classList.remove('open');});
-    document.getElementById('continueBtn').addEventListener('click',()=>{document.getElementById('cartPanel').classList.remove('open');document.getElementById('cartOverlay').classList.remove('open');});
-
-    renderGrid();
-    updateCartUI();
-    </script>
 </body>
 </html>
