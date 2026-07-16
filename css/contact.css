@@ -24,8 +24,8 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: url('../images/tjanster-hero.jpeg') center/cover no-repeat;
-    opacity: .14;
+    background: url('../images/kontakt.jpeg') center/cover no-repeat;
+    opacity: .32;
     z-index: 0;
 }
 
@@ -76,7 +76,7 @@
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 420px;
+    grid-template-columns: minmax(0, 1.22fr) minmax(320px, .78fr);
     gap: 60px;
     align-items: start;
 }
@@ -85,7 +85,7 @@
 .contact-form-wrap {
     background: #fff;
     border-radius: 24px;
-    padding: 52px 48px;
+    padding: 64px 58px;
     box-shadow: 0 24px 60px rgba(91,21,51,.10);
     border: 1px solid rgba(212,175,55,.18);
 }
@@ -102,41 +102,41 @@
     width: 54px;
     height: 2px;
     background: linear-gradient(90deg, #d7b06b, #efd190);
-    margin: 14px 0 32px;
+    margin: 14px 0 40px;
     border-radius: 2px;
 }
 
 .contact-form-wrap .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 18px;
+    gap: 22px;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 26px;
 }
 
 .form-group label {
     display: block;
     font-family: 'Poppins', sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
     letter-spacing: 1.2px;
     text-transform: uppercase;
     color: #5b1533;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
     width: 100%;
-    padding: 14px 18px;
+    padding: 17px 20px;
     background: #fdf6ef;
     border: 1px solid rgba(91,21,51,.18);
     border-radius: 12px;
     font-family: 'Poppins', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     color: #3a1520;
     outline: none;
     transition: .3s;
@@ -154,7 +154,7 @@
 
 .form-group textarea {
     resize: vertical;
-    min-height: 130px;
+    min-height: 168px;
 }
 
 .form-group select {
@@ -174,7 +174,7 @@
     background: linear-gradient(135deg, #5b1533, #8b2045);
     color: #f3dca8;
     font-family: 'Poppins', sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -250,35 +250,100 @@
 /* ── Social Media ───────────────────────────────── */
 .social-links {
     display: flex;
-    gap: 14px;
+    gap: 12px;
     flex-wrap: wrap;
 }
 
 .social-link {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 12px 20px;
+    gap: 12px;
+    padding: 10px 16px;
     border-radius: 999px;
-    background: linear-gradient(135deg, #fdf2e8, #f5e4cc);
-    border: 1px solid rgba(215,176,107,.28);
+    background: linear-gradient(135deg, #fef7ee, #f8ecd8);
+    border: 1px solid rgba(215,176,107,.44);
     color: #5b1533;
     font-family: 'Poppins', sans-serif;
     font-size: 13px;
-    font-weight: 500;
-    transition: .3s;
+    font-weight: 600;
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease, background .3s ease, color .3s ease;
     text-decoration: none;
 }
 
 .social-link:hover {
     background: linear-gradient(135deg, #5b1533, #8b2045);
     color: #f3dca8;
-    border-color: transparent;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 28px rgba(91,21,51,.24);
+    border-color: rgba(239,209,144,.32);
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(91,21,51,.26);
 }
 
 .social-link i { font-size: 15px; }
+
+.social-icon-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,.65);
+    border: 1px solid rgba(215,176,107,.6);
+    color: #5b1533;
+    transition: inherit;
+    flex-shrink: 0;
+}
+
+.social-link:hover .social-icon-circle {
+    background: rgba(243,220,168,.2);
+    border-color: rgba(243,220,168,.85);
+    color: #f3dca8;
+    transform: scale(1.05);
+}
+
+.hours-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.hours-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #6a2a3f;
+    border-bottom: 1px dashed rgba(215,176,107,.34);
+    padding-bottom: 12px;
+}
+
+.hours-list li:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.hours-list strong {
+    color: #5b1533;
+    font-weight: 600;
+}
+
+.response-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #7a3a44;
+    line-height: 1.85;
+    font-weight: 300;
+}
+
+.response-text strong {
+    color: #5b1533;
+    font-weight: 600;
+}
 
 /* ── Google Maps ────────────────────────────────── */
 .maps-section {
@@ -320,6 +385,91 @@
     height: 100%;
     border: none;
     display: block;
+}
+
+/* ── Reviews ────────────────────────────────────── */
+.reviews-section {
+    background: linear-gradient(180deg, #f8f0e6 0%, #efe3d2 100%);
+    padding: 0 0 100px;
+}
+
+.reviews-header {
+    text-align: center;
+    padding-bottom: 34px;
+}
+
+.reviews-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 52px);
+    color: #5b1533;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.reviews-header p {
+    color: #7a3a44;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.review-card {
+    border-radius: 22px;
+    padding: 32px 30px;
+    background: #fff;
+    border: 1px solid rgba(212,175,55,.2);
+    box-shadow: 0 18px 42px rgba(91,21,51,.1);
+}
+
+.review-stars {
+    color: #d7b06b;
+    letter-spacing: 4px;
+    font-size: 20px;
+    margin-bottom: 14px;
+}
+
+.review-card p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #6f3643;
+    margin-bottom: 14px;
+}
+
+.review-author {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #5b1533;
+}
+
+.review-badge {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #fdf2e8, #f5e4cc);
+    border: 1px solid rgba(215,176,107,.4);
+    color: #5b1533;
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.review-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #5b1533;
+    margin-bottom: 10px;
 }
 
 /* ── CTA Section ────────────────────────────────── */
@@ -894,4 +1044,6 @@
         flex-direction: column;
     }
     .map-frame { height: 300px; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .hours-list li { flex-direction: column; align-items: flex-start; }
 }

@@ -77,3 +77,80 @@ if (window.gsap && window.ScrollTrigger) {
     });
   });
 }
+
+function injectGlobalLuxuryElements() {
+  if (!document.body) return;
+
+  if (!document.querySelector('.sal-floating-whatsapp')) {
+    const whatsapp = document.createElement('a');
+    whatsapp.className = 'sal-floating-whatsapp';
+    whatsapp.href = 'https://wa.me/46707117795';
+    whatsapp.target = '_blank';
+    whatsapp.rel = 'noopener noreferrer';
+    whatsapp.setAttribute('aria-label', 'Kontakta oss på WhatsApp');
+    whatsapp.innerHTML = `
+      <span class="sal-whatsapp-icon" aria-hidden="true">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16.1 3.2A12.7 12.7 0 0 0 5.4 22.6L3 29l6.6-2.3a12.8 12.8 0 1 0 6.5-23.5Zm0 23.2a10.5 10.5 0 0 1-5.4-1.5l-.4-.2-3.9 1.4 1.4-3.8-.2-.4a10.6 10.6 0 1 1 8.5 4.5Zm5.8-7.8c-.3-.2-1.9-.9-2.1-1-.3-.1-.5-.2-.7.2l-.8 1c-.2.2-.4.2-.7.1a8.6 8.6 0 0 1-2.5-1.6 9.3 9.3 0 0 1-1.7-2.2c-.2-.3 0-.4.1-.6l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1-2.2c-.2-.4-.4-.4-.7-.4h-.6c-.2 0-.6 0-.9.4-.3.3-1.2 1.1-1.2 2.8 0 1.6 1.2 3.1 1.4 3.3.1.2 2.3 3.5 5.5 5 .8.4 1.4.6 1.9.8.8.2 1.5.2 2 .1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4Z"/>
+        </svg>
+      </span>
+      <span class="sal-whatsapp-text">WhatsApp</span>
+    `;
+    document.body.appendChild(whatsapp);
+  }
+
+  if (!document.querySelector('.sal-site-footer')) {
+    const footer = document.createElement('footer');
+    footer.className = 'sal-site-footer';
+    footer.innerHTML = `
+      <div class="container sal-footer-grid">
+        <div class="sal-footer-brand">
+          <img src="images/Sallogo.png.PNG" alt="SÀLWORLD EVENTS logotyp" class="sal-footer-logo">
+          <p>Vi skapar exklusiva och minnesvärda evenemang med elegans, värme och precision.</p>
+        </div>
+        <div class="sal-footer-col">
+          <h3>Snabblänkar</h3>
+          <ul>
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="about.html">Om Oss</a></li>
+            <li><a href="tjanster.html">Tjänster</a></li>
+            <li><a href="salcups.html">SÀL CUPS</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="sal-footer-col">
+          <h3>Kontaktinformation</h3>
+          <ul>
+            <li><a href="mailto:info@salworldevents.se">info@salworldevents.se</a></li>
+            <li><a href="tel:+46707117795">+46 70 711 77 95</a></li>
+            <li>Sverige</li>
+          </ul>
+        </div>
+        <div class="sal-footer-col">
+          <h3>Sociala medier</h3>
+          <ul>
+            <li><a href="https://www.instagram.com/salworldevents?igsh=MTI5azYwdWltamZhMQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://www.facebook.com/share/1F4LNUwGtr/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="https://www.tiktok.com/@salworldevents?_r=1&_t=ZN-984isSbvLLa" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+            <li><a href="#">Integritetspolicy</a></li>
+            <li><a href="#">Villkor</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="sal-footer-bottom">
+        <div class="container">
+          <p>© 2026 SÀLWORLD EVENTS. All Rights Reserved.</p>
+        </div>
+      </div>
+    `;
+
+    const footerLogo = footer.querySelector('.sal-footer-logo');
+    footerLogo?.addEventListener('error', () => {
+      footerLogo.src = 'images/logo.png';
+    }, { once: true });
+
+    document.body.appendChild(footer);
+  }
+}
+
+injectGlobalLuxuryElements();
