@@ -8,6 +8,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tjanster.css">
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -16,152 +17,189 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body data-lang="sv">
 
-    <!-- HEADER (same as your main site) -->
-    <header class="header">
+    <!-- =========================
+            HEADER
+    ========================== -->
+    <header class="header" id="header">
         <div class="container">
-
             <a href="index.html" class="logo">
                 <img src="images/logo.png" alt="SÀLWORLD EVENTS">
             </a>
 
-            <nav class="navbar">
-                <a href="index.html#home">Hem</a>
-                <a href="index.html#about">Om Oss</a>
-                <a href="tjanster.html">Tjänster</a>
-                <a href="salcups.html">SÀL CUPS</a>
-                <a href="index.html#gallery">Galleri</a>
-                <a href="index.html#contact">Kontakt</a>
+            <nav class="navbar" id="nav">
+                <a href="index.html" data-sv="Hem" data-en="Home">Hem</a>
+                <a href="about.html" data-sv="Om Oss" data-en="About Us">Om Oss</a>
+                <a href="tjanster.html" class="active" data-sv="Tjänster" data-en="Services">Tjänster</a>
+                <a href="salcups.html" data-sv="SÀL CUPS" data-en="SÀL CUPS">SÀL CUPS</a>
+                <a href="index.html#gallery" data-sv="Galleri" data-en="Gallery">Galleri</a>
+                <a href="index.html#contact" data-sv="Kontakt" data-en="Contact">Kontakt</a>
             </nav>
 
             <div class="header-right">
-                <a href="index.html#contact" class="book-btn">Boka Nu</a>
+                <button class="language-btn" id="language-toggle" type="button" aria-label="Switch language">EN</button>
+                <a href="index.html#contact" class="book-btn" data-sv="Boka Nu" data-en="Book Now">Boka Nu</a>
             </div>
-
         </div>
     </header>
 
-    <!-- SERVICES HEADER -->
-    <section class="services-header">
-        <h1 class="lux-title">Våra Tjänster</h1>
-        <p class="lux-subtitle">Premium eventtjänster skapade med elegans, kreativitet och lyx.</p>
+    <!-- =========================
+            HERO SECTION
+    ========================== -->
+    <section class="services-hero">
+        <div class="hero-overlay"></div>
+        <img src="images/services-hero.jpg" alt="SALWORLD EVENTS Services">
+        
+        <div class="hero-content">
+            <span class="hero-eyebrow" data-sv="VÅRA TJÄNSTER" data-en="OUR SERVICES">VÅRA TJÄNSTER</span>
+            <h1 data-sv="Exklusiva Event Upplevelser" data-en="Exclusive Event Experiences">Exklusiva Event Upplevelser</h1>
+            <p data-sv="Från bröllop till barnkalas, vi skapar oförglömliga ögonblick med elegans, kreativitet och perfekt precision." data-en="From weddings to birthday parties, we create unforgettable moments with elegance, creativity and perfect precision.">
+                Från bröllop till barnkalas, vi skapar oförglömliga ögonblick med elegans, kreativitet och perfekt precision.
+            </p>
+        </div>
     </section>
 
-    <!-- SERVICES GRID -->
-    <section class="services-grid">
+    <!-- =========================
+            SERVICES GRID
+    ========================== -->
+    <section class="services-section">
+        <div class="container">
+            <div class="services-grid">
 
-        <div class="service-card">
-            <i class="fas fa-heart service-icon"></i>
-            <h3>Wedding Planning</h3>
-            <p>Komplett lyxig bröllopsplanering från koncept till utförande.</p>
-            <a href="index.html#contact" class="book-btn">Boka Nu</a>
+                <!-- SERVICE 1: WEDDINGS -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/wedding.jpg" alt="Weddings & Engagements">
+                    </div>
+                    <div class="service-content">
+                        <h3 data-sv="Bröllop & Förlovning" data-en="Weddings & Engagements">Bröllop & Förlovning</h3>
+                        <p data-sv="Skapa din drömdag med vår expertplanering. Vi hanterar allt från dekoration till catering och ser till att varje detalj är perfekt." data-en="Create your dream day with our expert planning. We handle everything from decoration to catering and ensure every detail is perfect.">
+                            Skapa din drömdag med vår expertplanering. Vi hanterar allt från dekoration till catering och ser till att varje detalj är perfekt.
+                        </p>
+                        <a href="index.html#contact" class="service-link" data-sv="Läs Mer" data-en="Learn More">Läs Mer →</a>
+                    </div>
+                </div>
+
+                <!-- SERVICE 2: ANNIVERSARY -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/anniversary.jpg" alt="Anniversaries & Celebrations">
+                    </div>
+                    <div class="service-content">
+                        <h3 data-sv="Årsdagar & Jubileum" data-en="Anniversaries & Celebrations">Årsdagar & Jubileum</h3>
+                        <p data-sv="Fira viktiga årtal med elegans och kärlek. Från silverbrölloop till guldbrölloop, vi skapar minnesvärd kväll." data-en="Celebrate important anniversaries with elegance and love. From silver to golden anniversaries, we create memorable evenings.">
+                            Fira viktiga årtal med elegans och kärlek. Från silverbrölloop till guldbrölloop, vi skapar minnesvärd kväll.
+                        </p>
+                        <a href="index.html#contact" class="service-link" data-sv="Läs Mer" data-en="Learn More">Läs Mer →</a>
+                    </div>
+                </div>
+
+                <!-- SERVICE 3: PROPOSAL -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/proposal.jpg" alt="Proposal Planning">
+                    </div>
+                    <div class="service-content">
+                        <h3 data-sv="Frierande Ögonblick" data-en="Proposal Planning">Frierande Ögonblick</h3>
+                        <p data-sv="Gör din frieri till en magisk och oförglömlig upplevelse. Vi arrangerar varje detalj för att skapa det perfekta ögonblicket." data-en="Make your proposal a magical and unforgettable experience. We arrange every detail to create the perfect moment.">
+                            Gör din frieri till en magisk och oförglömlig upplevelse. Vi arrangerar varje detalj för att skapa det perfekta ögonblicket.
+                        </p>
+                        <a href="index.html#contact" class="service-link" data-sv="Läs Mer" data-en="Learn More">Läs Mer →</a>
+                    </div>
+                </div>
+
+                <!-- SERVICE 4: BIRTHDAY -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/birthday.jpg" alt="Birthday Celebrations">
+                    </div>
+                    <div class="service-content">
+                        <h3 data-sv="Fødselsdagsfestar" data-en="Birthday Celebrations">Fødselsdagsfestar</h3>
+                        <p data-sv="Fira milstolpar med stil och glädje. Från barnkalas till vuxnafester, vi skapar magiska stunder för alla åldrar." data-en="Celebrate milestones with style and joy. From kids parties to adult celebrations, we create magical moments for all ages.">
+                            Fira milstolpar med stil och glädje. Från barnkalas till vuxnafester, vi skapar magiska stunder för alla åldrar.
+                        </p>
+                        <a href="index.html#contact" class="service-link" data-sv="Läs Mer" data-en="Learn More">Läs Mer →</a>
+                    </div>
+                </div>
+
+                <!-- SERVICE 5: HENNA CELEBRATION -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/henna.jpg" alt="Henna Celebrations">
+                    </div>
+                    <div class="service-content">
+                        <h3 data-sv="Hennafestar" data-en="Henna Celebrations">Hennafestar</h3>
+                        <p data-sv="En vacker och traditionell fest före bröllopet. Vi skapar en atmosfär av elegans, musik, dans och glädje." data-en="A beautiful and traditional celebration before the wedding. We create an atmosphere of elegance, music, dance and joy.">
+                            En vacker och traditionell fest före bröllopet. Vi skapar en atmosfär av elegans, musik, dans och glädje.
+                        </p>
+                        <a href="index.html#contact" class="service-link" data-sv="Läs Mer" data-en="Learn More">Läs Mer →</a>
+                    </div>
+                </div>
+
+                <!-- SERVICE 6: DESSERT TABLE & CATERING -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/dessert.jpg" alt="Dessert Table & Catering">
+                    </div>
+                    <div class="service-content">
+                        <h3 data-sv="Dessertbord & Catering" data-en="Dessert Table & Catering">Dessertbord & Catering</h3>
+                        <p data-sv="Gourmetmat och vackra dessertbord som låter gästerna bli förtrollad. Vi kombinerar smak med skönhet." data-en="Gourmet food and beautiful dessert tables that enchant your guests. We combine taste with beauty.">
+                            Gourmetmat och vackra dessertbord som låter gästerna bli förtrollad. Vi kombinerar smak med skönhet.
+                        </p>
+                        <a href="index.html#contact" class="service-link" data-sv="Läs Mer" data-en="Learn More">Läs Mer →</a>
+                    </div>
+                </div>
+
+                <!-- SERVICE 7: KIDS ACTIVITIES -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/kids-activities.jpg" alt="Kids Activities">
+                    </div>
+                    <div class="service-content">
+                        <h3 data-sv="Barnaktiviteter" data-en="Kids Activities">Barnaktiviteter</h3>
+                        <p data-sv="Glitterbåren och ansigtsmålning - barnens favorit! Vi erbjuder underhålning som gör varje fest minnesvärd för ungarna." data-en="Glitter bar and face painting - kids' favorite! We offer entertainment that makes every party memorable for children.">
+                            Glitterbåren och ansigtsmålning - barnens favorit! Vi erbjuder underhålning som gör varje fest minnesvärd för ungarna.
+                        </p>
+                        <a href="index.html#contact" class="service-link" data-sv="Läs Mer" data-en="Learn More">Läs Mer →</a>
+                    </div>
+                </div>
+
+            </div>
         </div>
-
-        <div class="service-card">
-            <i class="fas fa-birthday-cake service-icon"></i>
-            <h3>Birthday Celebrations</h3>
-            <p>Lyxiga födelsedagsfester med premiumdekorationer och skräddarsydda teman.</p>
-            <a href="index.html#contact" class="book-btn">Boka Nu</a>
-        </div>
-
-        <div class="service-card">
-            <i class="fas fa-ring service-icon"></i>
-            <h3>Engagement Parties</h3>
-            <p>Eleganta förlovningsfester med lyxig styling och personliga detaljer.</p>
-            <a href="index.html#contact" class="book-btn">Boka Nu</a>
-        </div>
-
-        <div class="service-card">
-            <i class="fas fa-star service-icon"></i>
-            <h3>Henna Celebrations</h3>
-            <p>Traditionella och moderna hennakvällar med exklusiva dekorationer.</p>
-            <a href="index.html#contact" class="book-btn">Boka Nu</a>
-        </div>
-
-        <div class="service-card">
-            <i class="fas fa-feather-alt service-icon"></i>
-            <h3>Event Decoration</h3>
-            <p>Premium ballonger, blommor, bakgrunder och komplett eventdekoration.</p>
-            <a href="index.html#contact" class="book-btn">Boka Nu</a>
-        </div>
-
-        <div class="service-card">
-            <i class="fas fa-ice-cream service-icon"></i>
-            <h3>Luxury Dessert Bar – SÀL CUPS</h3>
-            <p>Handgjorda lyxiga mini dessert cups för exklusiva dessertupplevelser.</p>
-            <a href="index.html#contact" class="book-btn">Boka Nu</a>
-        </div>
-
-        <div class="service-card">
-            <i class="fas fa-sparkles service-icon"></i>
-            <h3>Glitter Bar</h3>
-            <p>Professionell glitter makeup station som ger glamour till varje event.</p>
-            <a href="index.html#contact" class="book-btn">Boka Nu</a>
-        </div>
-
-        <div class="service-card">
-            <i class="fas fa-palette service-icon"></i>
-            <h3>Face Painting</h3>
-            <p>Kreativ och professionell ansiktsmålning för barnkalas och familjeevent.</p>
-            <a href="index.html#contact" class="book-btn">Boka Nu</a>
-        </div>
-
-        <div class="service-card">
-            <i class="fas fa-camera-retro service-icon"></i>
-            <h3>Photo Corner</h3>
-            <p>Lyxig fotohörna med eleganta bakgrunder och stilfulla dekorationer.</p>
-            <a href="index.html#contact" class="book-btn">Boka Nu</a>
-        </div>
-
-        <div class="service-card">
-            <i class="fas fa-wine-glass-alt service-icon"></i>
-            <h3>Catering & Beverage Station</h3>
-            <p>Premium catering och vackert presenterade dryckesstationer.</p>
-            <a href="index.html#contact" class="book-btn">Boka Nu</a>
-        </div>
-
-        <div class="service-card">
-            <i class="fas fa-gem service-icon"></i>
-            <h3>Custom Event Packages</h3>
-            <p>Skräddarsydda eventpaket anpassade efter stil, budget och önskemål.</p>
-            <a href="index.html#contact" class="book-btn">Boka Nu</a>
-        </div>
-
     </section>
 
-    <!-- WHY US -->
-    <section class="why-us">
-        <h2>Varför Välja SALWORLD EVENTS?</h2>
-        <ul>
-            <li>Lyxig Eventplanering</li>
-            <li>Premium Kvalitet</li>
-            <li>Professionellt Team</li>
-            <li>Eleganta Dekorationer</li>
-            <li>Personlig Service</li>
-            <li>Hög Uppmärksamhet på Detaljer</li>
-            <li>Pålitlig & Vänlig Service</li>
-            <li>Vi Skapar Oförglömliga Minnen</li>
-        </ul>
-    </section>
-
-    <!-- CTA -->
+    <!-- =========================
+            CTA SECTION
+    ========================== -->
     <section class="cta-section">
-        <h2>Let’s Create Something Unforgettable Together</h2>
-        <p>Contact us today and let us turn your dream event into reality.</p>
-        <a href="index.html#contact" class="cta-btn">Book Now</a>
+        <div class="container">
+            <h2 data-sv="Redo att skapa din drömfest?" data-en="Ready to create your dream event?">Redo att skapa din drömfest?</h2>
+            <a href="index.html#contact" class="cta-btn" data-sv="Boka Nu" data-en="Book Now">Boka Nu</a>
+        </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- =========================
+            FOOTER
+    ========================== -->
     <footer class="lux-footer">
-        <h3>Följ Oss</h3>
-        <div class="social-icons">
-            <a href="https://www.instagram.com/salworldevents"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@salworldevents"><i class="fab fa-tiktok"></i></a>
-            <a href="https://www.facebook.com/share/1EHJJA6cd5/?mibextid=wwXIfr"><i class="fab fa-facebook"></i></a>
-            <a href="https://wa.me/46707117795"><i class="fab fa-whatsapp"></i></a>
+        <div class="container">
+            <h3 data-sv="Följ Oss på Sociala Medier" data-en="Follow Us on Social Media">Följ Oss på Sociala Medier</h3>
+
+            <div class="social-icons">
+                <a href="https://www.instagram.com/salworldevents" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@salworldevents" title="TikTok" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.facebook.com/share/1EHJJA6cd5/?mibextid=wwXIfr" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://wa.me/46707117795" title="WhatsApp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+
+            <p class="footer-text" data-sv="©️ 2024 SALWORLD EVENTS. Alla rättigheter förbehållna." data-en="©️ 2024 SALWORLD EVENTS. All rights reserved.">©️ 2024 SALWORLD EVENTS. Alla rättigheter förbehållna.</p>
         </div>
     </footer>
 
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
 </body>
+
 </html>
