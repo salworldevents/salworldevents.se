@@ -13,7 +13,7 @@
     align-items: center;
     text-align: center;
     padding: 160px 24px 100px;
-    background-image: url('../images/kontakt.jpeg');
+    background-image: url('../images/kontakt.jpeg'), url('../images/anniversary.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -50,9 +50,9 @@
 
 .contact-hero h1 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(52px, 9vw, 100px);
+    font-size: clamp(64px, 10vw, 112px);
     font-weight: 600;
-    letter-spacing: 10px;
+    letter-spacing: 12px;
     color: #E8C97E;
     margin-bottom: 24px;
     text-transform: uppercase;
@@ -64,15 +64,15 @@
     width: min(100%, 680px);
     margin: 0 auto;
     color: #F6E8D8;
-    font-size: clamp(16px, 2vw, 21px);
-    line-height: 2;
+    font-size: clamp(18px, 2.2vw, 24px);
+    line-height: 1.95;
     font-weight: 300;
 }
 
 /* ── Section wrappers ───────────────────────────── */
 .contact-main {
     background: linear-gradient(180deg, #f8f0e6 0%, #efe3d2 100%);
-    padding: 100px 0 80px;
+    padding: 118px 0 92px;
 }
 
 .contact-grid {
@@ -89,6 +89,13 @@
     padding: 64px 58px;
     box-shadow: 0 24px 60px rgba(91,21,51,.10);
     border: 1px solid rgba(212,175,55,.18);
+    transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+}
+
+.contact-form-wrap:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 30px 68px rgba(91,21,51,.14);
+    border-color: rgba(212,175,55,.35);
 }
 
 .contact-form-wrap h2 {
@@ -172,8 +179,8 @@
     width: 100%;
     justify-content: center;
     padding: 18px 38px;
-    background: linear-gradient(135deg, #5b1533, #8b2045);
-    color: #f3dca8;
+    background: linear-gradient(135deg, #d7b06b, #efd190);
+    color: #4b1f2e;
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     font-weight: 600;
@@ -188,9 +195,9 @@
 }
 
 .submit-btn:hover {
-    background: linear-gradient(135deg, #7a1d44, #a8275a);
+    background: linear-gradient(135deg, #e6c584, #f4ddb0);
     transform: translateY(-3px);
-    box-shadow: 0 20px 46px rgba(91,21,51,.38);
+    box-shadow: 0 20px 46px rgba(103,58,22,.32);
 }
 
 /* ── Info Panel ─────────────────────────────────── */
@@ -206,6 +213,13 @@
     padding: 36px 32px;
     box-shadow: 0 16px 48px rgba(91,21,51,.08);
     border: 1px solid rgba(212,175,55,.16);
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 50px rgba(91,21,51,.12);
+    border-color: rgba(212,175,55,.34);
 }
 
 .info-card h3 {
@@ -348,7 +362,7 @@
 
 /* ── Google Maps ────────────────────────────────── */
 .maps-section {
-    padding: 0 0 100px;
+    padding: 0 0 108px;
     background: linear-gradient(180deg, #efe3d2 0%, #f8f0e6 100%);
 }
 
@@ -391,7 +405,7 @@
 /* ── Reviews ────────────────────────────────────── */
 .reviews-section {
     background: linear-gradient(180deg, #f8f0e6 0%, #efe3d2 100%);
-    padding: 0 0 100px;
+    padding: 0 0 108px;
 }
 
 .reviews-header {
@@ -427,6 +441,13 @@
     background: #fff;
     border: 1px solid rgba(212,175,55,.2);
     box-shadow: 0 18px 42px rgba(91,21,51,.1);
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 52px rgba(91,21,51,.14);
+    border-color: rgba(212,175,55,.32);
 }
 
 .review-stars {
@@ -476,7 +497,7 @@
 /* ── CTA Section ────────────────────────────────── */
 .contact-cta {
     background: linear-gradient(140deg, #2f141c 0%, #5b1533 52%, #2a0f17 100%);
-    padding: 100px 24px;
+    padding: 108px 24px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -525,7 +546,7 @@
     border-radius: 999px;
     cursor: pointer;
     border: none;
-    transition: .35s;
+    transition: transform .35s ease, box-shadow .35s ease, background .35s ease;
     box-shadow: 0 18px 44px rgba(0,0,0,.28);
     position: relative;
 }
