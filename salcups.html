@@ -62,6 +62,71 @@
         </div>
     </div>
 
+    <!-- ========================
+         LUXURY BRAND AD SECTION
+         ======================== -->
+    <section class="sc-brand-editorial">
+        <div class="sc-editorial-bg-accent"></div>
+        <div class="container">
+            <div class="sc-editorial-header">
+                <span class="sc-eyebrow">SIGNATURÖGONBLICK</span>
+                <h2 class="sc-editorial-title">En smak av lyx</h2>
+                <div class="sc-gold-divider"></div>
+                <p class="sc-editorial-subtitle">Eleganta dessertkreationer som förhöjer varje firande med smak,<br>stil och en exklusiv känsla för det oförglömliga.</p>
+            </div>
+
+            <div class="sc-editorial-grid">
+                <!-- Feature image (left / large) -->
+                <div class="sc-editorial-feature" data-aos="fade-right">
+                    <div class="sc-editorial-img-wrap">
+                        <img src="images/fc85ce6f-353b-4c96-a8e5-a27c0c956ac5.jpeg" alt="SÀL CUPS Signatur" class="sc-editorial-img">
+                        <div class="sc-editorial-overlay">
+                            <span class="sc-editorial-badge">SIGNATURKOLLEKTIONEN</span>
+                            <p class="sc-editorial-overlay-text">Skapad för att imponera</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Two stacked side images (right) -->
+                <div class="sc-editorial-side">
+                    <div class="sc-editorial-side-card" data-aos="fade-left" data-aos-delay="100">
+                        <div class="sc-editorial-img-wrap">
+                            <img src="images/f4dc64f3-13cc-418f-afec-2cf535e41ff6.jpeg" alt="Lotus Signatur" class="sc-editorial-img">
+                            <div class="sc-editorial-overlay">
+                                <span class="sc-editorial-badge">LOTUS DREAM</span>
+                            </div>
+                        </div>
+                        <div class="sc-editorial-side-text">
+                            <h3>Hantverk i varje kopp</h3>
+                            <p>Noggrant framtagna av premiumingredienser — varje dessert är ett uttryck för perfektion.</p>
+                        </div>
+                    </div>
+                    <div class="sc-editorial-side-card" data-aos="fade-left" data-aos-delay="200">
+                        <div class="sc-editorial-img-wrap">
+                            <img src="images/d93d1c81-e482-4489-b4a2-222ff564fa9a.jpeg" alt="Ferrero Royale" class="sc-editorial-img">
+                            <div class="sc-editorial-overlay">
+                                <span class="sc-editorial-badge">FERRERO ROYALE</span>
+                            </div>
+                        </div>
+                        <div class="sc-editorial-side-text">
+                            <h3>Elegans i varje detalj</h3>
+                            <p>Presenterat med omsorg för att skapa den perfekta upplevelsen vid varje tillfälle.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sc-editorial-quote-wrap">
+                <blockquote class="sc-editorial-quote">
+                    <span class="sc-quote-mark">"</span>
+                    Där elegans möter dessert — skapade för att förgylla varje ögonblick
+                    <span class="sc-quote-mark">"</span>
+                </blockquote>
+                <p class="sc-editorial-brand">— SÀL CUPS, HANDGJORDA LYXDESSERTER</p>
+            </div>
+        </div>
+    </section>
+
     <section class="sc-products-luxury" id="sc-products">
         <div class="container">
             <div class="sc-products-header">
@@ -73,94 +138,173 @@
         </div>
     </section>
 
-    <div class="sc-cart-overlay" id="cartOverlay"></div>
+    <!-- Full-page luxury cart overlay -->
+    <div class="sc-cart-fullpage" id="cartPanel" role="dialog" aria-modal="true" aria-label="Kundvagn">
 
-    <aside class="sc-cart-panel" id="cartPanel">
-        <div class="sc-cart-header">
-            <h3>Kundvagn</h3>
-            <button class="sc-cart-close" id="cartClose">✕</button>
+        <!-- Cart top bar -->
+        <div class="sc-cart-topbar">
+            <div class="sc-cart-topbar-inner">
+                <div class="sc-cart-topbar-logo">
+                    <img src="images/Salcuplogo.png.PNG" alt="SÀL CUPS">
+                </div>
+                <h2 class="sc-cart-heading">
+                    <i class="fas fa-shopping-bag sc-cart-heading-icon"></i>
+                    Din Kundvagn
+                </h2>
+                <button class="sc-cart-close" id="cartClose" aria-label="Stäng kundvagn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
         </div>
 
+        <!-- Main two-column body -->
         <div class="sc-cart-body">
-            <div class="sc-cart-items" id="cartItems"></div>
 
-            <div class="sc-cart-total-section">
-                <div class="sc-cart-total">
-                    <span>TOTALT</span>
-                    <span class="sc-cart-total-amount" id="cartTotal">0 SEK</span>
+            <!-- LEFT: items + totals -->
+            <div class="sc-cart-left">
+                <div class="sc-cart-left-header">
+                    <span class="sc-section-eyebrow">DINA VAL</span>
+                    <h3 class="sc-cart-left-title">Valda Produkter</h3>
                 </div>
-                <div class="sc-cart-discount">
-                    <input type="text" placeholder="Rabattkod" id="discountCode" class="sc-discount-input">
-                    <button class="sc-apply-discount" id="applyDiscount">Tillämpa</button>
-                </div>
-                <div class="sc-discount-info" id="discountInfo" style="display: none;"></div>
-            </div>
 
-            <div class="sc-checkout-section">
-                <h4 class="sc-section-title">Leverans</h4>
-                <div class="sc-delivery-options">
-                    <label class="sc-delivery-option">
-                        <input type="radio" name="delivery" value="pickup" checked>
-                        <span class="sc-option-label">
-                            <i class="fas fa-store"></i>
-                            <div>
-                                <strong>Hämtning</strong>
-                                <small>Gratis</small>
-                            </div>
-                        </span>
-                    </label>
-                    <label class="sc-delivery-option">
-                        <input type="radio" name="delivery" value="home">
-                        <span class="sc-option-label disabled">
-                            <i class="fas fa-truck"></i>
-                            <div>
-                                <strong>Hemleverans</strong>
-                                <small>Kontakta support</small>
-                            </div>
-                        </span>
-                    </label>
-                </div>
-                <p class="sc-delivery-note">För hemleverans, vänligen kontakta vår support.</p>
-            </div>
+                <div class="sc-cart-items" id="cartItems"></div>
 
-            <div class="sc-checkout-section">
-                <h4 class="sc-section-title">Dina Uppgifter</h4>
-                <form class="sc-customer-form" id="customerForm">
-                    <input type="text" placeholder="Namn *" id="customerName" required class="sc-input">
-                    <input type="email" placeholder="E-post *" id="customerEmail" required class="sc-input">
-                    <input type="tel" placeholder="Telefonnummer *" id="customerPhone" required class="sc-input">
-                    <div id="pickupFields" class="sc-address-fields">
-                        <input type="text" placeholder="Gatuadress *" id="customerAddress" required class="sc-input">
-                        <input type="text" placeholder="Postnummer *" id="customerZip" required class="sc-input">
-                        <input type="text" placeholder="Stad *" id="customerCity" required class="sc-input">
+                <div class="sc-cart-total-section">
+                    <div class="sc-cart-subtotal-row">
+                        <span>Delsumma</span>
+                        <span id="cartSubtotal">0 SEK</span>
                     </div>
-                </form>
+                    <div class="sc-cart-discount">
+                        <div class="sc-discount-row">
+                            <input type="text" placeholder="Rabattkod" id="discountCode" class="sc-discount-input">
+                            <button class="sc-apply-discount" id="applyDiscount">Tillämpa</button>
+                        </div>
+                        <div class="sc-discount-info" id="discountInfo" style="display: none;"></div>
+                    </div>
+                    <div class="sc-cart-total-final">
+                        <span class="sc-total-label">TOTALT</span>
+                        <span class="sc-cart-total-amount" id="cartTotal">0 SEK</span>
+                    </div>
+                </div>
+
+                <button class="sc-continue-btn" id="continueBtn">
+                    <i class="fas fa-arrow-left"></i> Fortsätt handla
+                </button>
             </div>
 
-            <div class="sc-checkout-section">
-                <h4 class="sc-section-title">Betalning</h4>
-                <div class="sc-payment-options">
-                    <label class="sc-payment-option">
-                        <input type="radio" name="payment" value="swish" checked>
-                        <span class="sc-payment-label"><i class="fas fa-mobile-alt"></i> <strong>Swish</strong></span>
+            <!-- RIGHT: checkout form -->
+            <div class="sc-cart-right">
+                <div class="sc-cart-right-header">
+                    <span class="sc-section-eyebrow">BESTÄLLNING</span>
+                    <h3 class="sc-cart-right-title">Slutför Din Beställning</h3>
+                </div>
+
+                <!-- Delivery -->
+                <div class="sc-checkout-block">
+                    <h4 class="sc-block-title"><i class="fas fa-truck sc-block-icon"></i> Leveransalternativ</h4>
+                    <div class="sc-delivery-options">
+                        <label class="sc-delivery-option">
+                            <input type="radio" name="delivery" value="pickup" checked>
+                            <span class="sc-option-label">
+                                <i class="fas fa-store"></i>
+                                <div>
+                                    <strong>Hämtning</strong>
+                                    <small>Gratis — hämta på plats</small>
+                                </div>
+                            </span>
+                        </label>
+                        <label class="sc-delivery-option">
+                            <input type="radio" name="delivery" value="home">
+                            <span class="sc-option-label">
+                                <i class="fas fa-truck"></i>
+                                <div>
+                                    <strong>Hemleverans</strong>
+                                    <small>Kontakta oss för pris</small>
+                                </div>
+                            </span>
+                        </label>
+                    </div>
+                    <p class="sc-delivery-note">För hemleverans kontaktar du oss direkt efter bestellningen.</p>
+                </div>
+
+                <!-- Contact details -->
+                <div class="sc-checkout-block">
+                    <h4 class="sc-block-title"><i class="fas fa-user sc-block-icon"></i> Dina Uppgifter</h4>
+                    <form class="sc-customer-form" id="customerForm">
+                        <div class="sc-form-row">
+                            <input type="text" placeholder="Fullständigt namn *" id="customerName" required class="sc-input">
+                            <input type="email" placeholder="E-postadress *" id="customerEmail" required class="sc-input">
+                        </div>
+                        <input type="tel" placeholder="Telefonnummer *" id="customerPhone" required class="sc-input">
+                        <div id="pickupFields" class="sc-address-fields" style="display:none;">
+                            <input type="text" placeholder="Gatuadress *" id="customerAddress" class="sc-input">
+                            <div class="sc-form-row">
+                                <input type="text" placeholder="Postnummer *" id="customerZip" class="sc-input">
+                                <input type="text" placeholder="Stad *" id="customerCity" class="sc-input">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Payment -->
+                <div class="sc-checkout-block">
+                    <h4 class="sc-block-title"><i class="fas fa-credit-card sc-block-icon"></i> Betalningsmetod</h4>
+                    <div class="sc-payment-options">
+                        <label class="sc-payment-option">
+                            <input type="radio" name="payment" value="swish" checked>
+                            <span class="sc-payment-label">
+                                <i class="fas fa-mobile-alt"></i>
+                                <strong>Swish</strong>
+                            </span>
+                        </label>
+                        <label class="sc-payment-option">
+                            <input type="radio" name="payment" value="card">
+                            <span class="sc-payment-label">
+                                <i class="fas fa-credit-card"></i>
+                                <strong>Visa / Mastercard</strong>
+                            </span>
+                        </label>
+                        <label class="sc-payment-option">
+                            <input type="radio" name="payment" value="applepay">
+                            <span class="sc-payment-label">
+                                <i class="fab fa-apple"></i>
+                                <strong>Apple Pay</strong>
+                            </span>
+                        </label>
+                        <label class="sc-payment-option">
+                            <input type="radio" name="payment" value="googlepay">
+                            <span class="sc-payment-label">
+                                <i class="fab fa-google-pay"></i>
+                                <strong>Google Pay</strong>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="sc-payment-icons">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/200px-Visa_Inc._logo.svg.png" alt="Visa" class="sc-pay-icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/200px-Mastercard-logo.svg.png" alt="Mastercard" class="sc-pay-icon">
+                    </div>
+                </div>
+
+                <!-- Terms -->
+                <div class="sc-terms-row">
+                    <label class="sc-terms-label">
+                        <input type="checkbox" id="agreeTerms" class="sc-terms-check">
+                        <span>Jag godkänner <a href="#" class="sc-terms-link">Allmänna Villkor</a> och <a href="#" class="sc-terms-link">Integritetspolicy</a></span>
                     </label>
-                    <label class="sc-payment-option">
-                        <input type="radio" name="payment" value="card">
-                        <span class="sc-payment-label"><i class="fas fa-credit-card"></i> <strong>Visa/Mastercard</strong></span>
-                    </label>
-                    <label class="sc-payment-option">
-                        <input type="radio" name="payment" value="applepay">
-                        <span class="sc-payment-label"><i class="fab fa-apple"></i> <strong>Apple Pay</strong></span>
-                    </label>
+                </div>
+
+                <button class="sc-checkout-btn" id="checkoutBtn">
+                    <i class="fas fa-lock"></i> Lägg beställning
+                </button>
+
+                <div class="sc-trust-strip">
+                    <div class="sc-trust-item"><i class="fas fa-shield-alt"></i> Säker betalning</div>
+                    <div class="sc-trust-item"><i class="fas fa-star"></i> Premiumkvalitet</div>
+                    <div class="sc-trust-item"><i class="fas fa-heart"></i> Handgjorda desserter</div>
                 </div>
             </div>
         </div>
-
-        <div class="sc-cart-footer">
-            <button class="sc-continue-btn" id="continueBtn">Fortsätt handla</button>
-            <button class="sc-checkout-btn" id="checkoutBtn">Gå till betalning</button>
-        </div>
-    </aside>
+    </div>
 
     <script src="js/script.js"></script>
     <script>
@@ -195,13 +339,28 @@
 
     function addToCart(product,qty){const existing=cart.find(i=>i.product.id===product.id);if(existing)existing.qty+=qty;else cart.push({product,qty});updateCartUI();}
 
+    function openCart() {
+        const panel = document.getElementById('cartPanel');
+        panel.classList.add('open');
+        document.body.classList.add('sc-cart-open');
+    }
+
+    function closeCart() {
+        const panel = document.getElementById('cartPanel');
+        panel.classList.remove('open');
+        document.body.classList.remove('sc-cart-open');
+    }
+
     function updateCartUI(){
         const count=cart.reduce((sum,i)=>sum+i.qty,0);
-        document.getElementById('cartBadgeHeader').textContent=count;
-        document.getElementById('cartBadgeHeader').classList.toggle('visible',count>0);
+        const badge=document.getElementById('cartBadgeHeader');
+        badge.textContent=count;
+        badge.classList.toggle('visible',count>0);
         const itemsEl=document.getElementById('cartItems');
-        if(cart.length===0){itemsEl.innerHTML='<div class="sc-cart-empty"><p>Din kundvagn är tom</p></div>';}else{
-            itemsEl.innerHTML=cart.map(i=>{const price=getPrice(cart.reduce((s,x)=>s+x.qty,0));return `<div class="sc-cart-item"><img src="${i.product.img}" alt="${i.product.name}"><div class="sc-cart-item-info"><span>${i.product.name}</span><span class="sc-cart-item-price">${price} SEK × ${i.qty} = ${price*i.qty} SEK</span><div class="sc-cart-item-qty"><button class="sc-cart-qty-btn" data-id="${i.product.id}" data-action="dec">−</button><span>${i.qty}</span><button class="sc-cart-qty-btn" data-id="${i.product.id}" data-action="inc">+</button></div></div><button class="sc-cart-item-remove" data-id="${i.product.id}">✕</button></div>`;}).join('');
+        if(cart.length===0){
+            itemsEl.innerHTML='<div class="sc-cart-empty"><i class="fas fa-shopping-bag sc-cart-empty-icon"></i><p>Din kundvagn är tom</p><small>Välj dina favoriter nedan</small></div>';
+        } else {
+            itemsEl.innerHTML=cart.map(i=>{const price=getPrice(cart.reduce((s,x)=>s+x.qty,0));return `<div class="sc-cart-item"><img src="${i.product.img}" alt="${i.product.name}"><div class="sc-cart-item-info"><span class="sc-cart-item-name">${i.product.name}</span><span class="sc-cart-item-price">${price} SEK / kopp</span><div class="sc-cart-item-qty"><button class="sc-cart-qty-btn" data-id="${i.product.id}" data-action="dec">−</button><span class="sc-cart-qty-num">${i.qty}</span><button class="sc-cart-qty-btn" data-id="${i.product.id}" data-action="inc">+</button></div></div><div class="sc-cart-item-right"><span class="sc-cart-item-total">${price*i.qty} SEK</span><button class="sc-cart-item-remove" data-id="${i.product.id}" title="Ta bort"><i class="fas fa-trash-alt"></i></button></div></div>`;}).join('');
             itemsEl.querySelectorAll('.sc-cart-qty-btn').forEach(btn=>{btn.addEventListener('click',()=>{const id=parseInt(btn.dataset.id);const item=cart.find(i=>i.product.id===id);if(btn.dataset.action==='inc')item.qty++;else if(item.qty>20)item.qty--;updateCartUI();});});
             itemsEl.querySelectorAll('.sc-cart-item-remove').forEach(btn=>{btn.addEventListener('click',()=>{cart=cart.filter(i=>i.product.id!==parseInt(btn.dataset.id));updateCartUI();});});
         }
@@ -212,6 +371,8 @@
         const totalItems = cart.reduce((sum,i)=>sum+i.qty,0);
         const price = getPrice(totalItems);
         const subtotal = cart.reduce((sum,i)=>sum+price*i.qty,0);
+        const subtotalEl = document.getElementById('cartSubtotal');
+        if (subtotalEl) subtotalEl.textContent = subtotal.toFixed(0) + ' SEK';
         document.getElementById('cartTotal').textContent = subtotal.toFixed(0) + ' SEK';
     }
 
@@ -221,32 +382,33 @@
         if(code.length > 0) {
             discountCode = code;
             discountInfo.textContent = `✓ Rabattkod: ${code}`;
-            discountInfo.style.color = '#28a745';
+            discountInfo.style.color = '#5b1533';
             discountInfo.style.display = 'block';
         } else {
             discountCode = '';
             discountInfo.textContent = 'Vänligen ange en rabattkod';
-            discountInfo.style.color = '#dc3545';
+            discountInfo.style.color = '#c0392b';
             discountInfo.style.display = 'block';
         }
     });
 
-    document.querySelectorAll('input[name="delivery"]').forEach(radio=>{radio.addEventListener('change',(e)=>{const pickupFields=document.getElementById('pickupFields');const addressInputs=pickupFields.querySelectorAll('input');if(e.target.value==='pickup'){pickupFields.style.display='none';addressInputs.forEach(input=>input.removeAttribute('required'));}else{pickupFields.style.display='flex';addressInputs.forEach(input=>input.setAttribute('required',''));}});});
+    document.querySelectorAll('input[name="delivery"]').forEach(radio=>{radio.addEventListener('change',(e)=>{const pickupFields=document.getElementById('pickupFields');const addressInputs=pickupFields.querySelectorAll('input');if(e.target.value==='home'){pickupFields.style.display='flex';addressInputs.forEach(input=>input.setAttribute('required',''));}else{pickupFields.style.display='none';addressInputs.forEach(input=>input.removeAttribute('required'));}});});
 
     document.getElementById('checkoutBtn').addEventListener('click',()=>{
-        const form=document.getElementById('customerForm');
+        if(cart.length===0){alert('Din kundvagn är tom. Välj produkter först.');return;}
+        const agreeTerms=document.getElementById('agreeTerms');
+        if(agreeTerms && !agreeTerms.checked){alert('Vänligen godkänn allmänna villkor för att fortsätta.');return;}
         const name=document.getElementById('customerName').value;
         const email=document.getElementById('customerEmail').value;
         const phone=document.getElementById('customerPhone').value;
         const delivery=document.querySelector('input[name="delivery"]:checked').value;
         const payment=document.querySelector('input[name="payment"]:checked').value;
         if(!name||!email||!phone){alert('Vänligen fyll i alla obligatoriska fält');return;}
-        if(delivery==='pickup'&&(!document.getElementById('customerAddress').value||!document.getElementById('customerZip').value||!document.getElementById('customerCity').value)){alert('Vänligen fyll i leveransadress');return;}
+        if(delivery==='home'&&(!document.getElementById('customerAddress').value||!document.getElementById('customerZip').value||!document.getElementById('customerCity').value)){alert('Vänligen fyll i leveransadress');return;}
         const totalItems = cart.reduce((sum,i)=>sum+i.qty,0);
         const price = getPrice(totalItems);
         const subtotal = cart.reduce((sum,i)=>sum+price*i.qty,0);
-        const orderData={items:cart,customer:{name,email,phone,address:document.getElementById('customerAddress').value,zip:document.getElementById('customerZip').value,city:document.getElementById('customerCity').value},delivery,payment,discountCode,subtotal,total:subtotal.toFixed(0)};
-        const orderSummary = `Beställning klar!\n\nKunduppgifter:\nNamn: ${name}\nE-post: ${email}\nTelefon: ${phone}\n\nLeverans: ${delivery==='pickup'?'Hämtning':'Hemleverans'}\nBetalmetod: ${payment==='swish'?'Swish':payment==='card'?'Visa/Mastercard':'Apple Pay'}\n${discountCode ? `Rabattkod: ${discountCode}\n` : ''}Belopp: ${orderData.total} SEK\n\nDu kommer snart få en bekräftelse på din e-post.`;
+        const orderSummary = `✓ Tack för din beställning!\n\nKunduppgifter:\nNamn: ${name}\nE-post: ${email}\nTelefon: ${phone}\n\nLeverans: ${delivery==='pickup'?'Hämtning':'Hemleverans'}\nBetalmetod: ${payment==='swish'?'Swish':payment==='card'?'Visa/Mastercard':payment==='applepay'?'Apple Pay':'Google Pay'}\n${discountCode ? `Rabattkod: ${discountCode}\n` : ''}Belopp: ${subtotal.toFixed(0)} SEK\n\nEn bekräftelse skickas till din e-post.`;
         alert(orderSummary);
         cart=[];
         discountCode = '';
@@ -254,14 +416,16 @@
         document.getElementById('customerForm').reset();
         document.getElementById('discountCode').value = '';
         document.getElementById('discountInfo').style.display = 'none';
-        document.getElementById('cartPanel').classList.remove('open');
-        document.getElementById('cartOverlay').classList.remove('open');
+        if(document.getElementById('agreeTerms')) document.getElementById('agreeTerms').checked=false;
+        closeCart();
     });
 
-    document.getElementById('cartTriggerHeader').addEventListener('click',()=>{if(cart.length>0){document.getElementById('cartPanel').classList.add('open');document.getElementById('cartOverlay').classList.add('open');}});
-    document.getElementById('cartClose').addEventListener('click',()=>{document.getElementById('cartPanel').classList.remove('open');document.getElementById('cartOverlay').classList.remove('open');});
-    document.getElementById('cartOverlay').addEventListener('click',()=>{document.getElementById('cartPanel').classList.remove('open');document.getElementById('cartOverlay').classList.remove('open');});
-    document.getElementById('continueBtn').addEventListener('click',()=>{document.getElementById('cartPanel').classList.remove('open');document.getElementById('cartOverlay').classList.remove('open');});
+    document.getElementById('cartTriggerHeader').addEventListener('click',()=>{openCart();});
+    document.getElementById('cartClose').addEventListener('click',()=>{closeCart();});
+    document.getElementById('continueBtn').addEventListener('click',()=>{closeCart();});
+
+    // Close on Escape key
+    document.addEventListener('keydown',(e)=>{if(e.key==='Escape') closeCart();});
 
     renderGrid();
     updateCartUI();
