@@ -197,8 +197,36 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
+   <!-- JavaScript -->
+<script src="js/script.js"></script>
+
+<script>
+// Language switcher for tjänster page
+const languageToggle = document.getElementById('language-toggle');
+const translatableElements = document.querySelectorAll('[data-sv][data-en]');
+const defaultLang = 'sv';
+
+function applyLanguage(lang) {
+    document.documentElement.lang = lang;
+    document.body.dataset.lang = lang;
+
+    translatableElements.forEach((element) => {
+        element.innerHTML = element.dataset[lang];
+    });
+
+    if (languageToggle) {
+        languageToggle.textContent = lang === 'sv' ? 'EN' : 'SV';
+        languageToggle.setAttribute('aria-label', lang === 'sv' ? 'Switch to English' : 'Byt till svenska');
+    }
+}
+
+applyLanguage(defaultLang);
+
+languageToggle?.addEventListener('click', () => {
+    const nextLang = document.body.dataset.lang === 'sv' ? 'en' : 'sv';
+    applyLanguage(nextLang);
+});
+</script>
 
 </body>
 
