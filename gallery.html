@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galleri | SALWORLD EVENTS</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+
+<body data-lang="sv">
+
+    <!-- ================================================
+         HEADER
+    ================================================ -->
+    <header class="header" id="header">
+        <div class="container">
+
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="SALWORLD EVENTS">
+            </a>
+
+            <nav class="navbar" id="nav">
+                <a href="index.html" data-sv="Hem" data-en="Home">Hem</a>
+                <a href="about.html" data-sv="Om Oss" data-en="About Us">Om Oss</a>
+                <a href="tjanster.html" data-sv="Tjänster" data-en="Services">Tjänster</a>
+                <a href="salcups.html" data-sv="SÀL CUPS" data-en="SÀL CUPS">SÀL CUPS</a>
+                <a href="gallery.html" class="active" data-sv="Galleri" data-en="Gallery">Galleri</a>
+                <a href="contact.html" data-sv="Kontakt" data-en="Contact">Kontakt</a>
+            </nav>
+
+            <div class="header-right">
+                <button class="language-btn" id="language-toggle" type="button" aria-label="Switch language">EN</button>
+                <a href="contact.html" class="book-btn" data-sv="Boka Nu" data-en="Book Now">Boka Nu</a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- ================================================
+         HERO
+    ================================================ -->
+    <section class="gallery-hero">
+        <div class="gallery-hero-content">
+            <span class="gallery-hero-eyebrow" data-sv="VÅRA ÖGONBLICK" data-en="OUR MOMENTS">VÅRA ÖGONBLICK</span>
+            <h1 data-sv="Galleri" data-en="Gallery">Galleri</h1>
+            <div class="gallery-hero-divider"></div>
+            <p data-sv="Upptäck våra oförglömliga ögonblick, eleganta dukningar och exklusiva detaljer skapade för att imponera." data-en="Discover our unforgettable moments, elegant settings and exclusive details crafted to impress.">
+                Upptäck våra oförglömliga ögonblick, eleganta dukningar och exklusiva detaljer skapade för att imponera.
+            </p>
+        </div>
+    </section>
+
+    <!-- ================================================
+         FILTER BAR
+    ================================================ -->
+    <section class="gallery-filter-section">
+        <div class="gallery-filter-bar" role="group" aria-label="Filter gallery categories"
+             data-sv="Filtrera galleri" data-en="Filter gallery categories">
+            <button class="gal-filter-btn active" data-filter="all" data-sv="Alla" data-en="All">Alla</button>
+            <button class="gal-filter-btn" data-filter="weddings" data-sv="Bröllop" data-en="Weddings">Bröllop</button>
+            <button class="gal-filter-btn" data-filter="proposals" data-sv="Frieri" data-en="Proposals">Frieri</button>
+            <button class="gal-filter-btn" data-filter="henna" data-sv="Hennakvällar" data-en="Henna Evenings">Hennakvällar</button>
+            <button class="gal-filter-btn" data-filter="birthdays" data-sv="Födelsedagar" data-en="Birthdays">Födelsedagar</button>
+            <button class="gal-filter-btn" data-filter="catering-dessert" data-sv="Catering &amp; Dessertbord" data-en="Catering &amp; Desserts">Catering &amp; Dessertbord</button>
+            <button class="gal-filter-btn" data-filter="salcups" data-sv="SÀL CUPS" data-en="SÀL CUPS">SÀL CUPS</button>
+            <button class="gal-filter-btn" data-filter="decor-details" data-sv="Dekor &amp; Detaljer" data-en="Decor &amp; Details">Dekor &amp; Detaljer</button>
+        </div>
+    </section>
+
+    <!-- ================================================
+         GALLERY GRID
+         ─────────────────────────────────────────────
+         HOW TO ADD YOUR OWN PHOTOS:
+         1. Upload the image into the correct subfolder
+            under images/gallery/ (e.g. images/gallery/weddings/photo.jpg)
+         2. Copy one of the <div class="gallery-item"> blocks below.
+         3. Set data-cat="<subfolder-name>" (e.g. data-cat="weddings")
+         4. Replace the <img> src and alt with your image path and description.
+         5. Optionally update the caption inside .gal-item-caption.
+    ================================================ -->
+    <section class="gallery-section">
+        <div class="gallery-grid" id="galleryGrid">
+
+            <!-- ── WEDDINGS ─────────────────────────────────── -->
+            <!--
+            <div class="gallery-item" data-cat="weddings">
+                <img src="images/gallery/weddings/your-photo.jpg" alt="Bröllop">
+                <div class="gal-item-caption"><span>Bröllop</span></div>
+            </div>
+            -->
+
+            <!-- ── PROPOSALS ─────────────────────────────────── -->
+            <!--
+            <div class="gallery-item" data-cat="proposals">
+                <img src="images/gallery/proposals/your-photo.jpg" alt="Frieri">
+                <div class="gal-item-caption"><span>Frieri</span></div>
+            </div>
+            -->
+
+            <!-- ── HENNA ─────────────────────────────────────── -->
+            <!--
+            <div class="gallery-item" data-cat="henna">
+                <img src="images/gallery/henna/your-photo.jpg" alt="Hennakväll">
+                <div class="gal-item-caption"><span>Hennakvällar</span></div>
+            </div>
+            -->
+
+            <!-- ── BIRTHDAYS ──────────────────────────────────── -->
+            <!--
+            <div class="gallery-item" data-cat="birthdays">
+                <img src="images/gallery/birthdays/your-photo.jpg" alt="Födelsedag">
+                <div class="gal-item-caption"><span>Födelsedagar</span></div>
+            </div>
+            -->
+
+            <!-- ── CATERING & DESSERT ─────────────────────────── -->
+            <!--
+            <div class="gallery-item" data-cat="catering-dessert">
+                <img src="images/gallery/catering-dessert/your-photo.jpg" alt="Catering">
+                <div class="gal-item-caption"><span>Catering &amp; Dessertbord</span></div>
+            </div>
+            -->
+
+            <!-- ── SÀL CUPS ───────────────────────────────────── -->
+            <!--
+            <div class="gallery-item" data-cat="salcups">
+                <img src="images/gallery/salcups/your-photo.jpg" alt="SÀL CUPS">
+                <div class="gal-item-caption"><span>SÀL CUPS</span></div>
+            </div>
+            -->
+
+            <!-- ── DECOR & DETAILS ───────────────────────────── -->
+            <!--
+            <div class="gallery-item" data-cat="decor-details">
+                <img src="images/gallery/decor-details/your-photo.jpg" alt="Dekor">
+                <div class="gal-item-caption"><span>Dekor &amp; Detaljer</span></div>
+            </div>
+            -->
+
+            <!-- ── PLACEHOLDER CARDS (shown until photos are uploaded) ── -->
+            <div class="gallery-item gallery-placeholder-wrap" data-cat="weddings">
+                <div class="gallery-item-placeholder">
+                    <i class="fa-regular fa-image ph-icon"></i>
+                    <span class="ph-label">Bröllop</span>
+                </div>
+                <div class="gal-item-caption"><span>Bröllop</span></div>
+            </div>
+
+            <div class="gallery-item gallery-placeholder-wrap" data-cat="proposals">
+                <div class="gallery-item-placeholder">
+                    <i class="fa-regular fa-image ph-icon"></i>
+                    <span class="ph-label">Frieri</span>
+                </div>
+                <div class="gal-item-caption"><span>Frieri</span></div>
+            </div>
+
+            <div class="gallery-item gallery-placeholder-wrap" data-cat="henna">
+                <div class="gallery-item-placeholder">
+                    <i class="fa-regular fa-image ph-icon"></i>
+                    <span class="ph-label">Hennakvällar</span>
+                </div>
+                <div class="gal-item-caption"><span>Hennakvällar</span></div>
+            </div>
+
+            <div class="gallery-item gallery-placeholder-wrap" data-cat="birthdays">
+                <div class="gallery-item-placeholder">
+                    <i class="fa-regular fa-image ph-icon"></i>
+                    <span class="ph-label">Födelsedagar</span>
+                </div>
+                <div class="gal-item-caption"><span>Födelsedagar</span></div>
+            </div>
+
+            <div class="gallery-item gallery-placeholder-wrap" data-cat="catering-dessert">
+                <div class="gallery-item-placeholder">
+                    <i class="fa-regular fa-image ph-icon"></i>
+                    <span class="ph-label">Catering &amp; Dessertbord</span>
+                </div>
+                <div class="gal-item-caption"><span>Catering &amp; Dessertbord</span></div>
+            </div>
+
+            <div class="gallery-item gallery-placeholder-wrap" data-cat="salcups">
+                <div class="gallery-item-placeholder">
+                    <i class="fa-regular fa-image ph-icon"></i>
+                    <span class="ph-label">SÀL CUPS</span>
+                </div>
+                <div class="gal-item-caption"><span>SÀL CUPS</span></div>
+            </div>
+
+            <div class="gallery-item gallery-placeholder-wrap" data-cat="decor-details">
+                <div class="gallery-item-placeholder">
+                    <i class="fa-regular fa-image ph-icon"></i>
+                    <span class="ph-label">Dekor &amp; Detaljer</span>
+                </div>
+                <div class="gal-item-caption"><span>Dekor &amp; Detaljer</span></div>
+            </div>
+
+            <div class="gallery-item gallery-placeholder-wrap" data-cat="weddings">
+                <div class="gallery-item-placeholder" style="min-height:280px;">
+                    <i class="fa-regular fa-image ph-icon"></i>
+                    <span class="ph-label">Bröllop</span>
+                </div>
+                <div class="gal-item-caption"><span>Bröllop</span></div>
+            </div>
+
+            <div class="gallery-item gallery-placeholder-wrap" data-cat="proposals">
+                <div class="gallery-item-placeholder" style="min-height:260px;">
+                    <i class="fa-regular fa-image ph-icon"></i>
+                    <span class="ph-label">Frieri</span>
+                </div>
+                <div class="gal-item-caption"><span>Frieri</span></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================================================
+         CTA
+    ================================================ -->
+    <section class="gallery-cta-section">
+        <div class="container">
+            <span class="section-eyebrow" data-sv="SKAPA DITT EVENEMANG" data-en="CREATE YOUR EVENT">SKAPA DITT EVENEMANG</span>
+            <h2 data-sv="Vill du skapa något lika oförglömligt?" data-en="Want to create something just as unforgettable?">
+                Vill du skapa något lika oförglömligt?
+            </h2>
+            <div class="gallery-cta-divider"></div>
+            <p data-sv="Kontakta oss för att börja planera ditt nästa evenemang med elegans, värme och precision." data-en="Contact us to start planning your next event with elegance, warmth and precision.">
+                Kontakta oss för att börja planera ditt nästa evenemang med elegans, värme och precision.
+            </p>
+            <a href="contact.html" class="gallery-cta-btn" data-sv="Boka Konsultation" data-en="Book Consultation">
+                Boka Konsultation
+            </a>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script>
+    (function () {
+        // ── Filter logic ─────────────────────────────────
+        const filterBtns = document.querySelectorAll('.gal-filter-btn');
+        const items = document.querySelectorAll('.gallery-item');
+
+        function applyFilter(cat) {
+            items.forEach(item => {
+                const match = cat === 'all' || item.dataset.cat === cat;
+                if (match) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+            // Re-trigger visible animation for newly shown items
+            requestAnimationFrame(() => {
+                items.forEach(item => {
+                    if (!item.classList.contains('hidden') && !item.classList.contains('visible')) {
+                        item.classList.add('visible');
+                    }
+                });
+            });
+        }
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                applyFilter(btn.dataset.filter);
+            });
+        });
+
+        // ── Scroll-triggered fade-in ──────────────────────
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08 });
+
+        items.forEach(item => observer.observe(item));
+    }());
+    </script>
+
+</body>
+</html>
