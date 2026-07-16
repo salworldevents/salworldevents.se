@@ -1,362 +1,271 @@
 <!DOCTYPE html>
 <html lang="sv">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SÀL CUPS | SALWORLD EVENTS</title>
-
-    <!-- Google Fonts -->
+    <title>SÀL CUPS | Premium Dessert Shop | SALWORLD EVENTS</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/salcups.css">
 </head>
-
 <body class="salcups-page" data-lang="sv">
-
-    <!-- HEADER -->
-    <header class="header" id="header">
+    <header class="header salcups-header" id="header">
         <div class="container">
             <a href="index.html" class="logo">
                 <img src="images/logo.png" alt="SALWORLD EVENTS">
             </a>
-
             <nav class="navbar" id="nav">
-                <a href="index.html" data-sv="Hem" data-en="Home">Hem</a>
-                <a href="about.html" data-sv="Om Oss" data-en="About Us">Om Oss</a>
-                <a href="index.html#services" data-sv="Tjänster" data-en="Services">Tjänster</a>
-                <a href="salcups.html" class="active" data-sv="SÀL CUPS" data-en="SÀL CUPS">SÀL CUPS</a>
-                <a href="index.html#gallery" data-sv="Galleri" data-en="Gallery">Galleri</a>
-                <a href="index.html#contact" data-sv="Kontakt" data-en="Contact">Kontakt</a>
+                <a href="index.html">Hem</a>
+                <a href="about.html">Om Oss</a>
+                <a href="tjanster.html">Tjänster</a>
+                <a href="salcups.html" class="active">SÀL CUPS</a>
+                <a href="index.html#gallery">Galleri</a>
+                <a href="index.html#contact">Kontakt</a>
             </nav>
-
             <div class="header-right">
-                <button class="language-btn" id="language-toggle" type="button" aria-label="Switch language">EN</button>
-                <a href="index.html#contact" class="book-btn" data-sv="Boka Nu" data-en="Book Now">Boka Nu</a>
+                <button class="language-btn" id="language-toggle">EN</button>
+                <button class="cart-header-btn" id="cartTriggerHeader">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-badge" id="cartBadgeHeader">0</span>
+                </button>
+                <a href="index.html#contact" class="book-btn">Boka Nu</a>
             </div>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="sc-hero" id="sc-home">
-        <div class="sc-hero-content">
-            <img src="images/Salcuplogo.png.PNG" alt="SÀL CUPS" class="sc-hero-logo">
-            <span class="sc-hero-tagline" data-sv="PREMIUM MINI DESSERT CUPS" data-en="PREMIUM MINI DESSERT CUPS">PREMIUM MINI DESSERT CUPS</span>
-            <h1 class="sc-hero-title" data-sv="SÀL CUPS" data-en="SÀL CUPS">SÀL CUPS</h1>
-            <p class="sc-hero-desc" data-sv="Handgjorda lyxiga dessertbägare av premiumingredienser för oförglömliga firanden och speciella ögonblick." data-en="Handcrafted luxury dessert cups made with premium ingredients for unforgettable celebrations and special moments.">
-                Handgjorda lyxiga dessertbägare av premiumingredienser för oförglömliga firanden och speciella ögonblick.
-            </p>
-        </div>
-
-        <div class="sc-scroll-indicator" onclick="document.getElementById('sc-products').scrollIntoView({behavior:'smooth'})">
-            <span class="sc-scroll-label" data-sv="Scrolla ner" data-en="Scroll Down">Scrolla ner</span>
-            <div class="sc-scroll-arrow"></div>
+    <section class="sc-hero-premium">
+        <div class="sc-hero-bg" style="background-image: url('images/Salcuplogo.png.PNG')"></div>
+        <div class="sc-hero-overlay"></div>
+        <div class="sc-hero-content-premium">
+            <span class="sc-hero-eyebrow">PREMIUM DESSERT SHOP</span>
+            <h1 class="sc-hero-title-luxury">SÀL CUPS</h1>
+            <p class="sc-hero-desc-luxury">Handgjorda lyxdessertbägare av premiumingredienser för oförglömliga firanden.</p>
+            <a href="#sc-products" class="sc-hero-btn-luxury">Beställ Nu</a>
         </div>
     </section>
 
-    <!-- PRICING STRIP -->
-    <div class="sc-pricing-strip">
+    <div class="sc-pricing-strip-luxury">
         <div class="sc-pricing-inner">
             <div class="sc-pricing-badge">
-                <span class="sc-pricing-badge-label" data-sv="BULK-PRIS" data-en="BULK PRICE">BULK-PRIS</span>
-                <span class="sc-pricing-badge-price">35 SEK</span>
-                <span class="sc-pricing-badge-min" data-sv="vid minst 100 koppar" data-en="minimum order 100 cups">vid minst 100 koppar</span>
+                <span class="sc-pricing-badge-label">STANDARDPRIS</span>
+                <span class="sc-pricing-badge-price">40 SEK</span>
+                <span class="sc-pricing-badge-min">mindre än 100 koppar</span>
             </div>
             <div class="sc-pricing-divider"></div>
             <div class="sc-pricing-badge">
-                <span class="sc-pricing-badge-label" data-sv="STANDARDPRIS" data-en="STANDARD PRICE">STANDARDPRIS</span>
-                <span class="sc-pricing-badge-price">45 SEK</span>
-                <span class="sc-pricing-badge-min" data-sv="minimibeställning 20 koppar" data-en="minimum order 20 cups">minimibeställning 20 koppar</span>
+                <span class="sc-pricing-badge-label">BULK-PRIS</span>
+                <span class="sc-pricing-badge-price">35 SEK</span>
+                <span class="sc-pricing-badge-min">från 100 koppar</span>
             </div>
         </div>
     </div>
 
-    <!-- PRODUCTS SECTION -->
-    <section class="sc-products" id="sc-products">
+    <section class="sc-products-luxury" id="sc-products">
         <div class="container">
-            <div class="sc-products-header sc-reveal">
-                <span class="sc-eyebrow" data-sv="VÅRA SMAKER" data-en="OUR FLAVOURS">VÅRA SMAKER</span>
-                <h2 class="sc-products-title" data-sv="Välj din favorit" data-en="Choose Your Favourite">Välj din favorit</h2>
+            <div class="sc-products-header">
+                <span class="sc-eyebrow">VÅRA SMAKER</span>
+                <h2 class="sc-products-title">Välj din favorit</h2>
                 <div class="sc-gold-divider"></div>
             </div>
             <div class="sc-grid" id="sc-product-grid"></div>
         </div>
     </section>
 
-    <!-- FLOATING CART BUTTON -->
-    <button class="sc-cart-trigger" id="cartTrigger" aria-label="Öppna kundvagn">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
-            <line x1="3" y1="6" x2="21" y2="6"/>
-            <path d="M16 10a4 4 0 01-8 0"/>
-        </svg>
-        <span class="sc-cart-count" id="cartCount">0</span>
-    </button>
-
-    <!-- CART OVERLAY -->
     <div class="sc-cart-overlay" id="cartOverlay"></div>
 
-    <!-- CART PANEL -->
-    <aside class="sc-cart-panel" id="cartPanel" role="dialog" aria-label="Kundvagn">
+    <aside class="sc-cart-panel" id="cartPanel">
         <div class="sc-cart-header">
-            <h3 data-sv="Kundvagn" data-en="Cart">Kundvagn</h3>
-            <button class="sc-cart-close" id="cartClose" aria-label="Stäng kundvagn">&#x2715;</button>
+            <h3>Kundvagn</h3>
+            <button class="sc-cart-close" id="cartClose">✕</button>
         </div>
-        <div class="sc-cart-items" id="cartItems"></div>
-        <div class="sc-cart-footer" id="cartFooter">
-            <div class="sc-cart-total">
-                <span data-sv="TOTALT" data-en="TOTAL">TOTALT</span>
-                <span class="sc-cart-total-amount" id="cartTotal">0 SEK</span>
+
+        <div class="sc-cart-body">
+            <div class="sc-cart-items" id="cartItems"></div>
+
+            <div class="sc-cart-total-section">
+                <div class="sc-cart-total">
+                    <span>TOTALT</span>
+                    <span class="sc-cart-total-amount" id="cartTotal">0 SEK</span>
+                </div>
+                <div class="sc-cart-discount">
+                    <input type="text" placeholder="Rabattkod" id="discountCode" class="sc-discount-input">
+                    <button class="sc-apply-discount" id="applyDiscount">Tillämpa</button>
+                </div>
+                <div class="sc-discount-info" id="discountInfo" style="display: none;"></div>
             </div>
-            <button class="sc-continue-btn" id="continueBtn" data-sv="Fortsätt handla" data-en="Continue Shopping">Fortsätt handla</button>
-            <button class="sc-checkout-btn" data-sv="Gå till kassan" data-en="Checkout">Gå till kassan</button>
+
+            <div class="sc-checkout-section">
+                <h4 class="sc-section-title">Leverans</h4>
+                <div class="sc-delivery-options">
+                    <label class="sc-delivery-option">
+                        <input type="radio" name="delivery" value="pickup" checked>
+                        <span class="sc-option-label">
+                            <i class="fas fa-store"></i>
+                            <div>
+                                <strong>Hämtning</strong>
+                                <small>Gratis</small>
+                            </div>
+                        </span>
+                    </label>
+                    <label class="sc-delivery-option">
+                        <input type="radio" name="delivery" value="home">
+                        <span class="sc-option-label disabled">
+                            <i class="fas fa-truck"></i>
+                            <div>
+                                <strong>Hemleverans</strong>
+                                <small>Kontakta support</small>
+                            </div>
+                        </span>
+                    </label>
+                </div>
+                <p class="sc-delivery-note">För hemleverans, vänligen kontakta vår support.</p>
+            </div>
+
+            <div class="sc-checkout-section">
+                <h4 class="sc-section-title">Dina Uppgifter</h4>
+                <form class="sc-customer-form" id="customerForm">
+                    <input type="text" placeholder="Namn *" id="customerName" required class="sc-input">
+                    <input type="email" placeholder="E-post *" id="customerEmail" required class="sc-input">
+                    <input type="tel" placeholder="Telefonnummer *" id="customerPhone" required class="sc-input">
+                    <div id="pickupFields" class="sc-address-fields">
+                        <input type="text" placeholder="Gatuadress *" id="customerAddress" required class="sc-input">
+                        <input type="text" placeholder="Postnummer *" id="customerZip" required class="sc-input">
+                        <input type="text" placeholder="Stad *" id="customerCity" required class="sc-input">
+                    </div>
+                </form>
+            </div>
+
+            <div class="sc-checkout-section">
+                <h4 class="sc-section-title">Betalning</h4>
+                <div class="sc-payment-options">
+                    <label class="sc-payment-option">
+                        <input type="radio" name="payment" value="swish" checked>
+                        <span class="sc-payment-label"><i class="fas fa-mobile-alt"></i> <strong>Swish</strong></span>
+                    </label>
+                    <label class="sc-payment-option">
+                        <input type="radio" name="payment" value="card">
+                        <span class="sc-payment-label"><i class="fas fa-credit-card"></i> <strong>Visa/Mastercard</strong></span>
+                    </label>
+                    <label class="sc-payment-option">
+                        <input type="radio" name="payment" value="applepay">
+                        <span class="sc-payment-label"><i class="fab fa-apple"></i> <strong>Apple Pay</strong></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="sc-cart-footer">
+            <button class="sc-continue-btn" id="continueBtn">Fortsätt handla</button>
+            <button class="sc-checkout-btn" id="checkoutBtn">Gå till betalning</button>
         </div>
     </aside>
 
-    <!-- JAVASCRIPT -->
     <script src="js/script.js"></script>
     <script>
     const PRODUCTS = [
-        {
-            id: 1,
-            name: 'Frukt Cheesecake',
-            nameEn: 'Fruit Cheesecake',
-            desc: 'Krämig cheesecake toppad med färska frukter för en fräsch, färgstark och lyxig dessertupplevelse.',
-            descEn: 'Creamy cheesecake topped with fresh fruits for a refreshing, vibrant and luxurious dessert experience.',
-            img: 'images/eea3fc73-ebbe-4144-a8a3-4a1a1be6a899.jpeg',
-            price: 45
-        },
-        {
-            id: 2,
-            name: 'Mango Cheesecake',
-            nameEn: 'Mango Cheesecake',
-            desc: 'Len cheesecake med söt mango som ger en tropisk, elegant och somrig känsla i varje sked.',
-            descEn: 'Silky cheesecake with sweet mango giving a tropical, elegant and summery feeling with every spoonful.',
-            img: 'images/0c8de439-c25a-4e2f-b432-dafaaca00a4f.jpeg',
-            price: 45
-        },
-        {
-            id: 3,
-            name: 'Oreo Cheesecake',
-            nameEn: 'Oreo Cheesecake',
-            desc: 'En fyllig favorit med krämig cheesecake och Oreo för en rik, mjuk och oemotståndlig smak.',
-            descEn: 'A rich favourite with creamy cheesecake and Oreo for an indulgent, soft and irresistible taste.',
-            img: 'images/f4dc64f3-13cc-418f-afec-2cf535e41ff6.jpeg',
-            price: 45
-        },
-        {
-            id: 4,
-            name: 'Ferrero Rocher',
-            nameEn: 'Ferrero Rocher',
-            desc: 'Lyxig choklad och hasselnöt i perfekt harmoni för en sofistikerad dessert med exklusiv känsla.',
-            descEn: 'Luxurious chocolate and hazelnut in perfect harmony for a sophisticated dessert with an exclusive feel.',
-            img: 'images/d93d1c81-e482-4489-b4a2-222ff564fa9a.jpeg',
-            price: 45
-        },
-        {
-            id: 5,
-            name: 'Lotus Cheesecake',
-            nameEn: 'Lotus Cheesecake',
-            desc: 'Krämig cheesecake med karamelliserad Lotus-smak som känns varm, mjuk och elegant från första biten.',
-            descEn: 'Creamy cheesecake with caramelised Lotus flavour that feels warm, soft and elegant from the first bite.',
-            img: 'images/af43a02e-05a6-4fd9-8028-e8dd7846d4ba.jpeg',
-            price: 45
-        },
-        {
-            id: 6,
-            name: 'Jordgubb Cheesecake',
-            nameEn: 'Strawberry Cheesecake',
-            desc: 'En klassisk favorit med krämig fyllning och friska jordgubbar som ger en romantisk och lyxig touch.',
-            descEn: 'A classic favourite with creamy filling and fresh strawberries giving a romantic and luxurious touch.',
-            img: 'images/strawberry.png',
-            price: 45
-        }
+        { id: 1, name: 'Frukt Cheesecake', desc: 'Krämig cheesecake toppad med färska frukter', img: 'images/eea3fc73-ebbe-4144-a8a3-4a1a1be6a899.jpeg' },
+        { id: 2, name: 'Mango Cheesecake', desc: 'Len cheesecake med söt mango', img: 'images/0c8de439-c25a-4e2f-b432-dafaaca00a4f.jpeg' },
+        { id: 3, name: 'Oreo Cheesecake', desc: 'Fyllig favorit med Oreo', img: 'images/f4dc64f3-13cc-418f-afec-2cf535e41ff6.jpeg' },
+        { id: 4, name: 'Ferrero Rocher', desc: 'Lyxig choklad och hasselnöt', img: 'images/d93d1c81-e482-4489-b4a2-222ff564fa9a.jpeg' },
+        { id: 5, name: 'Lotus Cheesecake', desc: 'Karamelliserad Lotus-smak', img: 'images/af43a02e-05a6-4fd9-8028-e8dd7846d4ba.jpeg' },
+        { id: 6, name: 'Jordgubb Cheesecake', desc: 'Klassisk med färska jordgubbar', img: 'images/strawberry.png' }
     ];
 
     let cart = [];
+    let discountCode = '';
 
-    function currentLang() {
-        return document.body.dataset.lang || 'sv';
+    function getPrice(totalItems) {
+        return totalItems >= 100 ? 35 : 40;
     }
 
     function renderGrid() {
         const grid = document.getElementById('sc-product-grid');
-        if (!grid) return;
-        const lang = currentLang();
-        grid.innerHTML = PRODUCTS.map(p => `
-            <article class="sc-card sc-reveal" data-id="${p.id}">
-                <div class="sc-card-img-wrap">
-                    <img src="${p.img}" alt="${lang === 'en' ? p.nameEn : p.name}" class="sc-card-img" loading="lazy">
-                </div>
-                <div class="sc-card-body">
-                    <h3 class="sc-card-name">${lang === 'en' ? p.nameEn : p.name}</h3>
-                    <p class="sc-card-desc">${lang === 'en' ? p.descEn : p.desc}</p>
-                    <p class="sc-card-price">${p.price} SEK / kopp</p>
-                    <p class="sc-card-price-note">${lang === 'en' ? '35 SEK / cup on orders of 100+' : '35 SEK / kopp vid order på 100+'}</p>
-                    <div class="sc-qty-row">
-                        <button class="sc-qty-btn" data-action="dec" data-id="${p.id}" aria-label="Minska">&#x2212;</button>
-                        <span class="sc-qty-value" id="qty-${p.id}">1</span>
-                        <button class="sc-qty-btn" data-action="inc" data-id="${p.id}" aria-label="Öka">&#x2B;</button>
-                    </div>
-                    <button class="sc-add-btn" data-id="${p.id}">
-                        ${lang === 'en' ? 'Add to Cart' : 'Lägg i kundvagn'}
-                    </button>
-                </div>
-            </article>
-        `).join('');
-
-        grid.querySelectorAll('.sc-qty-btn').forEach(btn => {
-            btn.addEventListener('click', e => {
-                const id = parseInt(btn.dataset.id);
-                const qtyEl = document.getElementById('qty-' + id);
-                let v = parseInt(qtyEl.textContent);
-                if (btn.dataset.action === 'inc') v++;
-                else if (btn.dataset.action === 'dec' && v > 1) v--;
-                qtyEl.textContent = v;
-            });
-        });
-
-        grid.querySelectorAll('.sc-add-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const id = parseInt(btn.dataset.id);
-                const product = PRODUCTS.find(p => p.id === id);
-                const qty = parseInt(document.getElementById('qty-' + id).textContent);
-                addToCart(product, qty);
-                document.getElementById('qty-' + id).textContent = 1;
-                btn.textContent = currentLang() === 'en' ? '✓ Added' : '✓ Tillagd';
-                btn.style.background = 'linear-gradient(135deg,#5a1d2d,#3b1f28)';
-                btn.style.color = '#e8c97e';
-                setTimeout(() => {
-                    btn.textContent = currentLang() === 'en' ? 'Add to Cart' : 'Lägg i kundvagn';
-                    btn.style.background = '';
-                    btn.style.color = '';
-                }, 1400);
-            });
-        });
-
-        observeReveals();
+        grid.innerHTML = PRODUCTS.map(p => `<article class="sc-card-luxury"><div class="sc-card-img-wrap"><img src="${p.img}" alt="${p.name}" class="sc-card-img"></div><div class="sc-card-body"><h3>${p.name}</h3><p>${p.desc}</p><p class="sc-card-price" id="price-${p.id}">40 SEK / kopp</p><div class="sc-qty-row"><button class="sc-qty-btn" data-action="dec" data-id="${p.id}">−</button><span class="sc-qty-value" id="qty-${p.id}">20</span><button class="sc-qty-btn" data-action="inc" data-id="${p.id}">+</button></div><button class="sc-add-btn" data-id="${p.id}">Lägg i kundvagn</button></div></article>`).join('');
+        grid.querySelectorAll('.sc-qty-btn').forEach(btn=>{btn.addEventListener('click',e=>{const id=parseInt(btn.dataset.id);const qtyEl=document.getElementById('qty-'+id);let v=parseInt(qtyEl.textContent);if(btn.dataset.action==='inc')v++;else if(btn.dataset.action==='dec'&&v>20)v--;qtyEl.textContent=v;updatePriceDisplay(id,v);});});
+        grid.querySelectorAll('.sc-add-btn').forEach(btn=>{btn.addEventListener('click',()=>{const id=parseInt(btn.dataset.id);const product=PRODUCTS.find(p=>p.id===id);const qty=parseInt(document.getElementById('qty-'+id).textContent);addToCart(product,qty);document.getElementById('qty-'+id).textContent=20;btn.textContent='✓ Tillagd';setTimeout(()=>{btn.textContent='Lägg i kundvagn';},1500);});});
     }
 
-    function addToCart(product, qty) {
-        const existing = cart.find(i => i.product.id === product.id);
-        if (existing) existing.qty += qty;
-        else cart.push({ product, qty });
-        updateCartUI();
+    function updatePriceDisplay(productId, qty) {
+        const totalItems = qty;
+        const price = getPrice(totalItems);
+        document.getElementById('price-'+productId).textContent = price + ' SEK / kopp';
     }
 
-    function removeFromCart(id) {
-        cart = cart.filter(i => i.product.id !== id);
-        updateCartUI();
-    }
+    function addToCart(product,qty){const existing=cart.find(i=>i.product.id===product.id);if(existing)existing.qty+=qty;else cart.push({product,qty});updateCartUI();}
 
-    function changeCartQty(id, delta) {
-        const item = cart.find(i => i.product.id === id);
-        if (!item) return;
-        item.qty += delta;
-        if (item.qty <= 0) removeFromCart(id);
-        else updateCartUI();
-    }
-
-    function cartTotal() {
-        return cart.reduce((sum, i) => sum + i.product.price * i.qty, 0);
-    }
-
-    function cartItemCount() {
-        return cart.reduce((sum, i) => sum + i.qty, 0);
-    }
-
-    function updateCartUI() {
-        const lang = currentLang();
-        const countEl = document.getElementById('cartCount');
-        const count = cartItemCount();
-        countEl.textContent = count;
-        countEl.classList.toggle('visible', count > 0);
-
-        const itemsEl = document.getElementById('cartItems');
-        const totalEl = document.getElementById('cartTotal');
-
-        if (cart.length === 0) {
-            itemsEl.innerHTML = `
-                <div class="sc-cart-empty">
-                    <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-                    <p>${lang === 'en' ? 'Your cart is empty' : 'Din kundvagn är tom'}</p>
-                </div>`;
-        } else {
-            itemsEl.innerHTML = cart.map(i => `
-                <div class="sc-cart-item" data-id="${i.product.id}">
-                    <img src="${i.product.img}" alt="${lang === 'en' ? i.product.nameEn : i.product.name}" class="sc-cart-item-img">
-                    <div class="sc-cart-item-info">
-                        <span class="sc-cart-item-name">${lang === 'en' ? i.product.nameEn : i.product.name}</span>
-                        <span class="sc-cart-item-price">${i.product.price * i.qty} SEK</span>
-                        <div class="sc-cart-item-qty-row">
-                            <button class="sc-cart-item-qty-btn" data-id="${i.product.id}" data-delta="-1">&#x2212;</button>
-                            <span class="sc-cart-item-qty-val">${i.qty}</span>
-                            <button class="sc-cart-item-qty-btn" data-id="${i.product.id}" data-delta="1">&#x2B;</button>
-                        </div>
-                    </div>
-                    <button class="sc-cart-item-remove" data-id="${i.product.id}" aria-label="${lang === 'en' ? 'Remove' : 'Ta bort'}">&#x2715;</button>
-                </div>
-            `).join('');
-
-            itemsEl.querySelectorAll('.sc-cart-item-qty-btn').forEach(btn => {
-                btn.addEventListener('click', () => changeCartQty(parseInt(btn.dataset.id), parseInt(btn.dataset.delta)));
-            });
-            itemsEl.querySelectorAll('.sc-cart-item-remove').forEach(btn => {
-                btn.addEventListener('click', () => removeFromCart(parseInt(btn.dataset.id)));
-            });
+    function updateCartUI(){
+        const count=cart.reduce((sum,i)=>sum+i.qty,0);
+        document.getElementById('cartBadgeHeader').textContent=count;
+        document.getElementById('cartBadgeHeader').classList.toggle('visible',count>0);
+        const itemsEl=document.getElementById('cartItems');
+        if(cart.length===0){itemsEl.innerHTML='<div class="sc-cart-empty"><p>Din kundvagn är tom</p></div>';}else{
+            itemsEl.innerHTML=cart.map(i=>{const price=getPrice(cart.reduce((s,x)=>s+x.qty,0));return `<div class="sc-cart-item"><img src="${i.product.img}" alt="${i.product.name}"><div class="sc-cart-item-info"><span>${i.product.name}</span><span class="sc-cart-item-price">${price} SEK × ${i.qty} = ${price*i.qty} SEK</span><div class="sc-cart-item-qty"><button class="sc-cart-qty-btn" data-id="${i.product.id}" data-action="dec">−</button><span>${i.qty}</span><button class="sc-cart-qty-btn" data-id="${i.product.id}" data-action="inc">+</button></div></div><button class="sc-cart-item-remove" data-id="${i.product.id}">✕</button></div>`;}).join('');
+            itemsEl.querySelectorAll('.sc-cart-qty-btn').forEach(btn=>{btn.addEventListener('click',()=>{const id=parseInt(btn.dataset.id);const item=cart.find(i=>i.product.id===id);if(btn.dataset.action==='inc')item.qty++;else if(item.qty>20)item.qty--;updateCartUI();});});
+            itemsEl.querySelectorAll('.sc-cart-item-remove').forEach(btn=>{btn.addEventListener('click',()=>{cart=cart.filter(i=>i.product.id!==parseInt(btn.dataset.id));updateCartUI();});});
         }
-
-        totalEl.textContent = cartTotal() + ' SEK';
+        updateTotalPrice();
     }
 
-    function openCart() {
-        document.getElementById('cartPanel').classList.add('open');
-        document.getElementById('cartOverlay').classList.add('open');
-        document.body.style.overflow = 'hidden';
+    function updateTotalPrice(){
+        const totalItems = cart.reduce((sum,i)=>sum+i.qty,0);
+        const price = getPrice(totalItems);
+        const subtotal = cart.reduce((sum,i)=>sum+price*i.qty,0);
+        document.getElementById('cartTotal').textContent = subtotal.toFixed(0) + ' SEK';
     }
 
-    function closeCart() {
+    document.getElementById('applyDiscount').addEventListener('click', ()=>{
+        const code = document.getElementById('discountCode').value.trim();
+        const discountInfo = document.getElementById('discountInfo');
+        if(code.length > 0) {
+            discountCode = code;
+            discountInfo.textContent = `✓ Rabattkod: ${code}`;
+            discountInfo.style.color = '#28a745';
+            discountInfo.style.display = 'block';
+        } else {
+            discountCode = '';
+            discountInfo.textContent = 'Vänligen ange en rabattkod';
+            discountInfo.style.color = '#dc3545';
+            discountInfo.style.display = 'block';
+        }
+    });
+
+    document.querySelectorAll('input[name="delivery"]').forEach(radio=>{radio.addEventListener('change',(e)=>{const pickupFields=document.getElementById('pickupFields');const addressInputs=pickupFields.querySelectorAll('input');if(e.target.value==='pickup'){pickupFields.style.display='none';addressInputs.forEach(input=>input.removeAttribute('required'));}else{pickupFields.style.display='flex';addressInputs.forEach(input=>input.setAttribute('required',''));}});});
+
+    document.getElementById('checkoutBtn').addEventListener('click',()=>{
+        const form=document.getElementById('customerForm');
+        const name=document.getElementById('customerName').value;
+        const email=document.getElementById('customerEmail').value;
+        const phone=document.getElementById('customerPhone').value;
+        const delivery=document.querySelector('input[name="delivery"]:checked').value;
+        const payment=document.querySelector('input[name="payment"]:checked').value;
+        if(!name||!email||!phone){alert('Vänligen fyll i alla obligatoriska fält');return;}
+        if(delivery==='pickup'&&(!document.getElementById('customerAddress').value||!document.getElementById('customerZip').value||!document.getElementById('customerCity').value)){alert('Vänligen fyll i leveransadress');return;}
+        const totalItems = cart.reduce((sum,i)=>sum+i.qty,0);
+        const price = getPrice(totalItems);
+        const subtotal = cart.reduce((sum,i)=>sum+price*i.qty,0);
+        const orderData={items:cart,customer:{name,email,phone,address:document.getElementById('customerAddress').value,zip:document.getElementById('customerZip').value,city:document.getElementById('customerCity').value},delivery,payment,discountCode,subtotal,total:subtotal.toFixed(0)};
+        const orderSummary = `Beställning klar!\n\nKunduppgifter:\nNamn: ${name}\nE-post: ${email}\nTelefon: ${phone}\n\nLeverans: ${delivery==='pickup'?'Hämtning':'Hemleverans'}\nBetalmetod: ${payment==='swish'?'Swish':payment==='card'?'Visa/Mastercard':'Apple Pay'}\n${discountCode ? `Rabattkod: ${discountCode}\n` : ''}Belopp: ${orderData.total} SEK\n\nDu kommer snart få en bekräftelse på din e-post.`;
+        alert(orderSummary);
+        cart=[];
+        discountCode = '';
+        updateCartUI();
+        document.getElementById('customerForm').reset();
+        document.getElementById('discountCode').value = '';
+        document.getElementById('discountInfo').style.display = 'none';
         document.getElementById('cartPanel').classList.remove('open');
         document.getElementById('cartOverlay').classList.remove('open');
-        document.body.style.overflow = '';
-    }
+    });
 
-    document.getElementById('cartTrigger').addEventListener('click', openCart);
-    document.getElementById('cartClose').addEventListener('click', closeCart);
-    document.getElementById('cartOverlay').addEventListener('click', closeCart);
-    document.getElementById('continueBtn').addEventListener('click', closeCart);
-
-    function observeReveals() {
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.12 });
-
-        document.querySelectorAll('.sc-reveal:not(.visible)').forEach(el => observer.observe(el));
-    }
-
-    const _baseLangToggle = document.getElementById('language-toggle');
-    if (_baseLangToggle) {
-        _baseLangToggle.addEventListener('click', () => {
-            setTimeout(() => {
-                renderGrid();
-                updateCartUI();
-            }, 50);
-        });
-    }
+    document.getElementById('cartTriggerHeader').addEventListener('click',()=>{if(cart.length>0){document.getElementById('cartPanel').classList.add('open');document.getElementById('cartOverlay').classList.add('open');}});
+    document.getElementById('cartClose').addEventListener('click',()=>{document.getElementById('cartPanel').classList.remove('open');document.getElementById('cartOverlay').classList.remove('open');});
+    document.getElementById('cartOverlay').addEventListener('click',()=>{document.getElementById('cartPanel').classList.remove('open');document.getElementById('cartOverlay').classList.remove('open');});
+    document.getElementById('continueBtn').addEventListener('click',()=>{document.getElementById('cartPanel').classList.remove('open');document.getElementById('cartOverlay').classList.remove('open');});
 
     renderGrid();
     updateCartUI();
-    observeReveals();
     </script>
-
 </body>
 </html>
