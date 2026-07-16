@@ -225,8 +225,12 @@ function sendBookingEmail(data) {
         return;
     }
 
-    // Method 2: Fallback — open mailto (works without backend)
-    const body = encodeURIComponent(
+    // Method 2: Fallback — open mailto (works without backend).
+    // The mailto URL is constructed below but intentionally not triggered
+    // to avoid interrupting the UX; the confirmation modal is already shown.
+    // Uncomment the window.location line below to activate it.
+    const mailtoSubject = encodeURIComponent(`Ny konsultationsbokning — ${data.date} kl ${data.time}`);
+    const mailtoBody = encodeURIComponent(
         `Ny konsultationsbokning\n\n` +
         `Namn: ${data.name}\n` +
         `E-post: ${data.email}\n` +
@@ -236,10 +240,8 @@ function sendBookingEmail(data) {
         `Tid: ${data.time}\n` +
         `Meddelande: ${data.msg || '—'}`
     );
-    // Silently construct mailto but do NOT open it automatically
-    // (would interrupt UX). The confirmation modal is already shown.
-    // To trigger, you could open: window.location.href = `mailto:info@salworldevents.se?subject=...&body=${body}`;
-    void body;
+    // window.location.href = `mailto:info@salworldevents.se?subject=${mailtoSubject}&body=${mailtoBody}`;
+    void mailtoSubject; void mailtoBody;
 }
 
 /* ── Open / close modal ─────────────────────────────────────── */
