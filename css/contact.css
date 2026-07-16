@@ -7,16 +7,16 @@
 .contact-hero {
     position: relative;
     width: 100%;
-    min-height: 80vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 160px 24px 100px;
-    background:
-        radial-gradient(ellipse at 50% 0%, rgba(212,175,55,.18) 0%, transparent 55%),
-        radial-gradient(ellipse at 80% 80%, rgba(91,21,51,.45) 0%, transparent 55%),
-        linear-gradient(160deg, #0e0509 0%, #1f0c13 22%, #3b1929 48%, #5b1533 70%, #2a0f1c 100%);
+    background-image: url('../images/kontakt.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     overflow: hidden;
 }
 
@@ -24,8 +24,9 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: url('../images/kontakt.jpeg') center/cover no-repeat;
-    opacity: .32;
+    background:
+        radial-gradient(circle at center, rgba(212, 175, 55, .12), transparent 32%),
+        linear-gradient(180deg, rgba(25, 12, 17, .42) 0%, rgba(59, 31, 40, .72) 58%, rgba(46, 22, 32, .90) 100%);
     z-index: 0;
 }
 

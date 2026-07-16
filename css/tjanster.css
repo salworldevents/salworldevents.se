@@ -24,15 +24,25 @@
     align-items: center;
     text-align: center;
     padding: 140px 24px 90px;
+    background-image: url('../images/tjanster-hero.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.services-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
     background:
-        radial-gradient(ellipse at 50% 0%, rgba(212, 175, 55, .15) 0%, transparent 55%),
-        radial-gradient(ellipse at 80% 80%, rgba(91, 21, 51, .45) 0%, transparent 55%),
-        linear-gradient(160deg, #0e0509 0%, #1f0c13 22%, #3b1929 48%, #5b1533 70%, #2a0f1c 100%);
+        radial-gradient(circle at center, rgba(212, 175, 55, .12), transparent 32%),
+        linear-gradient(180deg, rgba(25, 12, 17, .42) 0%, rgba(59, 31, 40, .72) 58%, rgba(46, 22, 32, .90) 100%);
+    z-index: 1;
 }
 
 .services-hero .hero-content {
     position: relative;
-    z-index: 3;
+    z-index: 2;
     max-width: 920px;
     margin: 0 auto;
 }

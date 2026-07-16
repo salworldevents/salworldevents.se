@@ -18,69 +18,57 @@
 /* ---- Hero ---- */
 .gallery-hero {
   position: relative;
-  height: 56vh;
-  min-height: 360px;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   overflow: hidden;
-  background:
-    radial-gradient(circle at 30% 40%, rgba(212,175,55,.18), transparent 50%),
-    radial-gradient(circle at 70% 70%, rgba(91,21,51,.22), transparent 50%),
-    linear-gradient(160deg, #1f0c13 0%, #3b1f28 55%, #2a121a 100%);
+  background-image: url('../images/gallery.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 140px 24px 90px;
 }
 
 .gallery-hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  opacity: 0;
+  background:
+    radial-gradient(circle at center, rgba(212, 175, 55, .12), transparent 32%),
+    linear-gradient(180deg, rgba(25, 12, 17, .42) 0%, rgba(59, 31, 40, .72) 58%, rgba(46, 22, 32, .90) 100%);
+  z-index: 1;
   pointer-events: none;
 }
 
 .gallery-hero-content {
   position: relative;
   z-index: 2;
+  max-width: 920px;
+  margin: 0 auto;
   animation: gHeroFadeIn .9s var(--gal-ease) both;
-}
-
-.gallery-hero-eyebrow {
-  display: block;
-  font-family: 'Poppins', sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: var(--gal-gold);
-  margin-bottom: 18px;
-  opacity: .85;
 }
 
 .gallery-hero h1 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  font-size: clamp(64px, 10vw, 112px);
   font-weight: 600;
-  color: #fff;
-  letter-spacing: 2px;
-  line-height: 1.1;
-  margin-bottom: 20px;
-}
-
-.gallery-hero-divider {
-  width: 70px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--gal-gold), transparent);
-  margin: 0 auto 22px;
+  color: #E8C97E;
+  letter-spacing: 12px;
+  line-height: 1;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  text-shadow: 0 8px 38px rgba(0, 0, 0, .38);
 }
 
 .gallery-hero p {
   font-family: 'Poppins', sans-serif;
-  font-size: clamp(.9rem, 1.5vw, 1.05rem);
+  font-size: clamp(18px, 2.2vw, 24px);
   font-weight: 300;
-  color: rgba(248,232,210,.85);
-  max-width: 580px;
-  line-height: 1.85;
+  color: #F6E8D8;
+  max-width: 760px;
+  line-height: 1.95;
   margin: 0 auto;
 }
 
@@ -360,8 +348,18 @@
 /* ---- Responsive: phone ---- */
 @media (max-width: 640px) {
   .gallery-hero {
-    height: 50vh;
-    min-height: 300px;
+    padding: 140px 15px 60px;
+    min-height: 100vh;
+  }
+
+  .gallery-hero h1 {
+    font-size: 38px;
+    letter-spacing: 4px;
+  }
+
+  .gallery-hero p {
+    font-size: 16px;
+    line-height: 1.6;
   }
 
   .gallery-grid {
