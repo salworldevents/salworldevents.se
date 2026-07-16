@@ -1,4 +1,12 @@
 /* ===========================
+   SHARED UTILITY
+=========================== */
+
+.section-dark {
+    background: linear-gradient(140deg, #2f141c 0%, #5b1533 52%, #2a0f17 100%);
+}
+
+/* ===========================
    SERVICES PAGE STYLES
 =========================== */
 
@@ -148,7 +156,7 @@
 =========================== */
 
 .process-section {
-    background: linear-gradient(180deg, #2f141c 0%, #5b1533 50%, #2a0f17 100%);
+    background: linear-gradient(140deg, #2f141c 0%, #5b1533 52%, #2a0f17 100%);
     padding: 120px 0;
     overflow: hidden;
 }
@@ -304,7 +312,6 @@
 =========================== */
 
 .cta-section {
-    background: linear-gradient(140deg, #2f141c 0%, #5b1533 52%, #2a0f17 100%);
     padding: 95px 0;
     text-align: center;
 }
