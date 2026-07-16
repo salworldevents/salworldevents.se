@@ -1,0 +1,586 @@
+/* =============================================
+   ABOUT PAGE — Luxury Styles
+   Palette: Burgundy #3B1F28 | Gold #D4AF37
+   Font: Cormorant Garamond + Poppins
+============================================= */
+
+/* Override body background for about page */
+body {
+    background: #3B1F28;
+    color: #F6EDD8;
+}
+
+/* Active nav link */
+.navbar a.active {
+    color: #D4AF37;
+}
+
+/* ── Shared helpers ── */
+.ab-eyebrow {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    color: #D4AF37;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.ab-gold-line {
+    width: 70px;
+    height: 2px;
+    background: linear-gradient(90deg, #b8902a, #D4AF37, #b8902a);
+    border-radius: 50px;
+    margin: 28px 0;
+}
+
+/* Reveal animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.75s ease, transform 0.75s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =============================================
+   1. HERO
+============================================= */
+.ab-hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('../images/general-manager.jpg') center center / cover no-repeat;
+}
+
+.ab-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(25, 8, 14, 0.35), rgba(30, 10, 18, 0.78));
+}
+
+.ab-hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 24px;
+}
+
+.ab-hero-eyebrow {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    color: #D4AF37;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+.ab-hero-content h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(52px, 8vw, 100px);
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: #D4AF37;
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.45);
+    margin-bottom: 28px;
+    line-height: 1.05;
+}
+
+.ab-hero-content p {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(16px, 2vw, 22px);
+    font-weight: 300;
+    color: #F6EDD8;
+    max-width: 620px;
+    margin: 0 auto;
+    line-height: 1.9;
+}
+
+/* =============================================
+   2. STORY
+============================================= */
+.ab-story {
+    background: linear-gradient(180deg, #3B1F28 0%, #341821 100%);
+    padding: 130px 8%;
+}
+
+.ab-story-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    align-items: center;
+}
+
+.ab-story-img {
+    position: relative;
+}
+
+.ab-story-img::before {
+    content: "";
+    position: absolute;
+    top: -18px;
+    left: -18px;
+    width: 74px;
+    height: 74px;
+    border-top: 3px solid #D4AF37;
+    border-left: 3px solid #D4AF37;
+    border-radius: 18px 0 0 0;
+    z-index: 1;
+}
+
+.ab-story-img::after {
+    content: "";
+    position: absolute;
+    bottom: -18px;
+    right: -18px;
+    width: 74px;
+    height: 74px;
+    border-bottom: 3px solid #D4AF37;
+    border-right: 3px solid #D4AF37;
+    border-radius: 0 0 18px 0;
+    z-index: 1;
+}
+
+.ab-story-img img {
+    width: 100%;
+    border-radius: 24px;
+    display: block;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.45);
+    transition: transform 0.5s ease;
+}
+
+.ab-story-img img:hover {
+    transform: scale(1.02);
+}
+
+.ab-story-text h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(40px, 5vw, 62px);
+    font-weight: 600;
+    color: #D4AF37;
+    line-height: 1.1;
+}
+
+.ab-story-text p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 2;
+    color: #D6C4AC;
+}
+
+/* =============================================
+   3. MISSION
+============================================= */
+.ab-mission {
+    background: linear-gradient(180deg, #F3E7D3 0%, #EADBC3 100%);
+    padding: 110px 8%;
+}
+
+.ab-mission-card {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.58);
+    border: 1px solid rgba(212, 175, 55, 0.38);
+    border-radius: 30px;
+    padding: 76px 64px;
+    box-shadow: 0 25px 60px rgba(70, 45, 20, 0.12);
+    backdrop-filter: blur(6px);
+}
+
+.ab-mission-card .ab-gold-line {
+    margin: 28px auto;
+}
+
+.ab-mission-card h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(38px, 4.5vw, 58px);
+    font-weight: 600;
+    color: #8A5A2B;
+}
+
+.ab-mission-card p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 2;
+    color: #5C4632;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* =============================================
+   4. WHY CHOOSE US
+============================================= */
+.ab-why {
+    background: #3B1F28;
+    padding: 120px 8%;
+}
+
+.ab-section-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.ab-section-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(40px, 5vw, 62px);
+    font-weight: 600;
+    color: #D4AF37;
+    margin-top: 8px;
+}
+
+.ab-why-grid {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.ab-why-card {
+    background: linear-gradient(160deg, rgba(212, 175, 55, 0.08), rgba(212, 175, 55, 0.02));
+    border: 1px solid rgba(212, 175, 55, 0.22);
+    border-radius: 26px;
+    padding: 58px 42px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+.ab-why-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 26px 60px rgba(0, 0, 0, 0.35);
+}
+
+.ab-why-icon {
+    font-size: 32px;
+    color: #D4AF37;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.ab-why-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: #D4AF37;
+    margin-bottom: 16px;
+}
+
+.ab-why-card p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.95;
+    color: #D2BEA3;
+}
+
+/* =============================================
+   5. NUMBERS
+============================================= */
+.ab-numbers {
+    background: linear-gradient(135deg, #2E1620, #3B1F28);
+    padding: 110px 8%;
+    border-top: 1px solid rgba(212, 175, 55, 0.15);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.ab-numbers-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    flex-wrap: wrap;
+}
+
+.ab-stat {
+    flex: 1;
+    min-width: 180px;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.ab-stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(56px, 7vw, 88px);
+    font-weight: 600;
+    color: #D4AF37;
+    line-height: 1;
+    margin-bottom: 14px;
+}
+
+.ab-plus {
+    font-size: 0.6em;
+    vertical-align: super;
+    color: #D4AF37;
+}
+
+.ab-star {
+    color: #D4AF37;
+    font-size: 0.65em;
+    vertical-align: middle;
+}
+
+.ab-stat p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #B89B7A;
+}
+
+.ab-stat-divider {
+    width: 1px;
+    height: 80px;
+    background: rgba(212, 175, 55, 0.3);
+    flex-shrink: 0;
+}
+
+/* =============================================
+   6. TEAM
+============================================= */
+.ab-team {
+    background:
+        radial-gradient(circle at top, rgba(212, 175, 55, 0.08), transparent 35%),
+        linear-gradient(180deg, #3B1F28 0%, #2E1620 100%);
+    padding: 130px 8%;
+}
+
+.ab-team-intro {
+    max-width: 760px;
+    margin: 18px auto 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.95;
+    color: #D7C5AC;
+}
+
+.ab-team-grid {
+    max-width: 1260px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 42px;
+    align-items: stretch;
+}
+
+.ab-profile-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 42px 34px 40px;
+    border-radius: 30px;
+    background: linear-gradient(180deg, rgba(255, 248, 236, 0.08), rgba(212, 175, 55, 0.04));
+    border: 1px solid rgba(212, 175, 55, 0.22);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+    overflow: hidden;
+    transition: transform 0.45s ease, box-shadow 0.45s ease, border-color 0.45s ease;
+}
+
+.ab-profile-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(212, 175, 55, 0.05), transparent 40%, rgba(255, 255, 255, 0.02));
+    pointer-events: none;
+}
+
+.ab-profile-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 28px 65px rgba(0, 0, 0, 0.36);
+    border-color: rgba(212, 175, 55, 0.4);
+}
+
+.ab-profile-photo-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 28px;
+}
+
+.ab-profile-photo {
+    width: 100%;
+    max-width: 360px;
+    aspect-ratio: 1 / 1.08;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 1.5px solid rgba(212, 175, 55, 0.9);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+    transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.ab-profile-card:hover .ab-profile-photo {
+    transform: scale(1.03);
+    box-shadow: 0 24px 55px rgba(0, 0, 0, 0.34);
+}
+
+.ab-profile-content {
+    position: relative;
+    z-index: 1;
+    max-width: 420px;
+}
+
+.ab-profile-content h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(34px, 4vw, 42px);
+    font-weight: 600;
+    color: #F2DFC2;
+    margin-bottom: 10px;
+    letter-spacing: 0.4px;
+}
+
+.ab-profile-role {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #D4AF37;
+}
+
+.ab-profile-line {
+    margin: 24px auto 22px;
+}
+
+.ab-profile-content p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 2;
+    color: #D8C5AA;
+}
+
+/* =============================================
+   7. CTA
+============================================= */
+.ab-cta {
+    background: #2E1620;
+    padding: 130px 8%;
+    text-align: center;
+}
+
+.ab-cta-inner {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.ab-cta-inner .ab-gold-line {
+    margin: 28px auto;
+}
+
+.ab-cta-inner h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 5vw, 62px);
+    font-weight: 600;
+    color: #D4AF37;
+    line-height: 1.15;
+    margin-bottom: 10px;
+}
+
+.ab-cta-btn {
+    display: inline-block;
+    background: #D4AF37;
+    color: #2E1620;
+    padding: 18px 55px;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 12px 35px rgba(212, 175, 55, 0.25);
+    margin-top: 38px;
+}
+
+.ab-cta-btn:hover {
+    background: #e8c84e;
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px rgba(212, 175, 55, 0.35);
+}
+
+/* =============================================
+   RESPONSIVE
+============================================= */
+@media (max-width: 1100px) {
+    .ab-team-grid {
+        gap: 28px;
+    }
+
+    .ab-profile-card {
+        padding: 34px 24px 34px;
+    }
+}
+
+@media (max-width: 960px) {
+
+    .ab-story-inner {
+        grid-template-columns: 1fr;
+        gap: 56px;
+    }
+
+    .ab-why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ab-team-grid {
+        grid-template-columns: 1fr;
+        max-width: 620px;
+    }
+
+    .ab-stat-divider {
+        display: none;
+    }
+
+    .ab-numbers-inner {
+        gap: 10px;
+    }
+
+    .ab-mission-card {
+        padding: 54px 30px;
+    }
+}
+
+@media (max-width: 640px) {
+    .ab-story,
+    .ab-mission,
+    .ab-why,
+    .ab-numbers,
+    .ab-team,
+    .ab-cta {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .ab-profile-photo {
+        max-width: 100%;
+    }
+
+    .ab-profile-content h3 {
+        font-size: 32px;
+    }
+
+    .ab-team-intro {
+        font-size: 15px;
+    }
+}
