@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | SALWORLD EVENTS</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body data-lang="sv">
+
+    <!-- ================================================
+         HEADER
+    ================================================ -->
+    <header class="header" id="header">
+        <div class="container">
+
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="SALWORLD EVENTS">
+            </a>
+
+            <nav class="navbar" id="nav">
+                <a href="index.html">Hem</a>
+                <a href="about.html">Om Oss</a>
+                <a href="tjanster.html">Tjänster</a>
+                <a href="salcups.html">SÀL CUPS</a>
+                <a href="contact.html" class="active">Kontakt</a>
+            </nav>
+
+            <div class="header-right">
+                <button class="language-btn" id="language-toggle" type="button" aria-label="Byt språk">EN</button>
+                <a href="contact.html" class="book-btn">Boka Nu</a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- ================================================
+         HERO
+    ================================================ -->
+    <section class="contact-hero">
+        <div class="hero-content">
+            <span class="hero-eyebrow">KONTAKTA OSS</span>
+            <h1>Kontakta Oss</h1>
+            <p>Vi ser fram emot att höra om ditt nästa evenemang. Kontakta oss idag för en kostnadsfri konsultation.</p>
+        </div>
+    </section>
+
+    <!-- ================================================
+         MAIN — FORM + INFO
+    ================================================ -->
+    <section class="contact-main">
+        <div class="container">
+            <div class="contact-grid">
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrap reveal">
+                    <h2>Skicka ett Meddelande</h2>
+                    <div class="gold-line"></div>
+
+                    <!--
+                        FormSubmit.co forwards submissions to info@salworldevents.se.
+                        No backend code required for static sites.
+                    -->
+                    <form
+                        action="https://formsubmit.co/info@salworldevents.se"
+                        method="POST"
+                        id="contact-form"
+                    >
+                        <!-- FormSubmit config -->
+                        <input type="hidden" name="_subject" value="Ny förfrågan från SALWORLD EVENTS webbplats">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://salworldevents.se/contact.html?skickat=1">
+                        <!-- Honeypot anti-spam -->
+                        <input type="text" name="_honey" style="display:none">
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="c-name">Fullständigt Namn</label>
+                                <input type="text" id="c-name" name="namn" placeholder="Ditt namn" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="c-email">E-postadress</label>
+                                <input type="email" id="c-email" name="epost" placeholder="din@epost.se" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="c-phone">Telefonnummer</label>
+                                <input type="tel" id="c-phone" name="telefon" placeholder="+46 70 000 00 00">
+                            </div>
+                            <div class="form-group">
+                                <label for="c-type">Typ av Evenemang</label>
+                                <select id="c-type" name="evenemangstyp">
+                                    <option value="" disabled selected>Välj typ</option>
+                                    <option>Bröllop &amp; Förlovningsfest</option>
+                                    <option>Frieri</option>
+                                    <option>Hennakvällar</option>
+                                    <option>Födelsedag</option>
+                                    <option>Catering &amp; Dessertbar</option>
+                                    <option>Aktiviteter</option>
+                                    <option>Annat</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="c-date">Eventdatum</label>
+                                <input type="date" id="c-date" name="datum">
+                            </div>
+                            <div class="form-group">
+                                <label for="c-guests">Antal Gäster</label>
+                                <input type="number" id="c-guests" name="antal_gaster" placeholder="Ungefärligt antal" min="1">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="c-msg">Meddelande</label>
+                            <textarea id="c-msg" name="meddelande" placeholder="Berätta om ditt drömevenemang..."></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Skicka Förfrågan
+                        </button>
+                    </form>
+
+                    <!-- Success message when redirected back with ?skickat=1 -->
+                    <div id="form-success" style="display:none; margin-top:24px; text-align:center; padding:28px; background:linear-gradient(135deg,#fdf2e8,#f5e4cc); border-radius:16px; border:1px solid rgba(215,176,107,.3);">
+                        <div style="font-size:40px; margin-bottom:14px;">✨</div>
+                        <p style="font-family:'Cormorant Garamond',serif; font-size:26px; color:#5b1533; font-weight:600; margin-bottom:8px;">Tack för din förfrågan!</p>
+                        <p style="font-family:'Poppins',sans-serif; font-size:14px; color:#7a3a44; font-weight:300; line-height:1.85;">Vi återkommer till dig inom kort. Vi ser fram emot att skapa något oförglömligt tillsammans.</p>
+                    </div>
+                </div>
+
+                <!-- Info Panel -->
+                <div class="contact-info-panel">
+
+                    <!-- Contact Details -->
+                    <div class="info-card reveal">
+                        <h3>Kontaktuppgifter</h3>
+
+                        <div class="info-item">
+                            <span class="info-icon">📍</span>
+                            <span>Sverige</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">📧</span>
+                            <a href="mailto:info@salworldevents.se">info@salworldevents.se</a>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">📞</span>
+                            <a href="tel:+46707117795">+46 70 711 77 95</a>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="info-card reveal">
+                        <h3>Följ Oss</h3>
+                        <div class="social-links">
+                            <a
+                                href="https://www.instagram.com/salworldevents?igsh=MTI5azYwdWltamZhMQ%3D%3D&utm_source=qr"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="social-link"
+                            >
+                                <i class="fa-brands fa-instagram"></i>
+                                Instagram
+                            </a>
+                            <a
+                                href="https://www.facebook.com/share/1F4LNUwGtr/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="social-link"
+                            >
+                                <i class="fa-brands fa-facebook-f"></i>
+                                Facebook
+                            </a>
+                            <a
+                                href="https://www.tiktok.com/@salworldevents?_r=1&_t=ZN-984isSbvLLa"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="social-link"
+                            >
+                                <i class="fa-brands fa-tiktok"></i>
+                                TikTok
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Opening note -->
+                    <div class="info-card reveal">
+                        <h3>Svarstid</h3>
+                        <p style="font-family:'Poppins',sans-serif; font-size:14px; color:#7a3a44; line-height:1.85; font-weight:300;">
+                            Vi svarar på förfrågningar inom <strong style="color:#5b1533;">24–48 timmar</strong>. 
+                            Din dröm är vår prioritet — vi ser fram emot att höra om ditt evenemang.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================
+         GOOGLE MAPS
+    ================================================ -->
+    <section class="maps-section">
+        <div class="container">
+            <div class="maps-header reveal">
+                <h2>Hitta Oss</h2>
+                <p>Vi är verksamma i hela Sverige, med fokus på Skåne och omkringliggande regioner.</p>
+            </div>
+            <div class="map-frame reveal">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d706282.1985503068!2d12.686999999999998!3d55.99!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4650b5ccb4a0d76b%3A0xaef1a2b3c4d5e6f7!2zU2vDpW5lIGzDpG4sIFN2ZXJpZ2U!5e0!3m2!1ssv!2sse!4v1710000000000!5m2!1ssv!2sse"
+                    allowfullscreen
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Karta över Skåne län, Sverige"
+                ></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================
+         CTA
+    ================================================ -->
+    <section class="contact-cta">
+        <div class="container">
+            <h2 class="reveal">Låt oss skapa något oförglömligt tillsammans</h2>
+            <p class="reveal">Boka en kostnadsfri konsultation och låt oss förverkliga din vision med elegans och perfektion.</p>
+            <button class="cta-book-btn reveal" id="open-booking">
+                <i class="fa-regular fa-calendar-check"></i>
+                Boka Konsultation
+            </button>
+        </div>
+    </section>
+
+    <!-- ================================================
+         BOOKING MODAL
+    ================================================ -->
+    <div class="booking-overlay" id="booking-overlay" role="dialog" aria-modal="true" aria-label="Bokningsformulär">
+        <div class="booking-modal" id="booking-modal">
+
+            <div class="modal-header">
+                <h2>Boka Konsultation</h2>
+                <p>Boka en kostnadsfri 30-minuters konsultation</p>
+                <button class="modal-close" id="close-booking" aria-label="Stäng">&times;</button>
+            </div>
+
+            <div class="modal-body">
+
+                <!-- Step tabs -->
+                <div class="booking-steps" role="tablist">
+                    <div class="booking-step-tab active" id="tab-1">1. Välj Datum</div>
+                    <div class="booking-step-tab" id="tab-2">2. Välj Tid</div>
+                    <div class="booking-step-tab" id="tab-3">3. Dina Uppgifter</div>
+                    <div class="booking-step-tab" id="tab-4">4. Bekräftelse</div>
+                </div>
+
+                <!-- ── Step 1: Calendar ──────────────────── -->
+                <div class="booking-panel active" id="panel-1">
+                    <div class="cal-nav">
+                        <button id="cal-prev" aria-label="Föregående månad">&#8249;</button>
+                        <span id="cal-month-year">Juli 2026</span>
+                        <button id="cal-next" aria-label="Nästa månad">&#8250;</button>
+                    </div>
+                    <div class="cal-grid" id="cal-grid">
+                        <!-- Day names -->
+                        <div class="cal-day-name">Mån</div>
+                        <div class="cal-day-name">Tis</div>
+                        <div class="cal-day-name">Ons</div>
+                        <div class="cal-day-name">Tor</div>
+                        <div class="cal-day-name">Fre</div>
+                        <div class="cal-day-name">Lör</div>
+                        <div class="cal-day-name">Sön</div>
+                        <!-- Days rendered by JS -->
+                    </div>
+                    <button class="modal-next-btn" id="step1-next" disabled>Fortsätt &rarr;</button>
+                </div>
+
+                <!-- ── Step 2: Time Slots ────────────────── -->
+                <div class="booking-panel" id="panel-2">
+                    <div class="time-section">
+                        <h3 id="selected-date-display">Tillgängliga tider</h3>
+                        <div class="time-slots" id="time-slots-container"></div>
+                    </div>
+                    <div>
+                        <button class="modal-back-btn" id="step2-back">&#8592; Tillbaka</button>
+                        <button class="modal-next-btn" id="step2-next" disabled>Fortsätt &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- ── Step 3: Booking Form ──────────────── -->
+                <div class="booking-panel" id="panel-3">
+                    <div class="booking-form-header">
+                        <p>📅 <strong id="booking-summary-date"></strong> &nbsp;·&nbsp; 🕐 <strong id="booking-summary-time"></strong> &nbsp;·&nbsp; Kostnadsfri 30-min konsultation</p>
+                    </div>
+
+                    <form id="booking-form" class="booking-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="b-name">Fullständigt Namn</label>
+                                <input type="text" id="b-name" name="namn" placeholder="Ditt namn" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="b-email">E-postadress</label>
+                                <input type="email" id="b-email" name="epost" placeholder="din@epost.se" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="b-phone">Telefonnummer</label>
+                                <input type="tel" id="b-phone" name="telefon" placeholder="+46 70 000 00 00">
+                            </div>
+                            <div class="form-group">
+                                <label for="b-type">Typ av Evenemang</label>
+                                <select id="b-type" name="evenemangstyp">
+                                    <option value="" disabled selected>Välj typ</option>
+                                    <option>Bröllop &amp; Förlovningsfest</option>
+                                    <option>Frieri</option>
+                                    <option>Hennakvällar</option>
+                                    <option>Födelsedag</option>
+                                    <option>Catering &amp; Dessertbar</option>
+                                    <option>Aktiviteter</option>
+                                    <option>Annat</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="b-event-date">Eventdatum (om känt)</label>
+                                <input type="date" id="b-event-date" name="eventdatum">
+                            </div>
+                            <div class="form-group">
+                                <label for="b-guests">Antal Gäster</label>
+                                <input type="number" id="b-guests" name="antal_gaster" placeholder="Ungefärligt antal" min="1">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="b-msg">Meddelande</label>
+                            <textarea id="b-msg" name="meddelande" placeholder="Berätta om ditt drömevenemang..." style="min-height:100px;"></textarea>
+                        </div>
+
+                        <div class="integration-note">
+                            <strong>📌 Bokningsbekräftelse:</strong> Du kommer att få en bekräftelse via e-post.
+                            Bokningar markeras automatiskt som otillgängliga.
+                            <!-- TODO: Connect to backend/Google Calendar API for live sync -->
+                        </div>
+
+                        <div>
+                            <button type="button" class="modal-back-btn" id="step3-back">&#8592; Tillbaka</button>
+                            <button type="submit" class="modal-submit-btn">
+                                <i class="fa-solid fa-check"></i>
+                                Bekräfta Bokning
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- ── Step 4: Confirmation ──────────────── -->
+                <div class="booking-panel" id="panel-4">
+                    <div class="booking-confirmation">
+                        <div class="confirm-icon">✨</div>
+                        <h3>Bokning Mottagen!</h3>
+                        <p>Tack för din bokning. Vi har tagit emot din förfrågan och återkommer med en bekräftelse inom kort.</p>
+                        <div class="confirm-details">
+                            <p>📅 Datum: <strong id="conf-date"></strong></p>
+                            <p>🕐 Tid: <strong id="conf-time"></strong></p>
+                            <p>👤 Namn: <strong id="conf-name"></strong></p>
+                            <p>📧 E-post: <strong id="conf-email"></strong></p>
+                            <p>📋 Typ: Kostnadsfri 30-min konsultation</p>
+                        </div>
+                        <p style="font-size:13px; color:#9a5060;">
+                            En bekräftelse har skickats till din e-postadress.<br>
+                            <em>Vi ser fram emot att skapa något oförglömligt tillsammans.</em>
+                        </p>
+                        <button class="modal-close-final" id="close-booking-final">Stäng</button>
+                    </div>
+                </div>
+
+            </div><!-- /modal-body -->
+        </div><!-- /booking-modal -->
+    </div><!-- /booking-overlay -->
+
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+
+</html>
