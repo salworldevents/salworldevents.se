@@ -43,7 +43,22 @@ languageToggle?.addEventListener('click', () => {
   applyLanguage(nextLang);
 });
 
-// Safe GSAP (only if loaded)
+// Timeline scroll-reveal
+(function () {
+  const steps = document.querySelectorAll('.timeline-step');
+  if (!steps.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.18 });
+
+  steps.forEach(step => observer.observe(step));
+}());
 if (window.gsap && window.ScrollTrigger) {
   gsap.registerPlugin(ScrollTrigger);
 

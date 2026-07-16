@@ -16,24 +16,10 @@
     align-items: center;
     text-align: center;
     padding: 140px 24px 90px;
-}
-
-.services-hero img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-}
-
-.services-hero .hero-overlay {
-    position: absolute;
-    inset: 0;
     background:
-        radial-gradient(circle at center, rgba(212, 175, 55, .12), transparent 32%),
-        linear-gradient(180deg, rgba(25, 12, 17, .42) 0%, rgba(59, 31, 40, .70) 58%, rgba(46, 22, 32, .88) 100%);
-    z-index: 2;
+        radial-gradient(ellipse at 50% 0%, rgba(212, 175, 55, .15) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 80%, rgba(91, 21, 51, .45) 0%, transparent 55%),
+        linear-gradient(160deg, #0e0509 0%, #1f0c13 22%, #3b1929 48%, #5b1533 70%, #2a0f1c 100%);
 }
 
 .services-hero .hero-content {
@@ -158,20 +144,131 @@
 }
 
 /* ===========================
+   PROCESS / TIMELINE SECTION
+=========================== */
+
+.process-section {
+    background: linear-gradient(180deg, #2f141c 0%, #5b1533 50%, #2a0f17 100%);
+    padding: 120px 0;
+    overflow: hidden;
+}
+
+.process-header {
+    max-width: 760px;
+    margin: 0 auto 72px;
+    text-align: center;
+}
+
+.process-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(40px, 5vw, 60px);
+    color: #e6c77f;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.process-header p {
+    font-family: 'Poppins', sans-serif;
+    color: #f3e7dc;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* Desktop: horizontal timeline */
+.timeline {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+}
+
+/* Connecting horizontal line behind all circles */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 38px;
+    left: calc(10% + 38px);
+    right: calc(10% + 38px);
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, rgba(216, 192, 139, .6) 10%, rgba(216, 192, 139, .6) 90%, transparent 100%);
+    z-index: 0;
+}
+
+.timeline-step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 12px;
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity .55s ease, transform .55s ease;
+}
+
+.timeline-step.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-step:nth-child(1) { transition-delay: .05s; }
+.timeline-step:nth-child(2) { transition-delay: .18s; }
+.timeline-step:nth-child(3) { transition-delay: .31s; }
+.timeline-step:nth-child(4) { transition-delay: .44s; }
+.timeline-step:nth-child(5) { transition-delay: .57s; }
+
+.timeline-node {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 24px;
+}
+
+.timeline-circle {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 25%, #f2dfb2 0%, #c8982a 100%);
+    color: #3f1f12;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 28px rgba(176, 132, 47, .45), 0 0 0 4px rgba(216, 192, 139, .22);
+}
+
+.timeline-body h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #e6c77f;
+    margin-bottom: 10px;
+    line-height: 1.25;
+}
+
+.timeline-body p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    line-height: 1.85;
+    color: #f0dfd2;
+}
+
+/* ===========================
    SIGNATURE SECTION
 =========================== */
 
 .signature-section {
-    background: linear-gradient(140deg, #2f141c 0%, #5b1533 52%, #2a0f17 100%);
+    background: linear-gradient(180deg, #f8f0e6 0%, #efe3d2 100%);
     padding: 110px 0;
-    color: #f5e9dd;
 }
 
 .signature-section h2 {
     text-align: center;
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(40px, 5vw, 60px);
-    color: #e6c77f;
+    color: #5b1533;
     margin-bottom: 14px;
 }
 
@@ -182,7 +279,7 @@
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     line-height: 1.9;
-    color: #f3e7dc;
+    color: #4a232c;
 }
 
 .signature-points {
@@ -192,13 +289,14 @@
 }
 
 .signature-point {
-    background: rgba(11, 6, 8, .35);
-    border: 1px solid rgba(216, 192, 139, .32);
+    background: linear-gradient(135deg, rgba(255, 251, 245, .95) 0%, rgba(250, 241, 229, .95) 100%);
+    border: 1px solid rgba(216, 192, 139, .45);
     border-radius: 18px;
-    padding: 20px 18px;
+    padding: 22px 20px;
     font-family: 'Poppins', sans-serif;
-    color: #f8eee2;
+    color: #4a232c;
     line-height: 1.7;
+    box-shadow: 0 6px 20px rgba(48, 16, 25, .07);
 }
 
 /* ===========================
@@ -206,7 +304,7 @@
 =========================== */
 
 .cta-section {
-    background: #111;
+    background: linear-gradient(140deg, #2f141c 0%, #5b1533 52%, #2a0f17 100%);
     padding: 95px 0;
     text-align: center;
 }
@@ -244,6 +342,46 @@
    RESPONSIVE DESIGN
 =========================== */
 
+@media (max-width: 900px) {
+    .timeline {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .timeline::before {
+        top: 38px;
+        bottom: 38px;
+        left: 37px;
+        right: auto;
+        width: 2px;
+        height: auto;
+        background: linear-gradient(180deg, transparent 0%, rgba(216, 192, 139, .6) 10%, rgba(216, 192, 139, .6) 90%, transparent 100%);
+    }
+
+    .timeline-step {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        padding: 0 0 40px 0;
+        gap: 22px;
+    }
+
+    .timeline-step:last-child {
+        padding-bottom: 0;
+    }
+
+    .timeline-node {
+        flex-shrink: 0;
+        margin-bottom: 0;
+    }
+
+    .timeline-circle {
+        width: 76px;
+        height: 76px;
+    }
+}
+
 @media (max-width: 768px) {
     .services-hero {
         padding: 150px 20px 70px;
@@ -260,6 +398,7 @@
     }
 
     .services-section,
+    .process-section,
     .signature-section,
     .cta-section {
         padding: 80px 0;
@@ -271,6 +410,10 @@
 
     .service-card h3 {
         font-size: 28px;
+    }
+
+    .process-header {
+        margin-bottom: 52px;
     }
 
     .signature-section > .container > p {
@@ -298,6 +441,7 @@
     }
 
     .services-header h2,
+    .process-header h2,
     .signature-section h2,
     .cta-section h2 {
         font-size: 32px;
@@ -314,9 +458,25 @@
 
     .service-card p,
     .services-header p,
+    .process-header p,
+    .timeline-body p,
     .signature-section > .container > p,
     .signature-point {
         font-size: 14px;
+    }
+
+    .timeline-circle {
+        width: 62px;
+        height: 62px;
+        font-size: 18px;
+    }
+
+    .timeline::before {
+        left: 30px;
+    }
+
+    .timeline-body h3 {
+        font-size: 20px;
     }
 
     .cta-btn {
@@ -324,3 +484,4 @@
         font-size: 13px;
     }
 }
+
