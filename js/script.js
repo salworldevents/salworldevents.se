@@ -81,7 +81,10 @@ if (window.gsap && window.ScrollTrigger) {
 function injectGlobalLuxuryElements() {
   if (!document.body) return;
 
-  if (!document.querySelector('.sal-floating-whatsapp')) {
+  const isKontaktPage = window.location.pathname.endsWith('contact.html') ||
+                        (window.location.pathname === '/' && document.title.toLowerCase().includes('kontakt'));
+
+  if (isKontaktPage && !document.querySelector('.sal-floating-whatsapp')) {
     const whatsapp = document.createElement('a');
     whatsapp.className = 'sal-floating-whatsapp';
     whatsapp.href = 'https://wa.me/46707117795';
@@ -115,6 +118,7 @@ function injectGlobalLuxuryElements() {
             <li><a href="about.html">Om Oss</a></li>
             <li><a href="tjanster.html">Tjänster</a></li>
             <li><a href="salcups.html">SÀL CUPS</a></li>
+            <li><a href="gallery.html">Galleri</a></li>
             <li><a href="contact.html">Kontakt</a></li>
           </ul>
         </div>
