@@ -30,7 +30,7 @@
 .services-hero .hero-overlay {
     position: absolute;
     inset: 0;
-    background: 
+    background:
         radial-gradient(circle at center, rgba(212, 175, 55, .12), transparent 32%),
         linear-gradient(180deg, rgba(25, 12, 17, .42) 0%, rgba(59, 31, 40, .70) 58%, rgba(46, 22, 32, .88) 100%);
     z-index: 2;
@@ -76,106 +76,129 @@
 }
 
 /* ===========================
-   SERVICES GRID SECTION
+   SERVICES SECTION
 =========================== */
 
 .services-section {
-    background: linear-gradient(180deg, #f6efe7 0%, #efe4d4 100%);
+    background: linear-gradient(180deg, #f8f0e6 0%, #efe3d2 100%);
     padding: 120px 0;
+}
+
+.services-header {
+    max-width: 760px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.services-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(44px, 5vw, 62px);
+    color: #5b1533;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.services-header p {
+    font-family: 'Poppins', sans-serif;
+    color: #4a232c;
+    font-size: 16px;
+    line-height: 1.9;
 }
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 50px;
-    padding: 0;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
 }
 
 .service-card {
-    background: white;
-    border-radius: 16px;
-    overflow: hidden;
-    border: 1px solid rgba(216, 192, 139, .15);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, .08);
-    transition: all .45s ease;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    background: linear-gradient(180deg, rgba(255, 251, 245, .98) 0%, rgba(250, 241, 229, .98) 100%);
+    border-radius: 24px;
+    border: 1px solid rgba(216, 192, 139, .34);
+    box-shadow: 0 14px 36px rgba(48, 16, 25, .09);
+    padding: 34px 28px;
+    transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
 }
 
 .service-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 24px 60px rgba(0, 0, 0, .15);
-    border-color: rgba(216, 192, 139, .3);
+    transform: translateY(-8px);
+    border-color: rgba(216, 192, 139, .7);
+    box-shadow: 0 20px 45px rgba(48, 16, 25, .18);
 }
 
-.service-image {
-    width: 100%;
-    height: 280px;
-    overflow: hidden;
-    background: linear-gradient(135deg, #f6efe7 0%, #efe4d4 100%);
-}
-
-.service-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform .45s ease;
-}
-
-.service-card:hover .service-image img {
-    transform: scale(1.08);
-}
-
-.service-content {
-    padding: 40px 30px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+.service-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at 30% 20%, #f2dfb2 0%, #d5ab58 100%);
+    color: #3f1f12;
+    font-size: 22px;
+    box-shadow: 0 8px 24px rgba(176, 132, 47, .32);
+    margin-bottom: 18px;
 }
 
 .service-card h3 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 32px;
-    font-weight: 600;
     color: #5b1533;
-    margin-bottom: 16px;
+    font-size: 32px;
     line-height: 1.2;
+    margin-bottom: 14px;
+    font-weight: 600;
 }
 
 .service-card p {
     font-family: 'Poppins', sans-serif;
-    font-size: 15px;
-    line-height: 1.8;
-    color: #666;
-    margin-bottom: 24px;
-    flex-grow: 1;
-}
-
-.service-link {
-    display: inline-block;
-    color: #d8c08b;
-    font-weight: 600;
+    color: #3f3134;
     font-size: 14px;
-    letter-spacing: .5px;
-    transition: all .35s ease;
-    align-self: flex-start;
-    position: relative;
+    line-height: 1.9;
+    margin: 0;
 }
 
-.service-link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 0;
-    height: 2px;
-    background: #d8c08b;
-    transition: width .35s ease;
+/* ===========================
+   SIGNATURE SECTION
+=========================== */
+
+.signature-section {
+    background: linear-gradient(140deg, #2f141c 0%, #5b1533 52%, #2a0f17 100%);
+    padding: 110px 0;
+    color: #f5e9dd;
 }
 
-.service-link:hover::after {
-    width: 100%;
+.signature-section h2 {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(40px, 5vw, 60px);
+    color: #e6c77f;
+    margin-bottom: 14px;
+}
+
+.signature-section > .container > p {
+    max-width: 860px;
+    margin: 0 auto 36px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.9;
+    color: #f3e7dc;
+}
+
+.signature-points {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+}
+
+.signature-point {
+    background: rgba(11, 6, 8, .35);
+    border: 1px solid rgba(216, 192, 139, .32);
+    border-radius: 18px;
+    padding: 20px 18px;
+    font-family: 'Poppins', sans-serif;
+    color: #f8eee2;
+    line-height: 1.7;
 }
 
 /* ===========================
@@ -183,24 +206,24 @@
 =========================== */
 
 .cta-section {
-    background: #5b1533;
-    padding: 100px 0;
+    background: #111;
+    padding: 95px 0;
     text-align: center;
 }
 
 .cta-section h2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(36px, 5vw, 56px);
+    font-size: clamp(34px, 5vw, 56px);
     font-weight: 600;
     color: #f5e9dd;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
     letter-spacing: 1px;
 }
 
 .cta-btn {
     display: inline-block;
-    background: #d8c08b;
-    color: #5b1533;
+    background: linear-gradient(135deg, #cda559 0%, #efd49a 100%);
+    color: #4a1f2e;
     padding: 16px 48px;
     border-radius: 50px;
     text-decoration: none;
@@ -212,63 +235,9 @@
 }
 
 .cta-btn:hover {
-    background: #f5e9dd;
-    color: #5b1533;
     transform: translateY(-4px);
-    box-shadow: 0 16px 42px rgba(216, 192, 139, .35);
-}
-
-/* ===========================
-   FOOTER
-=========================== */
-
-.lux-footer {
-    background: #4b1f2e;
-    color: #f5e9dd;
-    text-align: center;
-    padding: 60px 20px;
-    border-top: 1px solid rgba(216, 192, 139, .2);
-}
-
-.lux-footer h3 {
-    font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 30px;
-    color: #d8c08b;
-    font-family: 'Cormorant Garamond', serif;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 30px;
-}
-
-.social-icons a {
-    color: #d8c08b;
-    font-size: 28px;
-    transition: all .35s ease;
-    display: inline-flex;
-    width: 50px;
-    height: 50px;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid rgba(216, 192, 139, .3);
-    border-radius: 50%;
-}
-
-.social-icons a:hover {
-    color: white;
-    background: rgba(216, 192, 139, .15);
-    transform: translateY(-4px) scale(1.1);
-    border-color: rgba(216, 192, 139, .6);
-}
-
-.footer-text {
-    font-size: 13px;
-    color: #999;
-    margin: 0;
+    box-shadow: 0 18px 40px rgba(216, 192, 139, .4);
+    color: #4a1f2e;
 }
 
 /* ===========================
@@ -290,39 +259,26 @@
         font-size: 18px;
     }
 
-    .services-section {
+    .services-section,
+    .signature-section,
+    .cta-section {
         padding: 80px 0;
     }
 
-    .services-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .service-image {
-        height: 250px;
-    }
-
-    .service-content {
-        padding: 30px 25px;
+    .services-header {
+        margin-bottom: 44px;
     }
 
     .service-card h3 {
         font-size: 28px;
     }
 
-    .cta-section {
-        padding: 80px 20px;
+    .signature-section > .container > p {
+        font-size: 15px;
     }
 
     .cta-section h2 {
-        font-size: 36px;
-        margin-bottom: 30px;
-    }
-
-    .cta-btn {
-        padding: 14px 40px;
-        font-size: 14px;
+        margin-bottom: 24px;
     }
 }
 
@@ -341,49 +297,30 @@
         line-height: 1.6;
     }
 
-    .service-image {
-        height: 220px;
+    .services-header h2,
+    .signature-section h2,
+    .cta-section h2 {
+        font-size: 32px;
     }
 
-    .service-content {
-        padding: 25px 20px;
+    .service-card {
+        padding: 28px 22px;
+        border-radius: 20px;
     }
 
     .service-card h3 {
         font-size: 24px;
-        margin-bottom: 12px;
     }
 
-    .service-card p {
+    .service-card p,
+    .services-header p,
+    .signature-section > .container > p,
+    .signature-point {
         font-size: 14px;
-        margin-bottom: 18px;
-    }
-
-    .cta-section {
-        padding: 60px 15px;
-    }
-
-    .cta-section h2 {
-        font-size: 28px;
-        margin-bottom: 24px;
     }
 
     .cta-btn {
-        padding: 12px 32px;
+        padding: 13px 34px;
         font-size: 13px;
-    }
-
-    .lux-footer {
-        padding: 40px 15px;
-    }
-
-    .social-icons {
-        gap: 20px;
-    }
-
-    .social-icons a {
-        width: 45px;
-        height: 45px;
-        font-size: 24px;
     }
 }
